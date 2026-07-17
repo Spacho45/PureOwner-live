@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace — PureOwner</title>
+<meta name="description" content="Parcourez la collection complète de noms Web3 disponibles. Réservez votre prénom, votre nom ou votre identité numérique — acquis une fois, à vous pour toujours.">
+<meta name="keywords" content="marketplace, noms de domaine, Web3, identité numérique, propriété numérique, PureOwner, réserver son nom, patrimoine numérique">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b2e26'/%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='3'%3E%3Cpath d='M50 80 L20 44 Q50 28 80 44 Z'/%3E%3Cpath d='M50 80 L50 40'/%3E%3C/g%3E%3Ccircle cx='50' cy='40' r='6' fill='%23f0d88a'/%3E%3Ctext x='50' y='27' font-family='Georgia,serif' font-size='20' fill='%23f0d88a' text-anchor='middle' font-weight='700'%3EP%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Marketplace — PureOwner">
+<meta property="og:description" content="Réservez votre identité numérique avant qu'elle ne soit prise. La marketplace de la propriété numérique Web3.">
+<meta property="og:image" content="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/marketplace.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketplace — PureOwner">
+<meta name="twitter:description" content="Réservez votre identité numérique avant qu'elle ne soit prise.">
+<meta name="twitter:image" content="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Marketplace — PureOwner",
+  "description": "Parcourez la collection complète de noms Web3 disponibles.",
+  "publisher": { "@type": "Organization", "name": "PureOwner" }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#06231c;--bg-2:#0b2e26;--panel:#0e3a30;--card:#0f4034;
+  --fg:#f4efe1;--muted:#9bbcae;
+  --gold:#d4af37;--gold-2:#f0d88a;--gold-glow:rgba(212,175,55,0.35);
+  --emerald:#1f7a5e;--emerald-bright:#2fae84;
+  --border:rgba(212,175,55,0.22);--border-soft:rgba(212,175,55,0.12);
+  --sepia:#7d6a4a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--bg)}
+a{color:inherit}
+h1,h2,h3,.display{font-family:'Didot','Playfair Display','Bodoni MT',Georgia,'Times New Roman',serif}
+
+.fan{position:absolute;pointer-events:none;opacity:0.5}
+.fan svg{display:block}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;backdrop-filter:blur(16px);background:rgba(6,35,28,0.82);border-bottom:1px solid var(--border-soft)}
+.logo{display:flex;align-items:center;gap:0.7rem;font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;letter-spacing:0.04em;color:var(--gold-2);text-decoration:none}
+.logo-mark{width:34px;height:34px;flex:none}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold-2)}
+.nav-cta{padding:0.55rem 1.15rem;border:1px solid var(--border);border-radius:2px;color:var(--gold-2)!important}
+.nav-cta:hover{border-color:var(--gold);background:rgba(212,175,55,0.06)}
+@media(max-width:920px){.nav-links{display:none}nav{padding:0.9rem 1.25rem}}
+
+/* Page header */
+.page-hero{position:relative;padding:9rem 2.5rem 3rem;max-width:1320px;margin:0 auto;text-align:center;overflow:hidden}
+.page-hero .eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.24em;color:var(--gold);margin-bottom:1.5rem;padding:0.45rem 1rem;border:1px solid var(--border);border-radius:2px}
+.page-hero .eyebrow::before,.page-hero .eyebrow::after{content:'';width:18px;height:1px;background:var(--gold)}
+.page-hero h1{font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1.04;font-weight:700;margin-bottom:1.3rem}
+.page-hero h1 .it{font-style:italic;color:var(--gold-2)}
+.page-hero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.75}
+
+.section{max-width:1320px;margin:0 auto;padding:2rem 2.5rem 5rem}
+.divider-deco{display:flex;align-items:center;justify-content:center;gap:1rem;margin:0 auto 3rem;max-width:1320px;padding:0 2.5rem}
+.divider-deco span{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.divider-deco .gem{width:10px;height:10px;background:var(--gold);transform:rotate(45deg);flex:none}
+
+/* Controls bar */
+.controls{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:1.5rem;padding:1.1rem 1.3rem;background:var(--panel);border:1px solid var(--border-soft);border-radius:3px}
+#storefront-count{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--gold-2);letter-spacing:0.02em;font-style:italic;min-height:1.2em}
+.controls-right{display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center}
+#storefront-search,#storefront-sort{background:var(--bg-2);border:1px solid var(--border);color:var(--fg);font-family:inherit;font-size:0.85rem;padding:0.7rem 1rem;border-radius:2px;transition:border-color 0.2s}
+#storefront-search{min-width:220px}
+#storefront-search::placeholder{color:var(--muted)}
+#storefront-search:focus,#storefront-sort:focus{outline:none;border-color:var(--gold)}
+#storefront-sort{cursor:pointer}
+#storefront-sort option{background:var(--bg-2);color:var(--fg)}
+@media(max-width:560px){.controls{flex-direction:column;align-items:stretch}.controls-right{flex-direction:column;align-items:stretch}#storefront-search{min-width:0;width:100%}#storefront-sort{width:100%}}
+
+/* Extension filter pills */
+.ext-filter{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.25rem;align-items:center}
+.ext-filter-label{font-size:0.66rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--gold);margin-right:0.35rem}
+.ext-pill{font-family:'Didot','Playfair Display',Georgia,serif;font-size:0.92rem;font-weight:700;letter-spacing:0.02em;padding:0.45rem 1rem;background:var(--panel);border:1px solid var(--border-soft);color:var(--muted);border-radius:2px;cursor:pointer;transition:all 0.22s}
+.ext-pill:hover{border-color:var(--gold);color:var(--gold-2)}
+.ext-pill.active{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1206;border-color:var(--gold)}
+
+#storefront-listings{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem}
+.storefront-card{position:relative;display:flex;flex-direction:column;gap:0.9rem;padding:1.6rem 1.5rem;background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border-soft);border-radius:3px;transition:all 0.3s;overflow:hidden}
+.storefront-card::before{content:'';position:absolute;inset:5px;border:1px solid var(--border-soft);border-radius:2px;pointer-events:none;transition:border-color 0.3s}
+.storefront-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 18px 40px -18px rgba(0,0,0,0.7)}
+.storefront-card:hover::before{border-color:var(--border)}
+.storefront-card-name{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--fg);text-decoration:none;letter-spacing:0.01em;word-break:break-word;transition:color 0.2s}
+.storefront-card-name:hover{color:var(--gold-2)}
+.storefront-card-chevron{color:var(--gold);font-size:1.2rem;flex:none;transition:transform 0.2s}
+.storefront-card-name:hover .storefront-card-chevron{transform:translateX(4px)}
+.storefront-card-price{position:relative;z-index:1;font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--gold);letter-spacing:0.01em}
+.storefront-card-badges{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:0.45rem}
+.storefront-card-badge{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;padding:0.35rem 0.7rem;border-radius:2px;border:1px solid var(--border-soft)}
+.storefront-badge-lto{color:var(--gold-2);background:rgba(212,175,55,0.08);border-color:var(--border)}
+.storefront-badge-offers{color:var(--emerald-bright);background:rgba(47,174,132,0.1);border-color:rgba(47,174,132,0.3)}
+.storefront-badge-type{color:var(--muted);background:rgba(155,188,174,0.06)}
+.storefront-buy-cta{position:relative;z-index:1;margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.8rem 1rem;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1206;text-decoration:none;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.16em;border-radius:2px;transition:all 0.25s}
+.storefront-buy-cta:hover{box-shadow:0 0 26px var(--gold-glow);transform:translateY(-1px)}
+.storefront-card-lto-link{position:relative;z-index:1;text-align:center;font-size:0.72rem;color:var(--muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s}
+.storefront-card-lto-link:hover{color:var(--gold-2)}
+
+.storefront-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;padding:4rem 1rem;color:var(--muted)}
+.storefront-loading .spinner{width:44px;height:44px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin 0.9s linear infinite}
+.storefront-loading .sp-txt{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.22em}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.storefront-empty{text-align:center;padding:4rem 1.5rem;color:var(--muted)}
+.storefront-empty .ee-mark{font-size:2.4rem;color:var(--gold);margin-bottom:1rem}
+.storefront-empty h3{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--fg);margin-bottom:0.6rem}
+
+#storefront-pagination{display:flex;justify-content:center;flex-wrap:wrap;gap:0.5rem;margin-top:2.5rem}
+.storefront-page-btn{min-width:40px;padding:0.6rem 0.85rem;background:var(--panel);border:1px solid var(--border-soft);color:var(--muted);font-family:inherit;font-size:0.82rem;font-weight:600;border-radius:2px;cursor:pointer;transition:all 0.2s}
+.storefront-page-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold-2)}
+.storefront-page-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1206;border-color:var(--gold)}
+.storefront-page-btn:disabled{opacity:0.35;cursor:not-allowed}
+.storefront-page-ellipsis{display:flex;align-items:center;padding:0 0.4rem;color:var(--muted)}
+
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:3px;overflow:hidden;margin-top:1rem}
+.trust-item{background:var(--panel);padding:1.8rem 1.4rem;text-align:center}
+.trust-item .ti-mark{font-size:1.5rem;color:var(--gold);margin-bottom:0.7rem}
+.trust-item h3{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.1rem;color:var(--gold-2);margin-bottom:0.4rem}
+.trust-item p{font-size:0.85rem;color:var(--muted);line-height:1.55}
+
+.market-head{text-align:center;margin-bottom:2.5rem}
+.market-head .eyebrow{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.26em;color:var(--gold);margin-bottom:1rem}
+.market-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.05}
+.market-head h2 .it{font-style:italic;color:var(--gold-2)}
+.market-head p{max-width:640px;margin:1.2rem auto 0;color:var(--muted);font-size:1.02rem;line-height:1.75}
+
+.cta-band{position:relative;background:linear-gradient(160deg,var(--bg-2),var(--bg));border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);overflow:hidden}
+.cta-inner{max-width:900px;margin:0 auto;padding:5rem 2.5rem;text-align:center;position:relative;z-index:1}
+.cta-inner .eyebrow{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.26em;color:var(--gold);margin-bottom:1.2rem}
+.cta-inner h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:700;line-height:1.15;margin-bottom:1.3rem}
+.cta-inner h2 .it{font-style:italic;color:var(--gold-2)}
+.cta-inner p{color:var(--muted);font-size:1.05rem;line-height:1.8;max-width:640px;margin:0 auto 2rem}
+.btn-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 1.9rem;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1206;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.14em;border-radius:2px;transition:all 0.3s}
+.btn-gold:hover{box-shadow:0 0 36px var(--gold-glow);transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--border-soft)}
+.footer-inner{max-width:1320px;margin:0 auto;padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--muted);letter-spacing:0.04em}
+.footer-inner .f-logo{font-family:'Didot','Playfair Display',Georgia,serif;color:var(--gold-2);font-size:1rem;letter-spacing:0.06em}
+.footer-inner a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-inner a:hover{color:var(--gold-2)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo" aria-label="PureOwner accueil">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <rect width="100" height="100" fill="none"/>
+      <g fill="none" stroke="#d4af37" stroke-width="3">
+        <path d="M50 80 L20 44 Q50 28 80 44 Z"/>
+        <path d="M50 80 L50 40"/>
+      </g>
+      <circle cx="50" cy="40" r="6" fill="#f0d88a"/>
+      <text x="50" y="27" font-family="Georgia,serif" font-size="20" fill="#f0d88a" text-anchor="middle" font-weight="700">P</text>
+    </svg>
+    PureOwner
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#transition">La transition</a></li>
+    <li><a href="index.html#compare">Web2 / Web3</a></li>
+    <li><a href="index.html#extensions">Extensions</a></li>
+    <li><a href="marketplace.html" class="active">Marketplace</a></li>
+    <li><a href="index.html#reserver" class="nav-cta">Réserver mon nom</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero" id="top">
+  <div class="fan" style="top:30px;right:-40px;width:300px;height:300px;opacity:0.3">
+    <svg viewBox="0 0 200 200" width="300" height="300" aria-hidden="true">
+      <g fill="none" stroke="#d4af37" stroke-width="1">
+        <path d="M100 190 L20 70 Q100 30 180 70 Z"/>
+        <path d="M100 190 L48 92"/><path d="M100 190 L74 80"/>
+        <path d="M100 190 L100 72"/><path d="M100 190 L126 80"/><path d="M100 190 L152 92"/>
+      </g>
+    </svg>
+  </div>
+  <div class="eyebrow">La collection complète</div>
+  <h1>Réservez votre<br><span class="it">identité</span> numérique.</h1>
+  <p>Chaque nom ci-dessous est disponible dès maintenant. Il ne s'agit pas simplement d'acheter un domaine, mais de réserver une partie de votre identité — avant quelqu'un d'autre. Cherchez le vôtre, sécurisez-le instantanément, pour les décennies à venir.</p>
+</header>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="market" aria-label="Noms disponibles">
+  <div class="ext-filter" id="ext-filter" role="group" aria-label="Filtrer par extension">
+    <span class="ext-filter-label">Extension</span>
+    <button type="button" class="ext-pill active" data-ext="">Toutes</button>
+    <button type="button" class="ext-pill" data-ext=".x">.x</button>
+    <button type="button" class="ext-pill" data-ext=".crypto">.crypto</button>
+    <button type="button" class="ext-pill" data-ext=".nft">.nft</button>
+    <button type="button" class="ext-pill" data-ext=".wallet">.wallet</button>
+    <button type="button" class="ext-pill" data-ext=".dao">.dao</button>
+    <button type="button" class="ext-pill" data-ext=".brave">.brave</button>
+    <button type="button" class="ext-pill" data-ext=".com">.com</button>
+  </div>
+
+  <div class="controls">
+    <div id="storefront-count">Chargement de la collection…</div>
+    <div class="controls-right">
+      <input id="storefront-search" type="text" placeholder="Rechercher un nom…" aria-label="Rechercher un nom de domaine">
+      <select id="storefront-sort" aria-label="Trier les noms de domaine">
+        <option value="listedAt-DESC">Les plus récents</option>
+        <option value="price-asc">Prix : croissant</option>
+        <option value="price-desc">Prix : décroissant</option>
+        <option value="name-asc">Nom : A → Z</option>
+        <option value="name-desc">Nom : Z → A</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="storefront-loading" style="display:none" aria-live="polite">
+    <div class="spinner"></div>
+    <div class="sp-txt">Chargement de la collection</div>
+  </div>
+
+  <div id="storefront-listings"></div>
+
+  <div class="storefront-empty" style="display:none">
+    <div class="ee-mark">◆</div>
+    <h3>Aucun nom listé pour l'instant</h3>
+    <p>La collection est en cours de curation. Revenez très bientôt pour découvrir de nouveaux noms.</p>
+  </div>
+
+  <div id="storefront-pagination"></div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="extensions" aria-label="Quelle extension choisir">
+  <div class="market-head">
+    <div class="eyebrow">Le guide</div>
+    <h2>Quelle <span class="it">extension</span> choisir ?</h2>
+    <p>Chaque extension a sa vocation. Voici comment orienter votre choix selon votre projet.</p>
+  </div>
+  <div class="trust">
+    <div class="trust-item">
+      <div class="ti-mark">★</div>
+      <h3>.x</h3>
+      <p>Courte et mémorable, idéale pour incarner votre prénom ou votre pseudonyme au quotidien.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">₿</div>
+      <h3>.crypto</h3>
+      <p>Parfaite comme adresse de paiement unifiée : remplacez vos longues adresses par votre nom.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">◈</div>
+      <h3>.nft</h3>
+      <p>Pour les artistes et collectionneurs qui veulent affirmer leur identité dans l'univers numérique.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">🦁</div>
+      <h3>.brave</h3>
+      <p>Résolue nativement dans le navigateur Brave : votre nom devient une identité Web3 reconnue d'office, sans extension ni configuration.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" aria-label="Comment ça marche">
+  <div class="market-head">
+    <div class="eyebrow">Comment ça marche</div>
+    <h2>Simple, <span class="it">sécurisé</span>, instantané</h2>
+    <p>Posséder son nom comme on possède son logement — un actif numérique acquis une fois, à vous pour toujours.</p>
+  </div>
+  <div class="trust">
+    <div class="trust-item">
+      <div class="ti-mark">⚡</div>
+      <h3>Acquérir maintenant</h3>
+      <p>Cliquez sur « Acheter » pour finaliser instantanément via le panier sécurisé d'Unstoppable Domains.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">📆</div>
+      <h3>Acquisition échelonnée</h3>
+      <p>Répartissez le coût sur plusieurs mois pour les noms éligibles — la propriété complète au terme.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">✦</div>
+      <h3>Faire une offre</h3>
+      <p>Un nom vous plaît sans prix fixe ? Envoyez une offre et lançons la discussion.</p>
+    </div>
+    <div class="trust-item">
+      <div class="ti-mark">🛡️</div>
+      <h3>Propriété permanente</h3>
+      <p>Un véritable actif numérique : identité, paiement, connexion, site et patrimoine transmissible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-label="La transition Web3">
+  <div class="fan" style="bottom:-80px;left:-50px;width:300px;height:300px;opacity:0.25">
+    <svg viewBox="0 0 200 200" width="300" height="300" aria-hidden="true">
+      <g fill="none" stroke="#d4af37" stroke-width="1">
+        <path d="M100 190 L20 70 Q100 30 180 70 Z"/>
+        <path d="M100 190 L48 92"/><path d="M100 190 L74 80"/>
+        <path d="M100 190 L100 72"/><path d="M100 190 L126 80"/><path d="M100 190 L152 92"/>
+      </g>
+    </svg>
+  </div>
+  <div class="cta-inner">
+    <div class="eyebrow">Le grand transfert de propriété numérique</div>
+    <h2>Agir <span class="it">tôt</span> est essentiel.</h2>
+    <p>Personne n'attend qu'un autre achète sa maison avant de chercher un logement. Demain, il sera tout aussi naturel de posséder son prénom numérique. Chaque nom est unique : plus on attend, plus le risque qu'il soit pris augmente.</p>
+    <a href="index.html#transition" class="btn-gold">Comprendre la transition →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="f-logo">PureOwner</div>
+    <div>© <span id="year"></span> PureOwner · La référence de la propriété numérique</div>
+    <div><a href="index.html#extensions">Extensions</a> · <a href="index.html#transition">La transition</a> · <a href="index.html#reserver">Réserver mon nom</a></div>
+  </div>
+</footer>
+
+
+
+
+
+<script>
+(function(){
+  var CLIENT_BASE = "https://unstoppabledomains.com";
+  function absolutise(u) {
+    if (!u) return u;
+    if (u.indexOf('http://') === 0 || u.indexOf('https://') === 0) return u;
+    return CLIENT_BASE + (u.charAt(0) === '/' ? u : '/' + u);
+  }
+  var CONFIG = {"accountId":"grand-mountain-5rej5rk","includeNames":null,"excludeNames":null,"priceMin":null,"priceMax":null,"hasLto":null,"hasOffers":null,"type":null,"pageSize":20};
+  var API_BASE = "https://api.unstoppabledomains.com/api/public/storefront/" + encodeURIComponent(CONFIG.accountId);
+  var currentPage = 1;
+  var currentSort = "listedAt";
+  var currentSortDir = "DESC";
+  var currentQuery = "";
+  var debounceTimer = null;
+
+  var $ = function(s){ return document.querySelector(s); };
+
+  function fmt(v) {
+    return (v / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
+  }
+
+  function buildUrl() {
+    var params = [];
+    params.push("page=" + currentPage);
+    params.push("pageSize=" + CONFIG.pageSize);
+    params.push("sortBy=" + currentSort);
+    params.push("sortDirection=" + currentSortDir);
+    if (currentQuery && currentQuery.length >= 2) params.push("query=" + encodeURIComponent(currentQuery));
+    if (CONFIG.includeNames) params.push("includeNames=" + encodeURIComponent(CONFIG.includeNames.join(",")));
+    if (CONFIG.excludeNames) params.push("excludeNames=" + encodeURIComponent(CONFIG.excludeNames.join(",")));
+    if (CONFIG.priceMin !== null) params.push("priceMin=" + CONFIG.priceMin);
+    if (CONFIG.priceMax !== null) params.push("priceMax=" + CONFIG.priceMax);
+    if (CONFIG.hasLto !== null) params.push("hasLto=" + CONFIG.hasLto);
+    if (CONFIG.hasOffers !== null) params.push("hasOffers=" + CONFIG.hasOffers);
+    if (CONFIG.type !== null) params.push("registryType=" + CONFIG.type);
+    return API_BASE + "?" + params.join("&");
+  }
+
+  function renderCard(item) {
+    var card = document.createElement('div');
+    card.className = 'storefront-card';
+
+    var nameLink = document.createElement('a');
+    nameLink.className = 'storefront-card-name';
+    nameLink.href = absolutise(item.detailUrl);
+    nameLink.target = '_blank';
+    nameLink.rel = 'noopener';
+    var nameText = document.createTextNode(item.domainDisplayName || item.domainName);
+    nameLink.appendChild(nameText);
+    var chevron = document.createElement('span');
+    chevron.className = 'storefront-card-chevron';
+    chevron.textContent = '\u203A';
+    nameLink.appendChild(chevron);
+    card.appendChild(nameLink);
+
+    var price = document.createElement('div');
+    price.className = 'storefront-card-price';
+    price.textContent = item.price !== null ? fmt(item.price) : 'Make an Offer';
+    card.appendChild(price);
+
+    var badges = document.createElement('div');
+    badges.className = 'storefront-card-badges';
+    if (item.hasLto && item.leaseToOwnMonthlyPrice !== null) {
+      var ltoBadge = document.createElement('span');
+      ltoBadge.className = 'storefront-card-badge storefront-badge-lto';
+      ltoBadge.textContent = 'Lease ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo';
+      badges.appendChild(ltoBadge);
+    }
+    if (item.hasOffers) {
+      var offerBadge = document.createElement('span');
+      offerBadge.className = 'storefront-card-badge storefront-badge-offers';
+      offerBadge.textContent = item.minOfferAmountInCents !== null
+        ? 'Offers from ' + fmt(item.minOfferAmountInCents)
+        : 'Offers Welcome';
+      badges.appendChild(offerBadge);
+    }
+    var typeBadge = document.createElement('span');
+    typeBadge.className = 'storefront-card-badge storefront-badge-type';
+    typeBadge.textContent = item.type.toUpperCase();
+    badges.appendChild(typeBadge);
+    card.appendChild(badges);
+
+    var cta = document.createElement('a');
+    cta.className = 'storefront-buy-cta';
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    if (item.price !== null) {
+      cta.href = absolutise(item.buyUrl);
+      cta.textContent = 'Buy Now';
+    } else {
+      cta.href = absolutise(item.detailUrl);
+      cta.textContent = 'View Domain';
+    }
+    card.appendChild(cta);
+
+    if (item.hasLto) {
+      var ltoLink = document.createElement('a');
+      ltoLink.className = 'storefront-card-lto-link';
+      ltoLink.href = absolutise(item.detailUrl + '?pm=lto');
+      ltoLink.target = '_blank';
+      ltoLink.rel = 'noopener';
+      ltoLink.textContent = item.leaseToOwnMonthlyPrice !== null ? 'Lease from ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo' : 'Lease Options';
+      card.appendChild(ltoLink);
+    }
+
+    return card;
+  }
+
+  function renderPagination(total, page, pageSize) {
+    var container = $('#storefront-pagination');
+    if (!container) return;
+    container.innerHTML = '';
+    var totalPages = Math.ceil(total / pageSize);
+    if (totalPages <= 1) return;
+
+    function addBtn(label, targetPage, isActive, isDisabled) {
+      var btn = document.createElement('button');
+      btn.className = 'storefront-page-btn' + (isActive ? ' active' : '');
+      btn.textContent = label;
+      if (isDisabled) { btn.disabled = true; }
+      else {
+        btn.dataset.page = String(targetPage);
+        btn.addEventListener('click', function() {
+          currentPage = parseInt(this.dataset.page, 10);
+          fetchAndRender();
+        });
+      }
+      container.appendChild(btn);
+    }
+    function addEllipsis() { var s = document.createElement('span'); s.className = 'storefront-page-ellipsis'; s.textContent = '\u2026'; container.appendChild(s); }
+
+    var w = 1;
+    var start = Math.max(1, page - w);
+    var end = Math.min(totalPages, page + w);
+
+    addBtn('Prev', page - 1, false, page <= 1);
+    if (start > 1) { addBtn(1, 1, page === 1, false); if (start > 2) addEllipsis(); }
+    for (var i = start; i <= end; i++) { addBtn(String(i), i, i === page, false); }
+    if (end < totalPages) { if (end < totalPages - 1) addEllipsis(); addBtn(String(totalPages), totalPages, page === totalPages, false); }
+    addBtn('Next', page + 1, false, page >= totalPages);
+  }
+
+  function fetchAndRender() {
+    var listings = $('#storefront-listings');
+    var loading = document.querySelector('.storefront-loading');
+    var empty = document.querySelector('.storefront-empty');
+    var count = $('#storefront-count');
+
+    if (loading) loading.style.display = '';
+    if (empty) empty.style.display = 'none';
+
+    fetch(buildUrl())
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(data) {
+        if (loading) loading.style.display = 'none';
+        if (listings) {
+          listings.innerHTML = '';
+          if (data.listings.length === 0) {
+            if (empty) empty.style.display = '';
+          } else {
+            data.listings.forEach(function(item) {
+              listings.appendChild(renderCard(item));
+            });
+          }
+        }
+        if (count) count.textContent = data.total + ' domain' + (data.total !== 1 ? 's' : '') + ' for sale';
+        renderPagination(data.total, data.page, data.pageSize);
+      })
+      .catch(function() {
+        if (loading) loading.style.display = 'none';
+        if (listings) listings.innerHTML = '';
+        if (count) count.textContent = '';
+        var pag = $('#storefront-pagination'); if (pag) pag.innerHTML = '';
+        if (empty) empty.style.display = '';
+      });
+  }
+
+  // Bind sort controls
+  var sortEl = $('#storefront-sort');
+  if (sortEl) {
+    sortEl.addEventListener('change', function() {
+      var val = this.value;
+      var parts = val.split("-");
+      currentSort = parts[0] === "listedAt" ? "listedAt" : parts[0];
+      currentSortDir = (parts[parts.length - 1] || "DESC").toUpperCase();
+      currentPage = 1;
+      fetchAndRender();
+    });
+  }
+
+  // Bind search input
+  var searchEl = $('#storefront-search');
+  if (searchEl) {
+    searchEl.addEventListener('input', function() {
+      var val = this.value;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(function() {
+        currentQuery = val;
+        currentPage = 1;
+        fetchAndRender();
+      }, 300);
+    });
+  }
+
+  // Fill copyright year
+  var yr = $('#year'); if (yr) yr.textContent = new Date().getFullYear();
+
+  // Initial fetch
+  fetchAndRender();
+})();
+</script>
+</body>
+</html>

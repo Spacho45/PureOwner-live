@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PureOwner — Réapprendre à reconnaître ce que veut dire posséder.</title>
+  <meta name="description" content="À quoi reconnaît-on qu'une chose nous appartient vraiment ? PureOwner explore les principes fondamentaux de la propriété personnelle à l'ère numérique.">
+  <meta name="keywords" content="propriété numérique, identité numérique, contrôle, accès, PureOwner">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="PureOwner — Réapprendre à reconnaître ce que veut dire posséder.">
+  <meta property="og:description" content="À quoi reconnaît-on qu'une chose nous appartient vraiment ? Une réflexion sur la propriété personnelle à l'ère numérique.">
+  <meta property="og:image" content="assets/images/pureowner-affiche.png">
+  <meta property="og:url" content="https://pureowner.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PureOwner — Réapprendre à reconnaître ce que veut dire posséder.">
+  <meta name="twitter:description" content="À quoi reconnaît-on qu'une chose nous appartient vraiment ?">
+  <meta name="twitter:image" content="assets/images/pureowner-affiche.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1F2A44">
+  <meta name="msapplication-TileColor" content="#F7F4EE">
+  <meta name="msapplication-TileImage" content="assets/favicons/mstile-150x150.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PureOwner",
+    "url": "https://pureowner.com",
+    "description": "PureOwner explore les principes fondamentaux de la propriété personnelle à l'ère numérique.",
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --noir: #0E0E0C;
+      --blanc: #F7F4EE;
+      --gris: #D9D4CC;
+      --nuit: #1F2A44;
+      --sauge: #7C8B7A;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--blanc);
+      color: var(--noir);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--nuit); color: var(--blanc); }
+
+    /* ── Typography ── */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15; }
+    p { max-width: 62ch; text-align: justify; }
+    .label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sauge);
+    }
+
+    /* ── Layout ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 0; }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 0.8s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ══════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════ */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(247,244,238,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    #header.scrolled { border-color: var(--gris); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    }
+    .logo {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+      color: var(--noir); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .logo span { color: var(--sauge); }
+    nav { display: flex; align-items: center; gap: 2.2rem; }
+    nav a {
+      font-size: 0.8rem; font-weight: 400; letter-spacing: 0.06em;
+      color: var(--noir); text-decoration: none; opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+    nav a:hover { opacity: 1; }
+    .btn-join {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--nuit);
+      border: 1px solid var(--nuit); padding: 0.5rem 1.2rem;
+      text-decoration: none; transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-join:hover { background: var(--nuit); color: var(--blanc); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--noir); transition: transform 0.3s, opacity 0.3s;
+    }
+    .mobile-nav {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: var(--blanc); border-bottom: 1px solid var(--gris);
+      padding: 1.5rem 2rem; flex-direction: column; gap: 1.2rem; z-index: 99;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-size: 0.9rem; color: var(--noir); text-decoration: none;
+      opacity: 0.7; letter-spacing: 0.04em;
+    }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: 64px; position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .hero-surtitle {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--sauge); margin-bottom: 1.8rem;
+    }
+    .hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      font-weight: 500; line-height: 1.1;
+      color: var(--noir); margin-bottom: 1.8rem;
+    }
+    .hero-title em { font-style: italic; color: var(--nuit); }
+    .hero-text {
+      font-size: 1.05rem; color: #4a4a46; line-height: 1.75;
+      margin-bottom: 2.8rem; max-width: 52ch;
+    }
+    .hero-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; background: var(--nuit); color: var(--blanc);
+      padding: 0.85rem 2rem; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--noir); transform: translateY(-1px); }
+    .btn-ghost {
+      font-size: 0.8rem; font-weight: 400; letter-spacing: 0.08em;
+      color: var(--noir); text-decoration: none; opacity: 0.6;
+      border-bottom: 1px solid currentColor; padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .btn-ghost:hover { opacity: 1; }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative; min-height: 520px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-svg { width: 100%; height: 100%; }
+    .hero-image-card {
+      width: min(100%, 470px);
+      padding: 0.55rem;
+      background: rgba(255,255,255,0.56);
+      border: 1px solid rgba(31,42,68,0.12);
+      border-radius: 28px;
+      box-shadow: 0 28px 90px rgba(31,42,68,0.14);
+    }
+    .hero-image-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+    }
+
+    /* ── Educational visuals ── */
+    .site-visual {
+      margin: 4rem auto 0;
+    }
+    .site-visual--wide { max-width: 100%; }
+    .site-visual--portrait { max-width: 980px; }
+    .site-visual__frame {
+      overflow: hidden;
+      padding: 0.55rem;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid rgba(31,42,68,0.1);
+      border-radius: 26px;
+      box-shadow: 0 26px 80px rgba(31,42,68,0.12);
+    }
+    .site-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    .site-visual figcaption {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #68645d;
+      max-width: 76ch;
+    }
+    .site-visual--centered figcaption { margin-left: auto; margin-right: auto; text-align: center; }
+    .site-visual--dark .site-visual__frame {
+      background: rgba(247,244,238,0.06);
+      border-color: rgba(247,244,238,0.16);
+      box-shadow: 0 26px 80px rgba(0,0,0,0.26);
+    }
+    .site-visual--dark figcaption { color: rgba(247,244,238,0.56); }
+    .site-visual--timeline figcaption { color: #654a15; }
+
+    /* ══════════════════════════════════════
+       MANIFESTE
+    ══════════════════════════════════════ */
+    #manifeste { background: var(--nuit); color: var(--blanc); }
+    #manifeste .label { color: rgba(247,244,238,0.45); }
+    .manifeste-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 500; margin: 1.2rem 0 2.2rem;
+      color: var(--blanc); max-width: 22ch;
+    }
+    .manifeste-body { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .manifeste-body p {
+      font-size: 1rem; line-height: 1.85; color: rgba(247,244,238,0.78);
+      max-width: 52ch;
+    }
+    .manifeste-rule {
+      width: 40px; height: 1px; background: var(--sauge);
+      margin: 2.5rem 0;
+    }
+    .manifeste-closing {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.1rem; color: rgba(247,244,238,0.9);
+      max-width: 60ch; line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════
+       SIGNES
+    ══════════════════════════════════════ */
+    #signes { background: var(--blanc); }
+    .signes-header { margin-bottom: 4rem; }
+    .signes-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-top: 1rem; max-width: 28ch;
+    }
+    .signes-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; border-top: 1px solid var(--gris);
+      border-left: 1px solid var(--gris);
+    }
+    .signe-card {
+      padding: 2.8rem 2.4rem;
+      border-right: 1px solid var(--gris);
+      border-bottom: 1px solid var(--gris);
+      transition: background 0.3s;
+      cursor: default;
+    }
+    .signe-card:hover { background: #f0ece4; }
+    .signe-num {
+      font-family: var(--serif); font-size: 0.75rem;
+      color: var(--sauge); margin-bottom: 1.4rem;
+      letter-spacing: 0.1em;
+    }
+    .signe-title {
+      font-family: var(--serif); font-size: 1.5rem;
+      font-weight: 500; margin-bottom: 1rem; color: var(--noir);
+    }
+    .signe-text { font-size: 0.9rem; color: #5a5a56; line-height: 1.7; max-width: 36ch; }
+
+    /* ══════════════════════════════════════
+       PÉDAGOGIE
+    ══════════════════════════════════════ */
+    #pedagogie { background: var(--blanc); border-top: 1px solid var(--gris); }
+    .peda-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .peda-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      margin-top: 1rem; max-width: 22ch;
+    }
+    .peda-body p {
+      font-size: 1rem; line-height: 1.85; color: #4a4a46;
+      margin-bottom: 1.4rem;
+    }
+    .peda-distinction {
+      margin-top: 2.5rem; padding: 2rem 2.2rem;
+      border-left: 2px solid var(--nuit); background: #f0ece4;
+    }
+    .peda-distinction p {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.05rem; color: var(--nuit); margin: 0;
+    }
+
+    /* ══════════════════════════════════════
+       EXEMPLES
+    ══════════════════════════════════════ */
+    #exemples { background: var(--noir); color: var(--blanc); }
+    #exemples .label { color: rgba(247,244,238,0.4); }
+    .exemples-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--blanc); margin: 1rem 0 4rem; max-width: 30ch;
+    }
+    .exemples-list { display: flex; flex-direction: column; }
+    .exemple-item {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 2rem; padding: 2.8rem 0;
+      border-bottom: 1px solid rgba(217,212,204,0.12);
+      transition: background 0.3s;
+    }
+    .exemple-item:first-child { border-top: 1px solid rgba(217,212,204,0.12); }
+    .exemple-item:hover { background: rgba(247,244,238,0.03); }
+    .exemple-num {
+      font-family: var(--serif); font-size: 2.2rem;
+      color: rgba(247,244,238,0.12); font-weight: 500;
+      line-height: 1; padding-top: 4px;
+    }
+    .exemple-content {}
+    .exemple-title {
+      font-family: var(--serif); font-size: 1.3rem;
+      color: var(--blanc); margin-bottom: 0.8rem; font-weight: 500;
+    }
+    .exemple-text {
+      font-size: 0.92rem; color: rgba(247,244,238,0.62);
+      line-height: 1.75; max-width: 64ch;
+    }
+
+    /* ══════════════════════════════════════
+       VISION
+    ══════════════════════════════════════ */
+    #vision { background: var(--blanc); }
+    .vision-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .vision-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      margin-top: 1rem; max-width: 24ch;
+    }
+    .vision-body p {
+      font-size: 1rem; line-height: 1.85; color: #4a4a46;
+      margin-bottom: 1.4rem;
+    }
+    .vision-accent {
+      font-family: var(--serif); font-size: 1.25rem;
+      font-style: italic; color: var(--nuit); margin-top: 2rem;
+      padding-top: 2rem; border-top: 1px solid var(--gris);
+      max-width: 48ch;
+    }
+
+    /* ══════════════════════════════════════
+       PROMESSE
+    ══════════════════════════════════════ */
+    #promesse { background: #f0ece4; border-top: 1px solid var(--gris); }
+    .promesse-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin: 1rem 0 4rem; max-width: 30ch;
+    }
+    .promesse-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+    }
+    .promesse-card {
+      padding: 2.4rem 0; border-top: 2px solid var(--nuit);
+    }
+    .promesse-card-num {
+      font-family: var(--serif); font-size: 0.75rem;
+      color: var(--sauge); margin-bottom: 1.2rem; letter-spacing: 0.1em;
+    }
+    .promesse-card-title {
+      font-family: var(--serif); font-size: 1.35rem;
+      font-weight: 500; margin-bottom: 0.9rem; color: var(--noir);
+    }
+    .promesse-card-text { font-size: 0.88rem; color: #5a5a56; line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       CTA FINAL
+    ══════════════════════════════════════ */
+    #cta { background: var(--nuit); color: var(--blanc); text-align: center; }
+    .cta-title {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      color: var(--blanc); max-width: 22ch; margin: 1.2rem auto 1.8rem;
+      line-height: 1.15;
+    }
+    .cta-text {
+      font-size: 1rem; color: rgba(247,244,238,0.7);
+      max-width: 52ch; margin: 0 auto 3rem; line-height: 1.75;
+    }
+    .cta-form {
+      display: flex; gap: 0; max-width: 480px; margin: 0 auto 1.2rem;
+    }
+    .cta-input {
+      flex: 1; padding: 0.9rem 1.4rem;
+      background: rgba(247,244,238,0.08);
+      border: 1px solid rgba(247,244,238,0.2);
+      border-right: none; color: var(--blanc);
+      font-family: var(--sans); font-size: 0.9rem;
+      outline: none; transition: border-color 0.2s;
+    }
+    .cta-input::placeholder { color: rgba(247,244,238,0.35); }
+    .cta-input:focus { border-color: rgba(247,244,238,0.5); }
+    .cta-btn {
+      padding: 0.9rem 1.8rem; background: var(--blanc); color: var(--nuit);
+      border: 1px solid var(--blanc); font-family: var(--sans);
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .cta-btn:hover { background: var(--gris); }
+    .cta-micro {
+      font-size: 0.75rem; color: rgba(247,244,238,0.38);
+      letter-spacing: 0.04em;
+    }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    footer {
+      background: var(--noir); color: var(--blanc);
+      padding: 4rem 0 2.5rem;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem;
+    }
+    .footer-brand {}
+    .footer-logo {
+      font-family: var(--serif); font-size: 1.1rem;
+      color: var(--blanc); margin-bottom: 0.5rem;
+    }
+    .footer-baseline {
+      font-size: 0.8rem; color: rgba(247,244,238,0.4);
+      max-width: 36ch; line-height: 1.6;
+    }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 1.8rem; }
+    .footer-nav a {
+      font-size: 0.78rem; color: rgba(247,244,238,0.5);
+      text-decoration: none; letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--blanc); }
+    .footer-bottom {
+      border-top: 1px solid rgba(217,212,204,0.1);
+      padding-top: 1.8rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: 0.72rem; color: rgba(247,244,238,0.25); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-visual { min-height: 0; }
+      .hero-image-card { width: min(100%, 560px); }
+      .manifeste-body { grid-template-columns: 1fr; gap: 1.8rem; }
+      .signes-grid { grid-template-columns: repeat(2, 1fr); }
+      .peda-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .vision-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .promesse-grid { grid-template-columns: repeat(2, 1fr); }
+      .exemple-item { grid-template-columns: 50px 1fr; gap: 1.2rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 5rem 0; }
+      .signes-grid { grid-template-columns: 1fr; }
+      .promesse-grid { grid-template-columns: 1fr; }
+      .cta-form { flex-direction: column; }
+      .cta-input { border-right: 1px solid rgba(247,244,238,0.2); border-bottom: none; }
+      .footer-inner { flex-direction: column; }
+      .hero-title { font-size: 2rem; }
+      .site-visual { margin-top: 2.6rem; }
+      .site-visual__frame, .hero-image-card { border-radius: 18px; padding: 0.35rem; }
+      .site-visual img, .hero-image-card img { border-radius: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo">Pure<span>Owner</span></a>
+      <nav aria-label="Navigation principale">
+        <a href="#vision">Vision</a>
+        <a href="#pedagogie">Méthode</a>
+        <a href="#exemples">Ressources</a>
+        <a href="#manifeste">À propos</a>
+        <a href="#cta">Contact</a>
+        <a href="#cta" class="btn-join">Rejoindre la liste</a>
+      </nav>
+      <button class="hamburger" aria-label="Ouvrir le menu" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+      <a href="#vision">Vision</a>
+      <a href="#pedagogie">Méthode</a>
+      <a href="#exemples">Ressources</a>
+      <a href="#manifeste">À propos</a>
+      <a href="#cta">Rejoindre la liste</a>
+    </nav>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-surtitle reveal">Own your digital self</p>
+          <h1 class="hero-title reveal reveal-delay-1">
+            À quoi reconnaît-on qu'une chose nous <em>appartient</em> vraiment&nbsp;?
+          </h1>
+          <p class="hero-text reveal reveal-delay-2">
+            Dans le monde numérique, la propriété ne se résume pas à l'usage. Elle se reconnaît à des signes précis : pouvoir prouver, accéder, autoriser, protéger, transmettre.
+          </p>
+          <div class="hero-ctas reveal reveal-delay-3">
+            <a href="#signes" class="btn-primary">Découvrir</a>
+            <a href="#vision" class="btn-ghost">Lire la vision</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <figure class="hero-image-card">
+            <img
+              src="assets/images/web3-appartient.png"
+              alt="Affiche Web3 le web qui vous appartient, opposant Web2 et Web3 autour de l'identité, des sites décentralisés et des paiements crypto."
+              width="1024"
+              height="1536"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </figure>
+        </div>
+      </div>
+      <figure class="site-visual site-visual--wide site-visual--dark site-visual--timeline reveal reveal-delay-2">
+        <div class="site-visual__frame">
+          <img
+            src="assets/images/internet-evolution-timeline.png"
+            alt="Frise de l'évolution d'Internet, de l'accès aux sites web vers la propriété numérique et la transmission."
+            width="1774"
+            height="887"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          Une lecture simple du basculement : consulter, partager et utiliser ne suffisent plus. L'étape décisive consiste à posséder, puis à transmettre ce qui compte.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ MANIFESTE ══ -->
+  <section id="manifeste" aria-label="Manifeste">
+    <div class="container">
+      <p class="label reveal">— Manifeste</p>
+      <h2 class="manifeste-title reveal reveal-delay-1">
+        Nous vivons entourés de signes de propriété, sans toujours les voir.
+      </h2>
+      <div class="manifeste-body">
+        <div>
+          <p class="reveal reveal-delay-2">
+            Chaque jour, nous nous identifions, nous validons, nous autorisons, nous récupérons, nous protégeons. Ces gestes paraissent ordinaires. Pourtant, ils révèlent quelque chose de fondamental : ce qui compte vraiment exige une preuve, un contrôle, et une forme de responsabilité.
+          </p>
+          <div class="manifeste-rule reveal reveal-delay-3"></div>
+          <p class="reveal reveal-delay-3">
+            Lorsqu'un système vous demande qui vous êtes, il reconnaît déjà qu'un lien doit être établi entre vous et ce à quoi vous accédez. Lorsqu'un accès dépend d'un secret que vous seul détenez, la relation change encore : vous ne faites pas que demander l'entrée, vous activez une capacité qui vous est propre.
+          </p>
+        </div>
+        <div>
+          <p class="reveal reveal-delay-2">
+            PureOwner part de cette intuition simple : la propriété n'est pas une abstraction lointaine. C'est une réalité concrète, lisible dans les mécanismes d'accès, de preuve, de consentement et de maîtrise.
+          </p>
+          <div class="manifeste-rule reveal reveal-delay-3"></div>
+          <p class="manifeste-closing reveal reveal-delay-4">
+            « Ce qui vous appartient vraiment, vous pouvez le prouver, y accéder, le protéger, le transmettre — et l'emporter avec vous. »
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SIGNES ══ -->
+  <section id="signes" aria-label="Les signes concrets de la propriété">
+    <div class="container">
+      <div class="signes-header">
+        <p class="label reveal">— Les signes concrets</p>
+        <h2 class="signes-title reveal reveal-delay-1">Six façons de reconnaître ce qui vous appartient vraiment.</h2>
+      </div>
+      <div class="signes-grid">
+        <div class="signe-card reveal">
+          <p class="signe-num">01</p>
+          <h3 class="signe-title">Prouver</h3>
+          <p class="signe-text">Ce qui vous appartient peut être relié à vous de manière crédible. La preuve n'est pas un détail administratif — c'est le fondement de tout droit.</p>
+        </div>
+        <div class="signe-card reveal reveal-delay-1">
+          <p class="signe-num">02</p>
+          <h3 class="signe-title">Accéder</h3>
+          <p class="signe-text">Ce qui est à vous ne devrait pas dépendre entièrement d'un tiers. L'accès conditionné est un accès fragile.</p>
+        </div>
+        <div class="signe-card reveal reveal-delay-2">
+          <p class="signe-num">03</p>
+          <h3 class="signe-title">Autoriser</h3>
+          <p class="signe-text">La propriété inclut le droit de permettre ou de refuser. Sans ce pouvoir, vous n'êtes que locataire de ce que vous croyez posséder.</p>
+        </div>
+        <div class="signe-card reveal reveal-delay-1">
+          <p class="signe-num">04</p>
+          <h3 class="signe-title">Protéger</h3>
+          <p class="signe-text">Ce qui a de la valeur appelle une garde. Protéger n'est pas une peur — c'est une responsabilité inhérente à la possession.</p>
+        </div>
+        <div class="signe-card reveal reveal-delay-2">
+          <p class="signe-num">05</p>
+          <h3 class="signe-title">Transmettre</h3>
+          <p class="signe-text">Ce qui vous appartient peut être confié, partagé ou légué. La transmission est la preuve ultime d'une propriété réelle.</p>
+        </div>
+        <div class="signe-card reveal reveal-delay-3">
+          <p class="signe-num">06</p>
+          <h3 class="signe-title">Emporter</h3>
+          <p class="signe-text">Ce qui est à vous doit pouvoir vous suivre. Une propriété qui ne se déplace pas avec vous n'est qu'une permission temporaire.</p>
+        </div>
+      </div>
+      <figure class="site-visual site-visual--portrait site-visual--centered reveal reveal-delay-2">
+        <div class="site-visual__frame">
+          <img
+            src="assets/images/has-been-2030.png"
+            alt="Infographie listant huit habitudes numériques dépassées en 2030, de la finance aux paiements, réseaux et abonnements."
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          Le concept devient plus clair quand on regarde nos habitudes actuelles depuis demain : beaucoup de frictions paraîtront normales jusqu'au jour où elles sembleront absurdes.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ PÉDAGOGIE ══ -->
+  <section id="pedagogie" aria-label="Pédagogie">
+    <div class="container">
+      <div class="peda-grid">
+        <div>
+          <p class="label reveal">— Méthode</p>
+          <h2 class="peda-title reveal reveal-delay-1">Posséder n'est pas seulement utiliser</h2>
+          <div class="peda-distinction reveal reveal-delay-2">
+            <p>Utiliser, c'est se servir de quelque chose. Posséder, c'est pouvoir prouver un lien, exercer un contrôle, et ne pas dépendre uniquement d'une autorité extérieure.</p>
+          </div>
+        </div>
+        <div class="peda-body">
+          <p class="reveal reveal-delay-1">Le numérique a souvent brouillé une distinction essentielle : celle qui sépare l'usage de la possession.</p>
+          <p class="reveal reveal-delay-2">On peut utiliser un service tous les jours sans en maîtriser l'accès. On peut dépendre d'une plateforme sans contrôler ce qu'elle sait, ce qu'elle garde, ou ce qu'elle décide.</p>
+          <p class="reveal reveal-delay-3">On peut bénéficier d'un espace sans en être pleinement propriétaire. La différence est subtile dans l'expérience quotidienne — elle devient évidente au moment où quelque chose change.</p>
+        </div>
+      </div>
+      <figure class="site-visual site-visual--portrait site-visual--centered reveal reveal-delay-2">
+        <div class="site-visual__frame">
+          <img
+            src="assets/images/utiliser-vs-posseder.png"
+            alt="Comparaison visuelle entre utiliser sur le Web2 et posséder sur le Web3, avec les différences de contrôle, transfert et identité."
+            width="1122"
+            height="1402"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          Cette comparaison donne un exemple concret : l'usage crée une dépendance, alors que la possession redonne la preuve, le contrôle et la capacité de transmettre.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ EXEMPLES ══ -->
+  <section id="exemples" aria-label="Exemples concrets">
+    <div class="container">
+      <p class="label reveal">— Observations</p>
+      <h2 class="exemples-title reveal reveal-delay-1">Des situations ordinaires qui révèlent l'essentiel.</h2>
+      <div class="exemples-list">
+        <div class="exemple-item reveal">
+          <div class="exemple-num">01</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand on vous demande de vous identifier</h3>
+            <p class="exemple-text">Chaque demande d'identification est une reconnaissance implicite : quelque chose vous appartient, et le système veut s'assurer que c'est bien vous. L'identité précède l'accès. Elle est la condition de la propriété.</p>
+          </div>
+        </div>
+        <div class="exemple-item reveal reveal-delay-1">
+          <div class="exemple-num">02</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand vous utilisez un mot de passe</h3>
+            <p class="exemple-text">Un mot de passe est une clé. Mais une clé confiée à un tiers n'est plus vraiment la vôtre. La question n'est pas de savoir si vous avez un mot de passe — c'est de savoir qui d'autre pourrait l'utiliser à votre place.</p>
+          </div>
+        </div>
+        <div class="exemple-item reveal reveal-delay-2">
+          <div class="exemple-num">03</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand l'accès dépend d'un secret que vous seul détenez</h3>
+            <p class="exemple-text">Lorsque vous êtes le seul à détenir la clé, la relation change fondamentalement. Vous n'êtes plus un utilisateur autorisé — vous êtes le propriétaire. Cette nuance est la plus importante du monde numérique.</p>
+          </div>
+        </div>
+        <div class="exemple-item reveal">
+          <div class="exemple-num">04</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand une plateforme peut suspendre votre accès</h3>
+            <p class="exemple-text">Si quelqu'un d'autre peut décider que vous n'avez plus accès à ce que vous pensiez posséder, alors vous n'en étiez pas vraiment propriétaire. Vous en étiez l'usager toléré.</p>
+          </div>
+        </div>
+        <div class="exemple-item reveal reveal-delay-1">
+          <div class="exemple-num">05</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand vous ne pouvez ni exporter, ni transmettre, ni récupérer</h3>
+            <p class="exemple-text">La portabilité est un test de propriété. Ce que vous ne pouvez pas emporter n'est pas à vous — c'est à la plateforme qui vous l'a prêté, sous conditions, jusqu'à nouvel ordre.</p>
+          </div>
+        </div>
+        <div class="exemple-item reveal reveal-delay-2">
+          <div class="exemple-num">06</div>
+          <div class="exemple-content">
+            <h3 class="exemple-title">Quand on vous demande votre consentement</h3>
+            <p class="exemple-text">Le consentement est la forme la plus visible de la propriété sur soi. Être consulté, c'est être reconnu comme propriétaire de quelque chose — votre attention, vos données, votre décision.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="site-visual site-visual--portrait site-visual--centered site-visual--dark reveal reveal-delay-2">
+        <div class="site-visual__frame">
+          <img
+            src="assets/images/pureowner-affiche.png"
+            alt="Affiche PureOwner expliquant que le futur appartient à ceux qui possèdent leur identité numérique."
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          PureOwner résume cette bascule en une promesse concrète : comprendre ce que vous utilisez déjà, puis reprendre la maîtrise de votre identité et de vos actifs numériques.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ VISION ══ -->
+  <section id="vision" aria-label="Vision">
+    <div class="container">
+      <div class="vision-inner">
+        <div>
+          <p class="label reveal">— Vision</p>
+          <h2 class="vision-title reveal reveal-delay-1">Vers une nouvelle culture de la propriété personnelle</h2>
+        </div>
+        <div class="vision-body">
+          <p class="reveal reveal-delay-1">Nous avons appris à utiliser des interfaces. Nous avons appris à ouvrir des comptes, accepter des conditions, stocker nos traces, partager nos informations.</p>
+          <p class="reveal reveal-delay-2">Mais nous avons rarement appris à reconnaître les conditions réelles de la propriété. À distinguer ce qui nous appartient de ce qui nous est simplement prêté, sous conditions, jusqu'à révocation.</p>
+          <p class="vision-accent reveal reveal-delay-3">PureOwner défend une idée simple : dans un environnement numérique dense, savoir ce qui nous appartient vraiment devient une compétence de base.</p>
+        </div>
+      </div>
+      <figure class="site-visual site-visual--portrait site-visual--centered reveal reveal-delay-2">
+        <div class="site-visual__frame">
+          <img
+            src="assets/images/evolution-internet-humanisation.png"
+            alt="Infographie sur l'évolution d'Internet, du Web1 au Web3, de la donnée produit à la possession de son identité."
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          La vision PureOwner s'inscrit dans cette trajectoire : après la donnée captée et les plateformes centralisées, la prochaine étape est l'identité possédée.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ PROMESSE ══ -->
+  <section id="promesse" aria-label="Promesse">
+    <div class="container">
+      <p class="label reveal">— Ce que PureOwner rend possible</p>
+      <h2 class="promesse-title reveal reveal-delay-1">Quatre engagements concrets.</h2>
+      <div class="promesse-grid">
+        <div class="promesse-card reveal">
+          <p class="promesse-card-num">I</p>
+          <h3 class="promesse-card-title">Voir plus clair</h3>
+          <p class="promesse-card-text">Comprendre les mécanismes réels qui définissent la propriété dans un environnement numérique. Sans jargon, sans simplification excessive.</p>
+        </div>
+        <div class="promesse-card reveal reveal-delay-1">
+          <p class="promesse-card-num">II</p>
+          <h3 class="promesse-card-title">Nommer les différences</h3>
+          <p class="promesse-card-text">Distinguer l'usage de la possession, la permission de la maîtrise, l'accès conditionné de l'accès souverain.</p>
+        </div>
+        <div class="promesse-card reveal reveal-delay-2">
+          <p class="promesse-card-num">III</p>
+          <h3 class="promesse-card-title">Reprendre la main</h3>
+          <p class="promesse-card-text">Identifier les leviers concrets qui permettent de passer d'un statut d'usager à celui de propriétaire dans sa vie numérique.</p>
+        </div>
+        <div class="promesse-card reveal reveal-delay-3">
+          <p class="promesse-card-num">IV</p>
+          <h3 class="promesse-card-title">Construire une discipline</h3>
+          <p class="promesse-card-text">Développer des réflexes durables, une attention juste, et une posture cohérente face aux systèmes qui gèrent ce qui nous appartient.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA FINAL ══ -->
+  <section id="cta" aria-label="Rejoindre la liste">
+    <div class="container--narrow" style="text-align:center;">
+      <p class="label reveal" style="justify-content:center;display:block;">— Rejoindre</p>
+      <h2 class="cta-title reveal reveal-delay-1">
+        Reprendre possession commence par mieux regarder ce qui vous appartient déjà
+      </h2>
+      <p class="cta-text reveal reveal-delay-2">
+        Rejoignez PureOwner pour suivre le lancement et recevoir les premiers contenus, réflexions et outils autour de la propriété personnelle à l'ère numérique.
+      </p>
+      <form class="cta-form reveal reveal-delay-3" onsubmit="handleSubmit(event)" aria-label="Inscription à la liste">
+        <input class="cta-input" type="email" placeholder="votre@adresse.com" required aria-label="Adresse email">
+        <button class="cta-btn" type="submit">Rejoindre la liste</button>
+      </form>
+      <p class="cta-micro reveal reveal-delay-4">Aucun bruit inutile. Seulement des contenus clairs, utiles et bien pensés.</p>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-logo">PureOwner</p>
+          <p class="footer-baseline">Réapprendre à reconnaître ce que veut dire posséder.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Navigation footer">
+          <a href="#vision">Vision</a>
+          <a href="#pedagogie">Méthode</a>
+          <a href="#exemples">Ressources</a>
+          <a href="#manifeste">À propos</a>
+          <a href="#cta">Contact</a>
+          <a href="#">Politique de confidentialité</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 PureOwner. Tous droits réservés.</p>
+        <p class="footer-copy" style="font-style:italic;opacity:0.2;">Own your digital self.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Header scroll state ──
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Mobile nav toggle ──
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // ── Scroll reveal ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── CTA form ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Bienvenue.';
+      btn.style.background = '#7C8B7A';
+      btn.style.color = '#F7F4EE';
+      btn.style.borderColor = '#7C8B7A';
+      input.value = '';
+      input.placeholder = 'Vous êtes sur la liste.';
+      input.disabled = true;
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
