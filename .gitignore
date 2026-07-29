@@ -4,3 +4,4 @@ PureOwner-site/
 PROMPT_LIBRARY.md
 .recovery/
 .pnpm-store/
+.wrangler/
