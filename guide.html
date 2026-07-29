@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Guide PureOwner — Comprendre la propriété numérique Web3</title>
+<meta name="description" content="Le guide complet PureOwner : pourquoi le transfert de propriété numérique arrive, pourquoi agir tôt, les différences Web2 / Web3, quelles extensions choisir et comment protéger son identité numérique pour les décennies à venir.">
+<meta name="keywords" content="guide Web3, identité numérique, propriété numérique, Web2 Web3, extensions Web3, protéger son nom, PureOwner, patrimoine numérique">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="./images/pureowner-logo.png">
+<meta property="og:title" content="Le Guide PureOwner — Comprendre la propriété numérique Web3">
+<meta property="og:description" content="Pourquoi cette évolution arrive, pourquoi agir tôt, Web2 vs Web3, quelle extension choisir et comment protéger son identité numérique.">
+<meta property="og:image" content="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/guide.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le Guide PureOwner — Comprendre la propriété numérique Web3">
+<meta name="twitter:description" content="Pourquoi cette évolution arrive, pourquoi agir tôt, Web2 vs Web3, quelle extension choisir et comment protéger son identité numérique.">
+<meta name="twitter:image" content="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Le Guide PureOwner — Comprendre la propriété numérique Web3",
+  "description": "Le guide complet pour comprendre le transfert de propriété numérique du Web2 vers le Web3.",
+  "publisher": { "@type": "Organization", "name": "PureOwner" }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#06231c;--bg-2:#0b2e26;--panel:#0e3a30;--card:#0f4034;
+  --fg:#f4efe1;--muted:#9bbcae;
+  --gold:#d4af37;--gold-2:#f0d88a;--gold-glow:rgba(212,175,55,0.35);
+  --emerald:#1f7a5e;--emerald-bright:#2fae84;
+  --border:rgba(212,175,55,0.22);--border-soft:rgba(212,175,55,0.12);
+  --sepia:#7d6a4a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--fg);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--bg)}
+a{color:inherit}
+h1,h2,h3,h4,.display{font-family:'Didot','Playfair Display','Bodoni MT',Georgia,'Times New Roman',serif}
+
+.fan{position:absolute;pointer-events:none;opacity:0.5}
+.fan svg{display:block}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;backdrop-filter:blur(16px);background:rgba(6,35,28,0.82);border-bottom:1px solid var(--border-soft)}
+.logo{display:flex;align-items:center;gap:0.7rem;font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;letter-spacing:0.04em;color:var(--gold-2);text-decoration:none}
+.logo-mark{width:34px;height:34px;flex:none;object-fit:cover;border-radius:8px}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold-2)}
+.nav-links a.active{color:var(--gold-2)}
+.nav-cta{padding:0.55rem 1.15rem;border:1px solid var(--border);border-radius:2px;color:var(--gold-2)!important}
+.nav-cta:hover{border-color:var(--gold);background:rgba(212,175,55,0.06)}
+.language-menu{position:relative}
+.lang-trigger{display:flex;align-items:center;gap:0.45rem;padding:0.55rem 0.8rem;border:1px solid var(--border);border-radius:2px;background:linear-gradient(160deg,rgba(212,175,55,0.12),rgba(6,35,28,0.78));color:var(--gold-2);font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;cursor:pointer}
+.lang-trigger:hover{border-color:var(--gold);box-shadow:0 0 18px rgba(212,175,55,0.14)}
+.lang-trigger .chev{font-size:0.7rem;color:var(--muted)}
+.lang-panel{position:absolute;right:0;top:calc(100% + 0.75rem);z-index:120;min-width:220px;padding:0.55rem;background:rgba(6,35,28,0.96);border:1px solid var(--border);border-radius:3px;box-shadow:0 24px 60px rgba(0,0,0,0.38);backdrop-filter:blur(14px);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity 0.18s,transform 0.18s}
+.language-menu.open .lang-panel,.language-menu:focus-within .lang-panel{opacity:1;transform:translateY(0);pointer-events:auto}
+.lang-panel button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:0.8rem;padding:0.72rem 0.78rem;border:0;border-bottom:1px solid var(--border-soft);background:transparent;color:var(--muted);font:inherit;font-size:0.76rem;font-weight:700;text-align:left;cursor:pointer}
+.lang-panel button:last-child{border-bottom:0}
+.lang-panel button:hover,.lang-panel button.active{color:var(--gold-2);background:rgba(212,175,55,0.08)}
+.lang-panel small{color:var(--gold);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase}
+@media(max-width:920px){.nav-links{display:flex;gap:0.75rem}.nav-links li:not(.language-menu){display:none}nav{padding:0.9rem 1.25rem}}
+
+.page-hero{position:relative;padding:9rem 2.5rem 4rem;max-width:1320px;margin:0 auto;text-align:center;overflow:hidden}
+.page-hero .eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.24em;color:var(--gold);margin-bottom:1.6rem;padding:0.45rem 1rem;border:1px solid var(--border);border-radius:2px}
+.page-hero .eyebrow::before,.page-hero .eyebrow::after{content:'';width:18px;height:1px;background:var(--gold)}
+.page-hero h1{font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.06;font-weight:700;margin-bottom:1.4rem}
+.page-hero h1 .it{font-style:italic;color:var(--gold-2)}
+.page-hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.78}
+
+.toc{max-width:1080px;margin:0 auto 1rem;padding:0 2.5rem}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:3px;overflow:hidden}
+.toc-item{display:flex;flex-direction:column;gap:0.4rem;padding:1.5rem 1.4rem;background:var(--panel);text-decoration:none;transition:background 0.25s}
+.toc-item:hover{background:var(--card)}
+.toc-item .toc-num{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.4rem;color:var(--gold);font-style:italic}
+.toc-item .toc-title{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--gold-2);line-height:1.2}
+.toc-item .toc-sub{font-size:0.8rem;color:var(--muted);line-height:1.5}
+
+.divider-deco{display:flex;align-items:center;justify-content:center;gap:1rem;margin:0 auto;max-width:1320px;padding:0 2.5rem}
+.divider-deco span{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.divider-deco .gem{width:10px;height:10px;background:var(--gold);transform:rotate(45deg);flex:none}
+
+.section{max-width:1080px;margin:0 auto;padding:4.5rem 2.5rem}
+.section-wide{max-width:1320px}
+
+.chapter-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.8rem}
+.chapter-head .ch-num{font-family:'Didot','Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(2rem,5vw,3.4rem);color:var(--gold);line-height:1;flex:none}
+.chapter-head .ch-eyebrow{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.24em;color:var(--gold);margin-bottom:0.6rem}
+.chapter-head h2{font-size:clamp(1.8rem,4.2vw,3rem);font-weight:700;line-height:1.1}
+.chapter-head h2 .it{font-style:italic;color:var(--gold-2)}
+
+.prose p{color:var(--muted);font-size:1.04rem;line-height:1.85;margin-bottom:1.2rem}
+.prose p strong{color:var(--fg);font-weight:600}
+.prose .lead{font-size:1.14rem;color:var(--fg)}
+
+.figure{margin:2rem 0}
+.figure-frame{position:relative;width:100%;padding:12px;background:linear-gradient(160deg,var(--gold),var(--emerald) 60%,var(--gold));border-radius:4px}
+.figure-frame img{width:100%;display:block;border-radius:2px;object-fit:cover;filter:saturate(0.92) contrast(1.04)}
+.figure-cap{font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.8rem;letter-spacing:0.05em}
+
+.pullquote{margin:2.5rem 0;padding:2rem 2.2rem;border-left:2px solid var(--gold);background:linear-gradient(160deg,var(--bg-2),var(--bg));border-radius:0 4px 4px 0}
+.pullquote p{font-family:'Didot','Playfair Display',Georgia,serif;font-size:clamp(1.2rem,2.6vw,1.7rem);line-height:1.4;color:var(--fg);font-style:italic;margin:0}
+.pullquote p .hl{color:var(--gold-2)}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;position:relative;margin-top:1rem}
+.compare-divider{position:absolute;left:50%;top:6%;bottom:6%;width:1px;background:linear-gradient(180deg,transparent,var(--gold),transparent);transform:translateX(-50%)}
+.compare-divider .vmark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);width:14px;height:14px;background:var(--gold);box-shadow:0 0 0 6px var(--bg)}
+.col{padding:2.4rem 2rem;border:1px solid var(--border-soft);border-radius:4px;position:relative}
+.col.web2{background:linear-gradient(160deg,#241f17,#1a160f)}
+.col.web3{background:linear-gradient(160deg,var(--card),var(--bg-2))}
+.col-tag{display:inline-block;font-size:0.66rem;text-transform:uppercase;letter-spacing:0.18em;font-weight:700;padding:0.4rem 0.85rem;border-radius:2px;margin-bottom:0.4rem}
+.col.web2 .col-tag{color:var(--sepia);background:rgba(125,106,74,0.14);border:1px solid rgba(125,106,74,0.4)}
+.col.web3 .col-tag{color:var(--gold-2);background:rgba(212,175,55,0.1);border:1px solid var(--border)}
+.col h3{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1.5rem;line-height:1.1}
+.col.web2 h3{color:#bfae8d}
+.col.web3 h3{color:var(--gold-2)}
+.col ul{list-style:none}
+.col li{display:flex;gap:0.85rem;align-items:flex-start;padding:0.85rem 0;border-bottom:1px solid var(--border-soft);font-size:0.96rem;line-height:1.55}
+.col li:last-child{border-bottom:none}
+.col li .mk{flex:none;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;margin-top:1px}
+.col.web2 li{color:#cdbf9f}
+.col.web2 .mk{background:rgba(125,106,74,0.18);color:var(--sepia)}
+.col.web3 li{color:var(--fg)}
+.col.web3 .mk{background:rgba(47,174,132,0.15);color:var(--emerald-bright)}
+@media(max-width:760px){.compare{grid-template-columns:1fr}.compare-divider{display:none}}
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:3px;overflow:hidden;margin-top:1.5rem}
+.pillar{background:var(--panel);padding:2rem 1.6rem;text-align:center}
+.pillar .pi-mark{font-size:1.6rem;color:var(--gold);margin-bottom:0.8rem}
+.pillar h3{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--gold-2);margin-bottom:0.5rem;line-height:1.2}
+.pillar p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+
+.ext-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:1.5rem}
+.ext-card{padding:1.8rem 1.6rem;background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border-soft);border-radius:3px;transition:all 0.3s}
+.ext-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 18px 40px -18px rgba(0,0,0,0.7)}
+.ext-card .ext-name{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--gold-2);margin-bottom:0.3rem}
+.ext-card .ext-for{font-size:0.66rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold);margin-bottom:0.9rem}
+.ext-card p{font-size:0.9rem;color:var(--muted);line-height:1.6}
+
+.steps{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+.step{display:flex;gap:1.3rem;align-items:flex-start;padding:1.6rem 1.7rem;background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border-soft);border-radius:3px}
+.step .step-num{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Didot','Playfair Display',Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--gold-2)}
+.step h3{font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.2rem;color:var(--gold-2);margin-bottom:0.35rem}
+.step p{font-size:0.92rem;color:var(--muted);line-height:1.65}
+
+.thesis{position:relative;background:linear-gradient(160deg,var(--bg-2),var(--bg));border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);overflow:hidden}
+.thesis-inner{max-width:920px;margin:0 auto;padding:5rem 2.5rem;text-align:center;position:relative;z-index:1}
+.thesis-inner .eyebrow{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.26em;color:var(--gold);margin-bottom:1.4rem}
+.thesis-inner h2{font-size:clamp(1.7rem,3.8vw,2.6rem);font-weight:700;line-height:1.28;margin-bottom:1.4rem}
+.thesis-inner h2 .it{font-style:italic;color:var(--gold-2)}
+.thesis-inner p{color:var(--muted);font-size:1.05rem;line-height:1.85;max-width:680px;margin:0 auto}
+
+.faq{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem}
+.faq details{background:var(--panel);border:1px solid var(--border-soft);border-radius:3px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:1.3rem 1.5rem;font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.08rem;color:var(--gold-2);display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color 0.2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q-mark{flex:none;color:var(--gold);font-size:1.2rem;transition:transform 0.25s}
+.faq details[open] summary .q-mark{transform:rotate(45deg)}
+.faq summary:hover{color:var(--gold)}
+.faq .faq-body{padding:0 1.5rem 1.4rem;color:var(--muted);font-size:0.96rem;line-height:1.75}
+
+.cta-band{position:relative;text-align:center;padding:5rem 2.5rem;max-width:1080px;margin:0 auto}
+.cta-band h2{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:700;line-height:1.12;margin-bottom:1.2rem}
+.cta-band h2 .it{font-style:italic;color:var(--gold-2)}
+.cta-band p{max-width:600px;margin:0 auto 2.2rem;color:var(--muted);font-size:1.04rem;line-height:1.78}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 1.9rem;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1206;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;border-radius:2px;transition:all 0.3s}
+.btn-gold:hover{box-shadow:0 0 36px var(--gold-glow);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 1.9rem;background:transparent;color:var(--gold-2);text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;border:1px solid var(--border);border-radius:2px;transition:all 0.3s}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(212,175,55,0.06)}
+
+footer{border-top:1px solid var(--border-soft)}
+.footer-inner{max-width:1320px;margin:0 auto;padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--muted);letter-spacing:0.04em}
+.footer-inner .f-logo{font-family:'Didot','Playfair Display',Georgia,serif;color:var(--gold-2);font-size:1rem;letter-spacing:0.06em}
+.footer-inner a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-inner a:hover{color:var(--gold-2)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo" aria-label="PureOwner accueil">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <rect width="100" height="100" fill="none"/>
+      <g fill="none" stroke="#d4af37" stroke-width="3">
+        <path d="M50 80 L20 44 Q50 28 80 44 Z"/>
+        <path d="M50 80 L50 40"/>
+      </g>
+      <circle cx="50" cy="40" r="6" fill="#f0d88a"/>
+      <text x="50" y="27" font-family="Georgia,serif" font-size="20" fill="#f0d88a" text-anchor="middle" font-weight="700">P</text>
+    </svg>
+    PureOwner
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#transition">La transition</a></li>
+    <li><a href="guide.html" class="active">Le guide</a></li>
+    <li><a href="index.html#extensions">Extensions</a></li>
+    <li><a href="marketplace.html">Marketplace</a></li>
+    <li class="language-menu">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="lang-current">FR</span><span class="chev">⌄</span></button>
+      <div class="lang-panel" role="menu" aria-label="Choisir une langue">
+        <button type="button" data-lang="fr" role="menuitem">Français <small>FR</small></button>
+        <button type="button" data-lang="en" role="menuitem">English <small>EN</small></button>
+        <button type="button" data-lang="es" role="menuitem">Español <small>ES</small></button>
+        <button type="button" data-lang="de" role="menuitem">Deutsch <small>DE</small></button>
+        <button type="button" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
+        <button type="button" data-lang="pt" role="menuitem">Português <small>PT</small></button>
+      </div>
+    </li>
+    <li><a href="marketplace.html" class="nav-cta">Réserver mon nom</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero" id="top" aria-label="Introduction au guide">
+  <div class="fan" style="top:10px;right:-40px;width:320px;height:320px;opacity:0.3">
+    <svg viewBox="0 0 200 200" width="320" height="320" aria-hidden="true">
+      <g fill="none" stroke="#d4af37" stroke-width="1">
+        <path d="M100 190 L20 70 Q100 30 180 70 Z"/>
+        <path d="M100 190 L48 92"/><path d="M100 190 L74 80"/>
+        <path d="M100 190 L100 72"/><path d="M100 190 L126 80"/><path d="M100 190 L152 92"/>
+      </g>
+    </svg>
+  </div>
+  <div class="eyebrow">Le guide de la propriété numérique</div>
+  <h1>Comprendre le grand <span class="it">transfert</span> numérique.</h1>
+  <p>L'objectif de PureOwner n'est pas de vendre des noms de domaine. Notre but est de faire comprendre que nous vivons le plus grand transfert de propriété numérique depuis la création d'Internet — et de vous accompagner, simplement, dans l'acquisition de votre patrimoine numérique.</p>
+</header>
+
+<nav class="toc" aria-label="Sommaire du guide">
+  <div class="toc-grid">
+    <a class="toc-item" href="#pourquoi">
+      <span class="toc-num">I</span>
+      <span class="toc-title">Pourquoi cette évolution arrive</span>
+      <span class="toc-sub">Le contexte du transfert de propriété numérique.</span>
+    </a>
+    <a class="toc-item" href="#web2-web3">
+      <span class="toc-num">II</span>
+      <span class="toc-title">Web2 contre Web3</span>
+      <span class="toc-sub">La location d'hier, la propriété d'aujourd'hui.</span>
+    </a>
+    <a class="toc-item" href="#tot">
+      <span class="toc-num">III</span>
+      <span class="toc-title">Pourquoi agir tôt</span>
+      <span class="toc-sub">Le premier arrivé sécurise son identité.</span>
+    </a>
+    <a class="toc-item" href="#extensions">
+      <span class="toc-num">IV</span>
+      <span class="toc-title">Quelle extension choisir</span>
+      <span class="toc-sub">Orienter votre choix selon votre projet.</span>
+    </a>
+    <a class="toc-item" href="#proteger">
+      <span class="toc-num">V</span>
+      <span class="toc-title">Protéger son identité</span>
+      <span class="toc-sub">Sécuriser votre nom pour les décennies à venir.</span>
+    </a>
+    <a class="toc-item" href="#faq">
+      <span class="toc-num">VI</span>
+      <span class="toc-title">Questions fréquentes</span>
+      <span class="toc-sub">Les réponses essentielles avant de commencer.</span>
+    </a>
+  </div>
+</nav>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="pourquoi" aria-label="Pourquoi cette évolution arrive">
+  <div class="chapter-head">
+    <span class="ch-num">I</span>
+    <div>
+      <div class="ch-eyebrow">Le contexte</div>
+      <h2>Pourquoi cette évolution <span class="it">arrive</span></h2>
+    </div>
+  </div>
+  <div class="prose">
+    <p class="lead">Pendant plus de 35 ans, les noms de domaine étaient principalement destinés aux entreprises. Les particuliers possédaient une adresse e-mail ou un compte sur une plateforme, mais rarement leur propre identité numérique.</p>
+    <p>Notre vie en ligne s'est construite sur des comptes que nous ne possédons pas vraiment. Un identifiant prêté par une plateforme, une adresse e-mail liée à un fournisseur, un nom d'utilisateur qui peut disparaître du jour au lendemain. Nous étions locataires de notre propre présence numérique.</p>
+    <p>Aujourd'hui, grâce au Web3, chacun peut devenir propriétaire de son prénom, de son nom ou de son identité numérique <strong>de manière permanente</strong>. Ce n'est plus un privilège réservé aux marques : c'est désormais accessible à chaque personne.</p>
+    <div class="figure">
+      <div class="figure-frame">
+        <img src="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png" alt="Le transfert de propriété numérique vers le Web3">
+      </div>
+      <div class="figure-cap">Du compte loué à l'identité possédée · le passage au Web3</div>
+    </div>
+    <p>C'est exactement le type de bascule qui ne se présente qu'une seule fois. Comme l'arrivée des noms de domaine pour les entreprises dans les années 1990, le moment où une ressource rare devient accessible est aussi le moment où elle se réserve le plus vite.</p>
+  </div>
+</section>
+
+<section class="thesis" aria-label="La thèse">
+  <div class="fan" style="top:-70px;left:-50px;width:280px;height:280px;opacity:0.2">
+    <svg viewBox="0 0 200 200" width="280" height="280" aria-hidden="true">
+      <g fill="none" stroke="#d4af37" stroke-width="1">
+        <path d="M100 190 L20 70 Q100 30 180 70 Z"/>
+        <path d="M100 190 L48 92"/><path d="M100 190 L74 80"/>
+        <path d="M100 190 L100 72"/><path d="M100 190 L126 80"/><path d="M100 190 L152 92"/>
+      </g>
+    </svg>
+  </div>
+  <div class="thesis-inner">
+    <div class="eyebrow">L'idée à retenir</div>
+    <h2>Il ne s'agit pas d'acheter un domaine, mais de <span class="it">réserver une partie de soi</span> avant qu'elle ne soit prise par quelqu'un d'autre.</h2>
+    <p>La marketplace ne vend donc pas uniquement des noms de domaine : elle accompagne chaque personne dans l'acquisition de son patrimoine numérique.</p>
+  </div>
+</section>
+
+<section class="section" id="web2-web3" aria-label="Web2 contre Web3">
+  <div class="chapter-head">
+    <span class="ch-num">II</span>
+    <div>
+      <div class="ch-eyebrow">Le contraste</div>
+      <h2>Web2 <span class="it">contre</span> Web3</h2>
+    </div>
+  </div>
+  <div class="prose">
+    <p>Le même besoin — posséder son nom — mais deux mondes radicalement différents. Hier, on louait. Aujourd'hui, on possède.</p>
+  </div>
+  <div class="compare">
+    <div class="compare-divider"><span class="vmark"></span></div>
+    <div class="col web2">
+      <span class="col-tag">Hier · Web2</span>
+      <h3>La location</h3>
+      <ul>
+        <li><span class="mk">↻</span><span>Les entreprises achetaient un domaine, rarement les particuliers.</span></li>
+        <li><span class="mk">↻</span><span>Il fallait renouveler l'abonnement chaque année.</span></li>
+        <li><span class="mk">✕</span><span>En cas d'oubli de paiement, le domaine pouvait être perdu.</span></li>
+        <li><span class="mk">⛓</span><span>L'utilisateur dépendait d'un registrar et d'un système centralisé.</span></li>
+      </ul>
+    </div>
+    <div class="col web3">
+      <span class="col-tag">Aujourd'hui · Web3</span>
+      <h3>La propriété</h3>
+      <ul>
+        <li><span class="mk">✓</span><span>Un domaine peut être acquis une seule fois.</span></li>
+        <li><span class="mk">✓</span><span>Il appartient directement à son détenteur.</span></li>
+        <li><span class="mk">✓</span><span>Aucune reconduction annuelle pour de nombreuses extensions Web3.</span></li>
+        <li><span class="mk">✓</span><span>Un véritable actif : identité, adresse de paiement, connexion, site web et patrimoine transmissible.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="prose" style="margin-top:2rem">
+    <p>La différence n'est pas seulement technique. Avec un nom Web3, vous ne dépendez plus d'un intermédiaire pour rester propriétaire. Le nom est inscrit à votre nom, et il le reste — tant que vous le conservez.</p>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="tot" aria-label="Pourquoi agir tôt">
+  <div class="chapter-head">
+    <span class="ch-num">III</span>
+    <div>
+      <div class="ch-eyebrow">Pourquoi maintenant</div>
+      <h2>Pourquoi agir <span class="it">tôt</span> est essentiel</h2>
+    </div>
+  </div>
+  <div class="prose">
+    <p>Le parallèle avec l'immobilier doit être omniprésent. Personne n'attend qu'une autre personne achète sa maison avant de chercher un logement. Personne ne laisserait volontairement son nom être déposé comme marque par un tiers.</p>
+  </div>
+  <div class="figure">
+    <div class="figure-frame">
+      <img src="./images/cbd568f3-a3f4-4d5c-99a3-fa385c173145.png" alt="Le parallèle entre l'immobilier et la propriété numérique">
+    </div>
+    <div class="figure-cap">Posséder son nom comme on possède son logement</div>
+  </div>
+  <div class="pullquote">
+    <p>Demain, il sera tout aussi naturel de posséder son <span class="hl">prénom numérique</span> qu'il l'est aujourd'hui de posséder son logement.</p>
+  </div>
+  <div class="prose">
+    <p>Un nom Web3 fonctionne comme un bien immobilier : il est unique, il vous appartient, et sa valeur grandit avec son usage. La seule différence, c'est qu'il n'en existe qu'un seul exemplaire — et qu'une fois pris, il l'est définitivement.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pi-mark">⏳</div>
+      <h3>Le premier arrivé</h3>
+      <p>Un nom ne peut appartenir qu'à une seule personne. Le réserver tôt, c'est le sécuriser pour des décennies.</p>
+    </div>
+    <div class="pillar">
+      <div class="pi-mark">🪙</div>
+      <h3>Un actif durable</h3>
+      <p>Acquis une fois, sans reconduction annuelle pour de nombreuses extensions — un patrimoine qui se transmet.</p>
+    </div>
+    <div class="pillar">
+      <div class="pi-mark">🔑</div>
+      <h3>Une identité unifiée</h3>
+      <p>Adresse de paiement, identifiant de connexion, site web : un seul nom pour toute votre vie numérique.</p>
+    </div>
+    <div class="pillar">
+      <div class="pi-mark">🛡️</div>
+      <h3>Une protection</h3>
+      <p>Protégez votre nom avant qu'un tiers ne le réserve — comme on protège une marque ou un bien.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="extensions" aria-label="Quelle extension choisir">
+  <div class="chapter-head">
+    <span class="ch-num">IV</span>
+    <div>
+      <div class="ch-eyebrow">Le choix</div>
+      <h2>Quelle <span class="it">extension</span> choisir</h2>
+    </div>
+  </div>
+  <div class="prose">
+    <p>Chaque extension a sa vocation. Voici comment orienter votre choix selon votre projet — qu'il s'agisse d'incarner votre identité personnelle, de simplifier vos paiements ou de bâtir une communauté.</p>
+  </div>
+  <div class="ext-grid">
+    <div class="ext-card">
+      <div class="ext-name">.x</div>
+      <div class="ext-for">Identité personnelle</div>
+      <p>Courte et mémorable, idéale pour incarner votre prénom ou votre pseudonyme au quotidien.</p>
+    </div>
+    <div class="ext-card">
+      <div class="ext-name">.crypto</div>
+      <div class="ext-for">Paiements &amp; portefeuille</div>
+      <p>Parfaite comme adresse de paiement unifiée : remplacez vos longues adresses par votre nom.</p>
+    </div>
+    <div class="ext-card">
+      <div class="ext-name">.nft</div>
+      <div class="ext-for">Créateurs &amp; collections</div>
+      <p>Pour les artistes et collectionneurs qui veulent affirmer leur identité dans l'univers numérique.</p>
+    </div>
+    <div class="ext-card">
+      <div class="ext-name">.wallet</div>
+      <div class="ext-for">Sécurité &amp; finances</div>
+      <p>Une adresse claire et lisible pour recevoir et envoyer, sans erreur de copier-coller.</p>
+    </div>
+    <div class="ext-card">
+      <div class="ext-name">.dao</div>
+      <div class="ext-for">Communautés &amp; projets</div>
+      <p>Idéale pour les collectifs, organisations et projets qui se construisent ensemble.</p>
+    </div>
+    <div class="ext-card">
+      <div class="ext-name">.com</div>
+      <div class="ext-for">Entreprise &amp; Web2</div>
+      <p>Toujours incontournable pour une présence professionnelle classique et reconnue de tous.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="proteger" aria-label="Comment protéger son identité numérique">
+  <div class="chapter-head">
+    <span class="ch-num">V</span>
+    <div>
+      <div class="ch-eyebrow">La méthode</div>
+      <h2>Protéger son identité pour les <span class="it">décennies</span> à venir</h2>
+    </div>
+  </div>
+  <div class="prose">
+    <p>Réserver son nom n'est que la première étape. Le protéger durablement repose sur quelques gestes simples, à la portée de chacun.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div>
+        <h3>Réservez votre nom dès maintenant</h3>
+        <p>Le premier arrivé est le premier servi. Sécurisez votre prénom, votre nom ou votre pseudonyme avant qu'un tiers ne le fasse.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div>
+        <h3>Sécurisez plusieurs extensions clés</h3>
+        <p>Comme une marque protège ses variantes, réservez les extensions stratégiques pour votre projet afin d'éviter toute confusion ou usurpation.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div>
+        <h3>Connectez votre nom à votre vie numérique</h3>
+        <p>Utilisez-le comme adresse de paiement, identifiant de connexion et site web. Plus il est utilisé, plus il s'enracine comme votre identité.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <div>
+        <h3>Conservez vos accès en sécurité</h3>
+        <p>Puisque le nom vous appartient directement, la garde de vos clés est essentielle. Sauvegardez-les hors ligne, dans un endroit sûr.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">5</span>
+      <div>
+        <h3>Préparez la transmission</h3>
+        <p>Un nom Web3 est un patrimoine transmissible. Anticipez sa transmission comme vous le feriez pour tout bien durable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="section" id="faq" aria-label="Questions fréquentes">
+  <div class="chapter-head">
+    <span class="ch-num">VI</span>
+    <div>
+      <div class="ch-eyebrow">Pour aller plus loin</div>
+      <h2>Questions <span class="it">fréquentes</span></h2>
+    </div>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>Est-ce que je deviens réellement propriétaire de mon nom ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Oui. Contrairement au Web2, où vous louiez un domaine auprès d'un registrar, un nom Web3 vous appartient directement. Il est inscrit à votre nom et personne ne peut vous le retirer parce que vous auriez oublié de payer un abonnement.</div>
+    </details>
+    <details>
+      <summary>Dois-je renouveler mon nom chaque année ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Pour de nombreuses extensions Web3, non. Le nom est acquis une seule fois et reste votre propriété sans reconduction annuelle. C'est l'une des différences majeures avec l'ancien modèle de location.</div>
+    </details>
+    <details>
+      <summary>À quoi sert concrètement un nom Web3 ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Il devient un véritable actif numérique : il peut servir d'identité, d'adresse de paiement, d'identifiant de connexion, de site web et de patrimoine transmissible. Un seul nom pour unifier toute votre présence en ligne.</div>
+    </details>
+    <details>
+      <summary>Pourquoi est-il urgent d'agir maintenant ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Parce que chaque nom est unique. Comme pour un logement ou une marque, le premier arrivé est le premier servi. Plus vous attendez, plus le risque qu'un tiers réserve votre nom augmente.</div>
+    </details>
+    <details>
+      <summary>Quelle extension dois-je choisir ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Cela dépend de votre projet : .x pour une identité personnelle, .crypto ou .wallet pour les paiements, .nft pour les créateurs, .dao pour les communautés, .com pour une présence d'entreprise classique. Beaucoup choisissent d'en sécuriser plusieurs.</div>
+    </details>
+    <details>
+      <summary>Puis-je transmettre mon nom à mes proches ? <span class="q-mark">+</span></summary>
+      <div class="faq-body">Oui. Puisqu'il s'agit d'un actif que vous possédez réellement, il peut être transmis comme tout patrimoine durable. C'est une dimension à anticiper dès l'acquisition.</div>
+    </details>
+  </div>
+</section>
+
+<div class="divider-deco"><span></span><span class="gem"></span><span></span></div>
+
+<section class="cta-band" aria-label="Passer à l'action">
+  <div class="fan" style="top:-30px;right:-30px;width:240px;height:240px;opacity:0.22">
+    <svg viewBox="0 0 200 200" width="240" height="240" aria-hidden="true">
+      <g fill="none" stroke="#d4af37" stroke-width="1">
+        <path d="M100 190 L20 70 Q100 30 180 70 Z"/>
+        <path d="M100 190 L48 92"/><path d="M100 190 L74 80"/>
+        <path d="M100 190 L100 72"/><path d="M100 190 L126 80"/><path d="M100 190 L152 92"/>
+      </g>
+    </svg>
+  </div>
+  <h2>Prêt à réserver une <span class="it">partie de vous</span> ?</h2>
+  <p>Vous avez compris pourquoi le moment est venu. La prochaine étape est simple : cherchez votre nom et sécurisez-le, avant quelqu'un d'autre.</p>
+  <div class="cta-row">
+    <a href="marketplace.html" class="btn-gold">Réserver mon nom →</a>
+    <a href="index.html#transition" class="btn-ghost">Revoir la transition</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="f-logo">PureOwner</div>
+    <div>© <span id="year"></span> PureOwner · La référence de la propriété numérique</div>
+    <div><a href="marketplace.html">Marketplace</a> · <a href="guide.html">Le guide</a> · <a href="index.html#transition">La transition</a></div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var CLIENT_BASE = "https://unstoppabledomains.com";
+  function absolutise(u) {
+    if (!u) return u;
+    if (u.indexOf('http://') === 0 || u.indexOf('https://') === 0) return u;
+    return CLIENT_BASE + (u.charAt(0) === '/' ? u : '/' + u);
+  }
+  var CONFIG = {"accountId":"grand-mountain-5rej5rk","includeNames":null,"excludeNames":null,"priceMin":null,"priceMax":null,"hasLto":null,"hasOffers":null,"type":null,"pageSize":20};
+  var API_BASE = "https://api.unstoppabledomains.com/api/public/storefront/" + encodeURIComponent(CONFIG.accountId);
+  var currentPage = 1;
+  var currentSort = "listedAt";
+  var currentSortDir = "DESC";
+  var currentQuery = "";
+  var debounceTimer = null;
+
+  var $ = function(s){ return document.querySelector(s); };
+
+  function fmt(v) {
+    return (v / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
+  }
+
+  function buildUrl() {
+    var params = [];
+    params.push("page=" + currentPage);
+    params.push("pageSize=" + CONFIG.pageSize);
+    params.push("sortBy=" + currentSort);
+    params.push("sortDirection=" + currentSortDir);
+    if (currentQuery && currentQuery.length >= 2) params.push("query=" + encodeURIComponent(currentQuery));
+    if (CONFIG.includeNames) params.push("includeNames=" + encodeURIComponent(CONFIG.includeNames.join(",")));
+    if (CONFIG.excludeNames) params.push("excludeNames=" + encodeURIComponent(CONFIG.excludeNames.join(",")));
+    if (CONFIG.priceMin !== null) params.push("priceMin=" + CONFIG.priceMin);
+    if (CONFIG.priceMax !== null) params.push("priceMax=" + CONFIG.priceMax);
+    if (CONFIG.hasLto !== null) params.push("hasLto=" + CONFIG.hasLto);
+    if (CONFIG.hasOffers !== null) params.push("hasOffers=" + CONFIG.hasOffers);
+    if (CONFIG.type !== null) params.push("registryType=" + CONFIG.type);
+    return API_BASE + "?" + params.join("&");
+  }
+
+  function renderCard(item) {
+    var card = document.createElement('div');
+    card.className = 'storefront-card';
+
+    var nameLink = document.createElement('a');
+    nameLink.className = 'storefront-card-name';
+    nameLink.href = absolutise(item.detailUrl);
+    nameLink.target = '_blank';
+    nameLink.rel = 'noopener';
+    var nameText = document.createTextNode(item.domainDisplayName || item.domainName);
+    nameLink.appendChild(nameText);
+    var chevron = document.createElement('span');
+    chevron.className = 'storefront-card-chevron';
+    chevron.textContent = '\u203A';
+    nameLink.appendChild(chevron);
+    card.appendChild(nameLink);
+
+    var price = document.createElement('div');
+    price.className = 'storefront-card-price';
+    price.textContent = item.price !== null ? fmt(item.price) : 'Make an Offer';
+    card.appendChild(price);
+
+    var badges = document.createElement('div');
+    badges.className = 'storefront-card-badges';
+    if (item.hasLto && item.leaseToOwnMonthlyPrice !== null) {
+      var ltoBadge = document.createElement('span');
+      ltoBadge.className = 'storefront-card-badge storefront-badge-lto';
+      ltoBadge.textContent = 'Lease ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo';
+      badges.appendChild(ltoBadge);
+    }
+    if (item.hasOffers) {
+      var offerBadge = document.createElement('span');
+      offerBadge.className = 'storefront-card-badge storefront-badge-offers';
+      offerBadge.textContent = item.minOfferAmountInCents !== null
+        ? 'Offers from ' + fmt(item.minOfferAmountInCents)
+        : 'Offers Welcome';
+      badges.appendChild(offerBadge);
+    }
+    var typeBadge = document.createElement('span');
+    typeBadge.className = 'storefront-card-badge storefront-badge-type';
+    typeBadge.textContent = item.type.toUpperCase();
+    badges.appendChild(typeBadge);
+    card.appendChild(badges);
+
+    var cta = document.createElement('a');
+    cta.className = 'storefront-buy-cta';
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    if (item.price !== null) {
+      cta.href = absolutise(item.buyUrl);
+      cta.textContent = 'Buy Now';
+    } else {
+      cta.href = absolutise(item.detailUrl);
+      cta.textContent = 'View Domain';
+    }
+    card.appendChild(cta);
+
+    if (item.hasLto) {
+      var ltoLink = document.createElement('a');
+      ltoLink.className = 'storefront-card-lto-link';
+      ltoLink.href = absolutise(item.detailUrl + '?pm=lto');
+      ltoLink.target = '_blank';
+      ltoLink.rel = 'noopener';
+      ltoLink.textContent = item.leaseToOwnMonthlyPrice !== null ? 'Lease from ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo' : 'Lease Options';
+      card.appendChild(ltoLink);
+    }
+
+    return card;
+  }
+
+  function renderPagination(total, page, pageSize) {
+    var container = $('#storefront-pagination');
+    if (!container) return;
+    container.innerHTML = '';
+    var totalPages = Math.ceil(total / pageSize);
+    if (totalPages <= 1) return;
+
+    function addBtn(label, targetPage, isActive, isDisabled) {
+      var btn = document.createElement('button');
+      btn.className = 'storefront-page-btn' + (isActive ? ' active' : '');
+      btn.textContent = label;
+      if (isDisabled) { btn.disabled = true; }
+      else {
+        btn.dataset.page = String(targetPage);
+        btn.addEventListener('click', function() {
+          currentPage = parseInt(this.dataset.page, 10);
+          fetchAndRender();
+        });
+      }
+      container.appendChild(btn);
+    }
+    function addEllipsis() { var s = document.createElement('span'); s.className = 'storefront-page-ellipsis'; s.textContent = '\u2026'; container.appendChild(s); }
+
+    var w = 1;
+    var start = Math.max(1, page - w);
+    var end = Math.min(totalPages, page + w);
+
+    addBtn('Prev', page - 1, false, page <= 1);
+    if (start > 1) { addBtn(1, 1, page === 1, false); if (start > 2) addEllipsis(); }
+    for (var i = start; i <= end; i++) { addBtn(String(i), i, i === page, false); }
+    if (end < totalPages) { if (end < totalPages - 1) addEllipsis(); addBtn(String(totalPages), totalPages, page === totalPages, false); }
+    addBtn('Next', page + 1, false, page >= totalPages);
+  }
+
+  function fetchAndRender() {
+    var listings = $('#storefront-listings');
+    var loading = document.querySelector('.storefront-loading');
+    var empty = document.querySelector('.storefront-empty');
+    var count = $('#storefront-count');
+
+    if (loading) loading.style.display = '';
+    if (empty) empty.style.display = 'none';
+
+    fetch(buildUrl())
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(data) {
+        if (loading) loading.style.display = 'none';
+        if (listings) {
+          listings.innerHTML = '';
+          if (data.listings.length === 0) {
+            if (empty) empty.style.display = '';
+          } else {
+            data.listings.forEach(function(item) {
+              listings.appendChild(renderCard(item));
+            });
+          }
+        }
+        if (count) count.textContent = data.total + ' domain' + (data.total !== 1 ? 's' : '') + ' for sale';
+        renderPagination(data.total, data.page, data.pageSize);
+      })
+      .catch(function() {
+        if (loading) loading.style.display = 'none';
+        if (listings) listings.innerHTML = '';
+        if (count) count.textContent = '';
+        var pag = $('#storefront-pagination'); if (pag) pag.innerHTML = '';
+        if (empty) empty.style.display = '';
+      });
+  }
+
+  // Bind sort controls
+  var sortEl = $('#storefront-sort');
+  if (sortEl) {
+    sortEl.addEventListener('change', function() {
+      var val = this.value;
+      var parts = val.split("-");
+      currentSort = parts[0] === "listedAt" ? "listedAt" : parts[0];
+      currentSortDir = (parts[parts.length - 1] || "DESC").toUpperCase();
+      currentPage = 1;
+      fetchAndRender();
+    });
+  }
+
+  // Bind search input
+  var searchEl = $('#storefront-search');
+  if (searchEl) {
+    searchEl.addEventListener('input', function() {
+      var val = this.value;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(function() {
+        currentQuery = val;
+        currentPage = 1;
+        fetchAndRender();
+      }, 300);
+    });
+  }
+
+  // Fill copyright year
+  var yr = $('#year'); if (yr) yr.textContent = new Date().getFullYear();
+
+  // Initial fetch
+  fetchAndRender();
+})();
+</script>
+<script>
+(function(){
+  var labels = { fr: "FR", en: "EN", es: "ES", de: "DE", it: "IT", pt: "PT" };
+  var storageKey = "braveowner-language";
+  var selected = localStorage.getItem(storageKey) || "fr";
+
+  function sync(menu) {
+    var current = menu.querySelector(".lang-current");
+    var trigger = menu.querySelector(".lang-trigger");
+    if (current) current.textContent = labels[selected] || "FR";
+    if (trigger) trigger.setAttribute("aria-expanded", menu.classList.contains("open") ? "true" : "false");
+    menu.querySelectorAll("[data-lang]").forEach(function(button) {
+      button.classList.toggle("active", button.dataset.lang === selected);
+    });
+    document.documentElement.setAttribute("lang", selected);
+  }
+
+  document.querySelectorAll(".language-menu").forEach(function(menu) {
+    var trigger = menu.querySelector(".lang-trigger");
+    sync(menu);
+    if (trigger) {
+      trigger.addEventListener("click", function(event) {
+        event.stopPropagation();
+        var willOpen = !menu.classList.contains("open");
+        document.querySelectorAll(".language-menu.open").forEach(function(openMenu) {
+          openMenu.classList.remove("open");
+          sync(openMenu);
+        });
+        menu.classList.toggle("open", willOpen);
+        sync(menu);
+      });
+    }
+    menu.querySelectorAll("[data-lang]").forEach(function(button) {
+      button.addEventListener("click", function(event) {
+        event.stopPropagation();
+        selected = button.dataset.lang;
+        localStorage.setItem(storageKey, selected);
+        document.querySelectorAll(".language-menu").forEach(function(item) {
+          item.classList.remove("open");
+          sync(item);
+        });
+      });
+    });
+  });
+
+  document.addEventListener("click", function() {
+    document.querySelectorAll(".language-menu.open").forEach(function(menu) {
+      menu.classList.remove("open");
+      sync(menu);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">BraveOwner mark</title>
+  <desc id="desc">A bold geometric B mark for the BraveOwner marketplace.</desc>
+  <defs>
+    <linearGradient id="g" x1="24" x2="136" y1="20" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff6a3d"/>
+      <stop offset=".52" stop-color="#f04438"/>
+      <stop offset="1" stop-color="#5b7cfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="#11131f"/>
+  <path fill="url(#g)" d="M41 34h46c28 0 45 13 45 34 0 12-6 22-17 27 13 5 21 16 21 30 0 23-18 35-48 35H41V34Zm31 25v27h14c10 0 15-5 15-14 0-8-6-13-16-13H72Zm0 50v26h18c10 0 16-5 16-13s-6-13-17-13H72Z"/>
+  <path fill="#fff" fill-opacity=".92" d="M29 27h24v106H29z"/>
+</svg>

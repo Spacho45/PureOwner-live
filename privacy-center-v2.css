@@ -1,0 +1,191 @@
+.po-privacy-note {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(225, 190, 91, 0.28);
+}
+
+.po-privacy-note h3 {
+  margin: 0 0 8px;
+  color: #f0d88a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 500;
+}
+
+.po-privacy-note p {
+  max-width: 66ch;
+  margin: 0 0 18px;
+  color: rgba(244, 239, 225, 0.72);
+  line-height: 1.65;
+}
+
+.po-privacy-trigger {
+  appearance: none;
+  border: 1px solid rgba(225, 190, 91, 0.48);
+  border-radius: 4px;
+  background: rgba(10, 57, 46, 0.72);
+  color: #f0d88a;
+  cursor: pointer;
+  font: 700 0.76rem/1.2 Arial, sans-serif;
+  letter-spacing: 0.12em;
+  padding: 13px 18px;
+  text-transform: uppercase;
+}
+
+.po-privacy-trigger:hover,
+.po-privacy-trigger:focus-visible {
+  background: #f0d88a;
+  color: #082d25;
+  outline: none;
+}
+
+.po-privacy-footer-link {
+  margin-left: 14px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.po-privacy-dialog {
+  width: min(820px, calc(100vw - 32px));
+  max-height: min(84vh, 900px);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(225, 190, 91, 0.46);
+  border-radius: 8px;
+  background: #062d25;
+  color: #f4efe1;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+}
+
+.po-privacy-dialog::backdrop {
+  background: rgba(0, 18, 15, 0.82);
+  backdrop-filter: blur(5px);
+}
+
+.po-privacy-shell {
+  display: flex;
+  max-height: inherit;
+  flex-direction: column;
+}
+
+.po-privacy-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 30px 22px;
+  border-bottom: 1px solid rgba(225, 190, 91, 0.22);
+}
+
+.po-privacy-kicker {
+  margin: 0 0 8px;
+  color: #d9b745;
+  font: 700 0.68rem/1.2 Arial, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.po-privacy-title {
+  margin: 0;
+  color: #f4efe1;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 4vw, 2.65rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.po-privacy-close {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid rgba(225, 190, 91, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: #f0d88a;
+  cursor: pointer;
+  font-size: 1.45rem;
+}
+
+.po-privacy-close:hover,
+.po-privacy-close:focus-visible {
+  border-color: #f0d88a;
+  background: rgba(225, 190, 91, 0.12);
+  outline: none;
+}
+
+.po-privacy-body {
+  overflow-y: auto;
+  padding: 25px 30px 34px;
+  overscroll-behavior: contain;
+}
+
+.po-privacy-intro {
+  margin: 0 0 26px;
+  color: rgba(244, 239, 225, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.po-privacy-section {
+  padding: 19px 0;
+  border-top: 1px solid rgba(225, 190, 91, 0.16);
+}
+
+.po-privacy-section h3 {
+  margin: 0 0 9px;
+  color: #f0d88a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.po-privacy-section p,
+.po-privacy-section li {
+  color: rgba(244, 239, 225, 0.74);
+  line-height: 1.65;
+}
+
+.po-privacy-section p {
+  margin: 0;
+}
+
+.po-privacy-section ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.po-privacy-dialog[data-fallback-open="true"] {
+  position: fixed;
+  inset: 8vh auto auto 50%;
+  z-index: 10000;
+  display: block;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 640px) {
+  .po-privacy-dialog {
+    width: 100%;
+    max-height: 88vh;
+    margin: auto 0 0;
+    border-width: 1px 0 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .po-privacy-head {
+    padding: 22px 20px 18px;
+  }
+
+  .po-privacy-body {
+    padding: 20px 20px 28px;
+  }
+
+  .po-privacy-trigger {
+    width: 100%;
+    min-height: 48px;
+  }
+}

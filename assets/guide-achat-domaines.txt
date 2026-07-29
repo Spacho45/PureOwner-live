@@ -1,0 +1,193 @@
+# Guide débutant : acheter des noms de domaine classiques et Web3
+
+Acheter un nom de domaine, c’est réserver une adresse simple à retenir pour représenter un site, une marque, une activité ou une identité numérique. Mais il existe deux univers très différents : les domaines classiques (`.fr`, `.com`) et les domaines Web3 (`.eth`, `.x`, `.crypto`).
+
+Le plus important à comprendre : dans les deux cas, on n’achète généralement pas un bien immobilier numérique définitif ; on obtient un droit d’usage, avec des règles, une durée et des risques propres à chaque système.
+
+## 1. Les deux familles de noms de domaine
+
+| Type              | Exemples                                     | Utilité principale                                   | Gestion                          |
+| ----------------- | -------------------------------------------- | ---------------------------------------------------- | -------------------------------- |
+| Domaine classique | `marque.fr`, `marque.com`                    | Site web, e-mail professionnel, référencement Google | DNS, registrar, renouvellement   |
+| Domaine Web3      | `nicolas.eth`, `nicolas.x`, `nicolas.crypto` | Identifiant wallet, réception crypto, profil Web3    | Blockchain, wallet ou plateforme |
+
+Un domaine classique est l’adresse universelle du web actuel : il fonctionne dans tous les navigateurs et permet notamment de créer une adresse e-mail telle que `contact@marque.fr`.
+
+Un domaine Web3 sert d’abord d’identifiant lisible lié à un portefeuille crypto. Au lieu d’envoyer des fonds vers une longue adresse comme `0x8A…F31`, on peut envoyer vers `nicolas.eth`, si ce nom est correctement configuré.
+
+## 2. Avant d’acheter : définir son objectif
+
+C’est l’étape qui évite la majorité des achats inutiles.
+
+On peut acheter un nom pour :
+
+* lancer une marque, un site ou une activité ;
+* protéger son nom, son pseudonyme ou celui d’une entreprise ;
+* créer une identité personnelle plus simple à partager ;
+* utiliser un wallet et recevoir des cryptomonnaies ;
+* réserver une déclinaison cohérente avant qu’elle ne soit prise ;
+* collectionner ou spéculer — avec un risque élevé et sans garantie de revente.
+
+Pour un projet sérieux, commencez par vous demander : « Quel nom mes clients, partenaires ou amis vont-ils réellement taper, retenir et utiliser ? »
+
+## 3. Comment choisir un bon nom
+
+Un bon domaine est généralement :
+
+* court ;
+* facile à prononcer ;
+* facile à écrire sans devoir l’expliquer ;
+* sans tiret, chiffre ou orthographe ambiguë, sauf si cela fait partie de la marque ;
+* cohérent avec votre activité ou identité ;
+* suffisamment distinctif pour ne pas être confondu avec une autre marque.
+
+Exemples :
+
+| Objectif              | À privilégier           | À éviter                                              |
+| --------------------- | ----------------------- | ----------------------------------------------------- |
+| Restaurant            | `lecomptoirlibanais.fr` | `le-comptoir-libanais-67-alsace.fr`                   |
+| Identité personnelle  | `nicolas.eth`           | `nicolas-2026-web3.eth`                               |
+| Marque internationale | `pureowner.com`         | une extension locale seule si l’ambition est mondiale |
+| Projet Web3           | `pureowner.eth`         | un nom difficile à lire ou à recopier                 |
+
+Un nom original et cohérent vaut souvent davantage qu’un mot générique acheté trop cher.
+
+## 4. Quelle extension choisir ?
+
+### Pour une activité classique
+
+* `.fr` : excellent choix si l’activité est principalement française.
+* `.com` : extension la plus universelle, adaptée à une marque internationale.
+* `.net` ou `.org` : seulement si elles correspondent réellement au projet.
+* `.ai`, `.io`, `.app`, `.shop`, `.club` : utiles lorsqu’elles renforcent clairement le positionnement.
+
+Pour une marque française ambitieuse, le duo `.fr` + `.com` est souvent la base la plus logique.
+
+### Pour une identité Web3
+
+* `.eth` : référence de l’écosystème Ethereum ; très utile pour les wallets, les apps Web3 et les identités on-chain.
+* `.x`, `.crypto`, `.nft`, `.wallet` : extensions proposées par Unstoppable Domains, souvent achetées une fois, sans renouvellement annuel selon les règles de la plateforme.
+* autres extensions : elles peuvent être intéressantes, mais leur valeur dépend surtout de l’adoption réelle, de la communauté et de la compatibilité technique.
+
+Ne choisissez pas une extension seulement parce qu’elle semble rare. Choisissez-la parce qu’elle donne du sens au nom et qu’elle peut être comprise par les personnes visées.
+
+## 5. Combien cela coûte-t-il ?
+
+### Domaine classique
+
+Le prix comprend habituellement :
+
+* l’enregistrement initial ;
+* le renouvellement annuel ;
+* parfois une option de confidentialité ;
+* éventuellement une prime si le nom est classé « premium ».
+
+Un domaine classique peut coûter une dizaine d’euros par an, mais certaines extensions ou certains noms premium sont bien plus chers. Vérifiez toujours le prix de renouvellement, pas uniquement la promotion de première année.
+
+### Domaine `.eth`
+
+Un nom ENS est loué pour une durée choisie et doit être renouvelé. Les tarifs officiels dépendent notamment de la longueur du nom : les noms de cinq caractères ou plus ont historiquement coûté environ 5 $ par an, les quatre caractères 160 $ et les trois caractères 640 $, auxquels peuvent s’ajouter des frais de transaction blockchain. Les règles et prix peuvent évoluer. [[Documentation ENS](https://docs.ens.domains/frequently-asked-questions?q=avatar)](https://docs.ens.domains/frequently-asked-questions?q=avatar)
+
+### Domaines Unstoppable
+
+Les domaines vendus par Unstoppable Domains sont généralement présentés comme des achats sans renouvellement annuel, mais le prix varie fortement selon l’extension et le caractère premium du mot. Vérifiez au moment de l’achat les conditions exactes du domaine, du wallet et de la blockchain utilisée.
+
+## 6. Où acheter ?
+
+Pour un domaine classique, passez par un registrar reconnu : OVHcloud, Gandi, Cloudflare Registrar, Infomaniak, IONOS ou un autre acteur établi.
+
+Pour un `.eth`, l’achat peut se faire via l’interface officielle d’ENS ou une application compatible. Pour les domaines Unstoppable, passez de préférence par le site officiel ou un canal clairement vérifié.
+
+Règle simple : ne cliquez jamais sur un lien reçu par message privé, e-mail ou publicité douteuse pour connecter votre wallet ou acheter un domaine.
+
+## 7. La différence essentielle : compte client ou wallet
+
+Avec un domaine classique, vous disposez d’un compte chez un registrar. Si vous perdez votre mot de passe, le support peut généralement vous aider à récupérer l’accès.
+
+Avec un domaine Web3 détenu dans votre wallet, la logique est différente : la personne qui contrôle la clé privée ou la phrase de récupération contrôle l’actif. Si cette phrase est perdue, personne ne peut normalement restaurer l’accès.
+
+À faire absolument :
+
+* noter la phrase de récupération hors ligne ;
+* ne jamais l’envoyer à qui que ce soit ;
+* ne jamais la copier dans un formulaire ou une conversation ;
+* activer la double authentification pour les comptes classiques ;
+* conserver une adresse e-mail de récupération à jour ;
+* prévoir les renouvellements et les alertes d’expiration.
+
+## 8. Ne pas confondre propriété, contrôle et visibilité
+
+Un domaine ne donne pas automatiquement tous les droits sur un mot.
+
+Acheter `marque.eth` ne vous autorise pas à vous faire passer pour la société portant cette marque. À l’inverse, posséder une marque ne garantit pas que toutes ses variantes sont libres dans toutes les extensions.
+
+Avant un achat important :
+
+* cherchez les marques déjà existantes ;
+* évitez les noms d’entreprises, d’artistes ou de personnalités que vous ne représentez pas ;
+* vérifiez si le nom est exploitable commercialement ;
+* conservez les preuves d’achat et d’usage.
+
+Un nom de domaine peut devenir source de litige s’il crée une confusion ou cherche à profiter de la réputation d’un tiers.
+
+## 9. Acheter pour protéger sa marque : la méthode simple
+
+Pour une petite marque, ne cherchez pas à acheter toutes les extensions du marché. Commencez avec une protection proportionnée :
+
+1. Le nom principal en `.fr` si vous visez la France.
+2. Le même nom en `.com` si la marque peut dépasser ce marché.
+3. Les fautes de frappe réellement probables.
+4. Une ou deux extensions métier pertinentes.
+5. La version `.eth` si votre projet touche au Web3, aux wallets ou à l’identité numérique.
+
+Exemple : pour `pureowner`, la logique peut être de sécuriser le nom central dans les extensions stratégiques, puis de réserver progressivement les variantes qui empêchent une confusion évidente.
+
+## 10. Acheter un domaine déjà pris
+
+Un nom pris peut être :
+
+* simplement réservé sans projet ;
+* exploité par une entreprise ;
+* proposé à la vente ;
+* expiré prochainement ;
+* détenu dans un wallet Web3 et négociable comme un NFT.
+
+Avant toute offre :
+
+* vérifiez l’usage réel du domaine ;
+* estimez ce que le nom vous apporte concrètement ;
+* fixez un plafond de prix ;
+* ne négociez pas sous le coup de l’urgence ;
+* utilisez un intermédiaire ou une procédure sécurisée pour les montants importants.
+
+Un domaine n’a pas de valeur universelle : sa valeur dépend du besoin précis d’un acheteur, de sa mémorisation, de son trafic éventuel, de sa marque et de sa rareté.
+
+## 11. Les erreurs les plus fréquentes
+
+* acheter trente extensions avant d’avoir un projet clair ;
+* oublier les coûts de renouvellement ;
+* perdre l’accès au compte registrar ou au wallet ;
+* croire qu’un domaine Web3 s’ouvrira automatiquement dans tous les navigateurs ;
+* croire qu’un domaine NFT garantit une forte revente ;
+* acheter un nom proche d’une marque connue ;
+* acheter un nom compliqué uniquement parce qu’il est disponible ;
+* laisser expirer un nom important.
+
+Pour ENS, un nom expiré bénéficie d’une période de grâce de 90 jours avant d’être remis en circulation, puis d’une période temporaire avec un prix de récupération décroissant. Il faut néanmoins le renouveler bien avant cette échéance. [[FAQ ENS](https://docs.ens.domains/faq/)](https://docs.ens.domains/faq/)
+
+## 12. La checklist avant paiement
+
+* Le nom est-il facile à dire, écrire et retenir ?
+* Sert-il un projet, une identité ou une protection réelle ?
+* L’extension est-elle adaptée à son usage ?
+* Ai-je vérifié le coût de renouvellement ?
+* Ai-je vérifié les marques et risques de confusion ?
+* Mon e-mail, mon numéro de téléphone et la double authentification sont-ils à jour ?
+* Si c’est du Web3 : ai-je sauvegardé ma phrase de récupération hors ligne ?
+* Suis-je prêt à conserver ce nom plusieurs années ?
+
+## À retenir
+
+Pour débuter, achetez peu, mais achetez juste. Un bon portefeuille de domaines repose sur un nom central fort, des extensions utiles, une gestion rigoureuse et une compréhension des coûts.
+
+Le domaine classique reste indispensable pour être trouvé facilement sur le web et utiliser l’e-mail. Le domaine Web3 ajoute une couche d’identité et de possession numérique : il peut simplifier les paiements, les connexions wallet et la reconnaissance dans les applications compatibles, mais il ne remplace pas encore l’ensemble des usages d’un `.com` ou d’un `.fr`.
