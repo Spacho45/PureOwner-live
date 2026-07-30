@@ -613,7 +613,62 @@
     "Agrandir le chapitre": { en: "Enlarge chapter", es: "Ampliar capítulo", de: "Kapitel vergrößern", it: "Ingrandisci capitolo", pt: "Ampliar capítulo" },
     "Chapitre précédent": { en: "Previous chapter", es: "Capítulo anterior", de: "Vorheriges Kapitel", it: "Capitolo precedente", pt: "Capítulo anterior" },
     "Chapitre suivant": { en: "Next chapter", es: "Capítulo siguiente", de: "Nächstes Kapitel", it: "Capitolo successivo", pt: "Próximo capítulo" },
-    "Fermer": { en: "Close", es: "Cerrar", de: "Schließen", it: "Chiudi", pt: "Fechar" }
+    "Fermer": { en: "Close", es: "Cerrar", de: "Schließen", it: "Chiudi", pt: "Fechar" },
+    "PureOwner · Privacy": { en: "PureOwner · Privacy", es: "PureOwner · Privacidad", de: "PureOwner · Datenschutz", it: "PureOwner · Privacy", pt: "PureOwner · Privacidade" },
+    "En bref": { en: "At a glance", es: "En resumen", de: "Kurz gesagt", it: "In breve", pt: "Em resumo" },
+    "Politique détaillée": { en: "Detailed policy", es: "Política detallada", de: "Ausführliche Richtlinie", it: "Informativa dettagliata", pt: "Política detalhada" },
+    "Une confidentialité lisible.": { en: "Privacy made clear.", es: "Una privacidad comprensible.", de: "Datenschutz verständlich erklärt.", it: "Una privacy chiara.", pt: "Privacidade clara." },
+    "PureOwner respecte votre vie privée. Les données autorisées servent uniquement à produire le service demandé et ne sont pas revendues.": {
+      en: "PureOwner respects your privacy. Authorized data is used only to provide the requested service and is never sold.",
+      es: "PureOwner respeta su privacidad. Los datos autorizados se utilizan únicamente para prestar el servicio solicitado y nunca se venden.",
+      de: "PureOwner respektiert Ihre Privatsphäre. Freigegebene Daten werden nur für den angeforderten Dienst verwendet und niemals verkauft.",
+      it: "PureOwner rispetta la tua privacy. I dati autorizzati vengono utilizzati solo per fornire il servizio richiesto e non vengono mai venduti.",
+      pt: "A PureOwner respeita a sua privacidade. Os dados autorizados são utilizados apenas para prestar o serviço solicitado e nunca são vendidos."
+    },
+    "Données utilisées": { en: "Data used", es: "Datos utilizados", de: "Verwendete Daten", it: "Dati utilizzati", pt: "Dados utilizados" },
+    "Identifiant ou pseudonyme, adresse de wallet et paramètres strictement nécessaires à l’affichage, uniquement avec votre autorisation.": {
+      en: "Identifier or pseudonym, wallet address and display settings that are strictly necessary, only with your permission.",
+      es: "Identificador o seudónimo, dirección de wallet y parámetros estrictamente necesarios para la visualización, solo con su autorización.",
+      de: "Kennung oder Pseudonym, Wallet-Adresse und für die Anzeige unbedingt erforderliche Einstellungen, nur mit Ihrer Zustimmung.",
+      it: "Identificativo o pseudonimo, indirizzo wallet e impostazioni strettamente necessarie alla visualizzazione, solo con la tua autorizzazione.",
+      pt: "Identificador ou pseudónimo, endereço de wallet e definições estritamente necessárias à apresentação, apenas com a sua autorização."
+    },
+    "Finalité": { en: "Purpose", es: "Finalidad", de: "Zweck", it: "Finalità", pt: "Finalidade" },
+    "Générer un visuel personnalisé, afficher le résultat demandé et assurer le bon fonctionnement de l’application.": { en: "Create a personalized visual, display the requested result and ensure the application works properly.", es: "Generar un visual personalizado, mostrar el resultado solicitado y garantizar el correcto funcionamiento de la aplicación.", de: "Eine personalisierte Darstellung erzeugen, das gewünschte Ergebnis anzeigen und den ordnungsgemäßen Betrieb der Anwendung sicherstellen.", it: "Generare un contenuto visivo personalizzato, mostrare il risultato richiesto e garantire il corretto funzionamento dell'applicazione.", pt: "Gerar um visual personalizado, apresentar o resultado solicitado e assegurar o bom funcionamento da aplicação." },
+    "Ce que nous ne faisons pas": { en: "What we do not do", es: "Lo que no hacemos", de: "Was wir nicht tun", it: "Cosa non facciamo", pt: "O que não fazemos" },
+    "Aucun marketing comportemental, aucune publicité ciblée et aucune vente de données.": { en: "No behavioral marketing, targeted advertising or data sales.", es: "Sin marketing conductual, publicidad dirigida ni venta de datos.", de: "Kein verhaltensbasiertes Marketing, keine zielgerichtete Werbung und kein Datenverkauf.", it: "Nessun marketing comportamentale, pubblicità mirata o vendita di dati.", pt: "Sem marketing comportamental, publicidade direcionada ou venda de dados." },
+    "Conservation": { en: "Retention", es: "Conservación", de: "Speicherung", it: "Conservazione", pt: "Conservação" },
+    "Les données utilisées pour produire un visuel ne sont pas conservées après sa génération.": { en: "Data used to produce a visual is not retained after it is generated.", es: "Los datos utilizados para producir un visual no se conservan después de generarlo.", de: "Daten zur Erstellung einer Darstellung werden nach der Generierung nicht gespeichert.", it: "I dati utilizzati per produrre un contenuto visivo non vengono conservati dopo la generazione.", pt: "Os dados utilizados para produzir um visual não são conservados após a sua geração." },
+    "Partage": { en: "Sharing", es: "Compartición", de: "Weitergabe", it: "Condivisione", pt: "Partilha" },
+    "Aucun partage, sauf avec un prestataire technique strictement nécessaire au fonctionnement du service.": { en: "No sharing except with a technical provider strictly required to operate the service.", es: "No se comparten datos, salvo con un proveedor técnico estrictamente necesario para el funcionamiento del servicio.", de: "Keine Weitergabe, außer an einen technischen Anbieter, der für den Betrieb des Dienstes zwingend erforderlich ist.", it: "Nessuna condivisione, salvo con un fornitore tecnico strettamente necessario al funzionamento del servizio.", pt: "Sem partilha, exceto com um prestador técnico estritamente necessário ao funcionamento do serviço." },
+    "Vos droits": { en: "Your rights", es: "Sus derechos", de: "Ihre Rechte", it: "I tuoi diritti", pt: "Os seus direitos" },
+    "Vous pouvez demander l’accès, la rectification, la suppression ou la limitation de l’usage de vos données.": { en: "You may request access, correction, deletion or restriction of the use of your data.", es: "Puede solicitar el acceso, la rectificación, la supresión o la limitación del uso de sus datos.", de: "Sie können Auskunft, Berichtigung, Löschung oder Einschränkung der Nutzung Ihrer Daten verlangen.", it: "Puoi richiedere l'accesso, la rettifica, la cancellazione o la limitazione dell'uso dei tuoi dati.", pt: "Pode solicitar o acesso, a retificação, a eliminação ou a limitação da utilização dos seus dados." },
+    "Pour toute question : contact@pureowner.com": { en: "Questions: contact@pureowner.com", es: "Preguntas: contact@pureowner.com", de: "Fragen: contact@pureowner.com", it: "Domande: contact@pureowner.com", pt: "Questões: contact@pureowner.com" },
+    "Contact": { en: "Contact", es: "Contacto", de: "Kontakt", it: "Contatti", pt: "Contacto" },
+    "Politique de confidentialité.": { en: "Privacy policy.", es: "Política de privacidad.", de: "Datenschutzerklärung.", it: "Informativa sulla privacy.", pt: "Política de privacidade." },
+    "Cette politique décrit de manière transparente comment PureOwner traite les données lorsque vous consultez le site ou utilisez un service activé.": { en: "This policy transparently explains how PureOwner handles data when you browse the site or use an enabled service.", es: "Esta política explica de forma transparente cómo trata PureOwner los datos cuando visita el sitio o utiliza un servicio activado.", de: "Diese Richtlinie erläutert transparent, wie PureOwner Daten beim Besuch der Website oder bei der Nutzung eines aktivierten Dienstes verarbeitet.", it: "Questa informativa spiega in modo trasparente come PureOwner tratta i dati quando visiti il sito o utilizzi un servizio attivato.", pt: "Esta política explica de forma transparente como a PureOwner trata os dados quando consulta o site ou utiliza um serviço ativado." },
+    "Responsable": { en: "Controller", es: "Responsable", de: "Verantwortlicher", it: "Titolare", pt: "Responsável" },
+    "PureOwner est responsable des traitements décrits ici. Contact : contact@pureowner.com.": { en: "PureOwner is responsible for the processing described here. Contact: contact@pureowner.com.", es: "PureOwner es responsable de los tratamientos aquí descritos. Contacto: contact@pureowner.com.", de: "PureOwner ist für die hier beschriebenen Verarbeitungen verantwortlich. Kontakt: contact@pureowner.com.", it: "PureOwner è titolare dei trattamenti descritti. Contatto: contact@pureowner.com.", pt: "A PureOwner é responsável pelos tratamentos aqui descritos. Contacto: contact@pureowner.com." },
+    "Données concernées": { en: "Data categories", es: "Datos afectados", de: "Betroffene Daten", it: "Dati interessati", pt: "Dados abrangidos" },
+    "Selon le service utilisé : pseudonyme, adresse de wallet, informations de profil, préférences d’affichage, messages adressés au support et données techniques de sécurité.": { en: "Depending on the service: pseudonym, wallet address, profile information, display preferences, support messages and technical security data.", es: "Según el servicio: seudónimo, dirección de wallet, información de perfil, preferencias de visualización, mensajes de soporte y datos técnicos de seguridad.", de: "Je nach Dienst: Pseudonym, Wallet-Adresse, Profilinformationen, Anzeigeeinstellungen, Supportnachrichten und technische Sicherheitsdaten.", it: "A seconda del servizio: pseudonimo, indirizzo wallet, informazioni del profilo, preferenze di visualizzazione, messaggi al supporto e dati tecnici di sicurezza.", pt: "Consoante o serviço: pseudónimo, endereço de wallet, informações de perfil, preferências de apresentação, mensagens ao suporte e dados técnicos de segurança." },
+    "Finalités et bases": { en: "Purposes and legal grounds", es: "Finalidades y bases", de: "Zwecke und Grundlagen", it: "Finalità e basi", pt: "Finalidades e fundamentos" },
+    "Exécuter le service demandé, personnaliser l’affichage avec votre accord, sécuriser le site, répondre à vos demandes et respecter nos obligations légales.": { en: "Provide the requested service, personalize the display with your consent, secure the site, respond to requests and meet legal obligations.", es: "Prestar el servicio solicitado, personalizar la visualización con su consentimiento, proteger el sitio, responder a sus solicitudes y cumplir nuestras obligaciones legales.", de: "Den angeforderten Dienst erbringen, die Anzeige mit Ihrer Zustimmung personalisieren, die Website sichern, Anfragen beantworten und gesetzliche Pflichten erfüllen.", it: "Fornire il servizio richiesto, personalizzare la visualizzazione con il tuo consenso, proteggere il sito, rispondere alle richieste e rispettare gli obblighi di legge.", pt: "Prestar o serviço solicitado, personalizar a apresentação com o seu consentimento, proteger o site, responder aos pedidos e cumprir as obrigações legais." },
+    "Minimisation": { en: "Data minimization", es: "Minimización", de: "Datenminimierung", it: "Minimizzazione", pt: "Minimização" },
+    "Nous limitons chaque traitement aux données strictement nécessaires. Les données sensibles ne doivent jamais être inscrites directement sur une blockchain publique.": { en: "We limit each processing operation to strictly necessary data. Sensitive data must never be written directly to a public blockchain.", es: "Limitamos cada tratamiento a los datos estrictamente necesarios. Los datos sensibles nunca deben registrarse directamente en una blockchain pública.", de: "Wir beschränken jede Verarbeitung auf unbedingt erforderliche Daten. Sensible Daten dürfen niemals direkt in eine öffentliche Blockchain geschrieben werden.", it: "Limitiamo ogni trattamento ai dati strettamente necessari. I dati sensibili non devono mai essere registrati direttamente su una blockchain pubblica.", pt: "Limitamos cada tratamento aos dados estritamente necessários. Os dados sensíveis nunca devem ser registados diretamente numa blockchain pública." },
+    "Durées": { en: "Retention periods", es: "Plazos", de: "Speicherdauer", it: "Durata", pt: "Prazos" },
+    "Les données de génération ne sont pas stockées. Les échanges avec le support et journaux techniques ne sont conservés que pendant la durée nécessaire à leur finalité ou aux obligations applicables.": { en: "Generation data is not stored. Support exchanges and technical logs are kept only as long as required for their purpose or applicable obligations.", es: "Los datos de generación no se almacenan. Los intercambios con soporte y los registros técnicos solo se conservan durante el tiempo necesario para su finalidad o las obligaciones aplicables.", de: "Generierungsdaten werden nicht gespeichert. Supportkommunikation und technische Protokolle werden nur so lange aufbewahrt, wie es für ihren Zweck oder geltende Pflichten erforderlich ist.", it: "I dati di generazione non vengono archiviati. Le comunicazioni con il supporto e i log tecnici vengono conservati solo per il tempo necessario alla loro finalità o agli obblighi applicabili.", pt: "Os dados de geração não são armazenados. As comunicações com o suporte e os registos técnicos são conservados apenas durante o período necessário à sua finalidade ou às obrigações aplicáveis." },
+    "Destinataires": { en: "Recipients", es: "Destinatarios", de: "Empfänger", it: "Destinatari", pt: "Destinatários" },
+    "PureOwner ne vend aucune donnée. Des prestataires d’hébergement, de sécurité ou d’infrastructure peuvent intervenir uniquement pour fournir le service et selon nos instructions.": { en: "PureOwner does not sell data. Hosting, security or infrastructure providers may process it only to deliver the service and under our instructions.", es: "PureOwner no vende datos. Los proveedores de alojamiento, seguridad o infraestructura solo pueden intervenir para prestar el servicio y siguiendo nuestras instrucciones.", de: "PureOwner verkauft keine Daten. Hosting-, Sicherheits- oder Infrastrukturanbieter dürfen sie nur zur Erbringung des Dienstes und nach unseren Weisungen verarbeiten.", it: "PureOwner non vende dati. I fornitori di hosting, sicurezza o infrastruttura possono trattarli solo per erogare il servizio e secondo le nostre istruzioni.", pt: "A PureOwner não vende dados. Os prestadores de alojamento, segurança ou infraestrutura só podem intervir para prestar o serviço e segundo as nossas instruções." },
+    "Transferts": { en: "Transfers", es: "Transferencias", de: "Übermittlungen", it: "Trasferimenti", pt: "Transferências" },
+    "Lorsqu’un prestataire traite des données hors de votre pays, les garanties contractuelles et réglementaires appropriées sont appliquées.": { en: "When a provider processes data outside your country, appropriate contractual and regulatory safeguards apply.", es: "Cuando un proveedor trata datos fuera de su país, se aplican las garantías contractuales y normativas adecuadas.", de: "Wenn ein Anbieter Daten außerhalb Ihres Landes verarbeitet, gelten geeignete vertragliche und regulatorische Schutzmaßnahmen.", it: "Quando un fornitore tratta dati fuori dal tuo Paese, si applicano adeguate garanzie contrattuali e normative.", pt: "Quando um prestador trata dados fora do seu país, são aplicadas garantias contratuais e regulamentares adequadas." },
+    "Sécurité": { en: "Security", es: "Seguridad", de: "Sicherheit", it: "Sicurezza", pt: "Segurança" },
+    "Nous privilégions le chiffrement, la limitation des accès, la minimisation et les preuves cryptographiques afin de réduire l’exposition des informations.": { en: "We favor encryption, restricted access, minimization and cryptographic proofs to reduce information exposure.", es: "Priorizamos el cifrado, la limitación de acceso, la minimización y las pruebas criptográficas para reducir la exposición de la información.", de: "Wir setzen auf Verschlüsselung, eingeschränkte Zugriffe, Datenminimierung und kryptografische Nachweise, um die Offenlegung von Informationen zu verringern.", it: "Privilegiamo cifratura, accessi limitati, minimizzazione e prove crittografiche per ridurre l'esposizione delle informazioni.", pt: "Privilegiamos a encriptação, a limitação de acessos, a minimização e as provas criptográficas para reduzir a exposição das informações." },
+    "Cookies et préférences": { en: "Cookies and preferences", es: "Cookies y preferencias", de: "Cookies und Einstellungen", it: "Cookie e preferenze", pt: "Cookies e preferências" },
+    "Le site peut mémoriser des préférences fonctionnelles, comme la langue. Aucun suivi publicitaire n’est activé sans consentement explicite.": { en: "The site may remember functional preferences such as language. No advertising tracking is enabled without explicit consent.", es: "El sitio puede recordar preferencias funcionales como el idioma. No se activa ningún seguimiento publicitario sin consentimiento explícito.", de: "Die Website kann funktionale Einstellungen wie die Sprache speichern. Ohne ausdrückliche Zustimmung wird kein Werbetracking aktiviert.", it: "Il sito può ricordare preferenze funzionali come la lingua. Nessun tracciamento pubblicitario viene attivato senza consenso esplicito.", pt: "O site pode memorizar preferências funcionais, como o idioma. Nenhum rastreio publicitário é ativado sem consentimento explícito." },
+    "Vous pouvez demander accès, rectification, effacement, limitation, opposition ou portabilité, et retirer votre consentement. Vous pouvez également saisir l’autorité de contrôle compétente.": { en: "You may request access, correction, erasure, restriction, objection or portability, and withdraw consent. You may also contact the competent supervisory authority.", es: "Puede solicitar acceso, rectificación, supresión, limitación, oposición o portabilidad y retirar su consentimiento. También puede acudir a la autoridad de control competente.", de: "Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch oder Datenübertragbarkeit verlangen und Ihre Einwilligung widerrufen. Außerdem können Sie sich an die zuständige Aufsichtsbehörde wenden.", it: "Puoi richiedere accesso, rettifica, cancellazione, limitazione, opposizione o portabilità e revocare il consenso. Puoi inoltre rivolgerti all'autorità di controllo competente.", pt: "Pode solicitar acesso, retificação, apagamento, limitação, oposição ou portabilidade e retirar o consentimento. Pode também contactar a autoridade de controlo competente." },
+    "Mises à jour": { en: "Updates", es: "Actualizaciones", de: "Aktualisierungen", it: "Aggiornamenti", pt: "Atualizações" },
+    "Cette politique peut évoluer avec les services PureOwner. La version publiée sur le site est la version applicable.": { en: "This policy may evolve with PureOwner services. The version published on the site applies.", es: "Esta política puede evolucionar con los servicios de PureOwner. Se aplica la versión publicada en el sitio.", de: "Diese Richtlinie kann sich mit den PureOwner-Diensten weiterentwickeln. Es gilt die auf der Website veröffentlichte Fassung.", it: "Questa informativa può evolvere con i servizi PureOwner. Si applica la versione pubblicata sul sito.", pt: "Esta política pode evoluir com os serviços da PureOwner. Aplica-se a versão publicada no site." },
+    "Écrivez à contact@pureowner.com pour exercer vos droits ou poser une question relative à la confidentialité.": { en: "Email contact@pureowner.com to exercise your rights or ask a privacy question.", es: "Escriba a contact@pureowner.com para ejercer sus derechos o hacer una pregunta sobre privacidad.", de: "Schreiben Sie an contact@pureowner.com, um Ihre Rechte auszuüben oder eine Datenschutzfrage zu stellen.", it: "Scrivi a contact@pureowner.com per esercitare i tuoi diritti o porre una domanda sulla privacy.", pt: "Escreva para contact@pureowner.com para exercer os seus direitos ou colocar uma questão de privacidade." }
   };
 
   Object.assign(T, {
@@ -953,6 +1008,131 @@
     "Le Web3, Internet de la propriété": { en: "Web3, the ownership Internet", es: "Web3, el Internet de la propiedad", de: "Web3, das Internet des Eigentums", it: "Il Web3, l'Internet della proprietà", pt: "A Web3, a Internet da propriedade" }
   });
 
+  Object.assign(T, {
+    "PureOwner — Devenez propriétaire de votre identité numérique": {
+      en: "PureOwner — Own your digital identity", es: "PureOwner — Sea dueño de su identidad digital", de: "PureOwner — Besitzen Sie Ihre digitale Identität", it: "PureOwner — Possiedi la tua identità digitale", pt: "PureOwner — Seja dono da sua identidade digital"
+    },
+    "PureOwner accompagne le plus grand transfert de propriété numérique depuis la création d'Internet. Web3 : possédez votre prénom, votre nom et votre identité numérique de façon permanente — avant quelqu'un d'autre.": {
+      en: "PureOwner supports the greatest transfer of digital ownership since the creation of the Internet. Web3: permanently own your first name, last name and digital identity — before someone else does.",
+      es: "PureOwner acompaña la mayor transferencia de propiedad digital desde la creación de Internet. Web3: posea de forma permanente su nombre, apellido e identidad digital — antes que otra persona.",
+      de: "PureOwner begleitet den größten Transfer digitalen Eigentums seit der Entstehung des Internets. Web3: Besitzen Sie Vorname, Nachname und digitale Identität dauerhaft — bevor es jemand anderes tut.",
+      it: "PureOwner accompagna il più grande trasferimento di proprietà digitale dalla nascita di Internet. Web3: possiedi in modo permanente nome, cognome e identità digitale — prima di qualcun altro.",
+      pt: "A PureOwner acompanha a maior transferência de propriedade digital desde a criação da Internet. Web3: possua permanentemente o seu nome, apelido e identidade digital — antes de outra pessoa."
+    },
+    "Le plus grand transfert de propriété numérique depuis la création d'Internet. Réservez votre nom avant qu'il ne soit pris.": {
+      en: "The greatest transfer of digital ownership since the creation of the Internet. Reserve your name before it is taken.",
+      es: "La mayor transferencia de propiedad digital desde la creación de Internet. Reserve su nombre antes de que alguien lo registre.",
+      de: "Der größte Transfer digitalen Eigentums seit der Entstehung des Internets. Sichern Sie Ihren Namen, bevor er vergeben ist.",
+      it: "Il più grande trasferimento di proprietà digitale dalla nascita di Internet. Prenota il tuo nome prima che venga registrato.",
+      pt: "A maior transferência de propriedade digital desde a criação da Internet. Reserve o seu nome antes que seja registado."
+    },
+    "Lire le guide d'achat": { en: "Read the buying guide", es: "Leer la guía de compra", de: "Kaufratgeber lesen", it: "Leggi la guida all'acquisto", pt: "Ler o guia de compra" },
+    "Guide pratique": { en: "Practical guide", es: "Guía práctica", de: "Praxisleitfaden", it: "Guida pratica", pt: "Guia prático" },
+    "Acheter un nom de domaine classique ou Web3": { en: "Buy a traditional or Web3 domain name", es: "Comprar un nombre de dominio clásico o Web3", de: "Einen klassischen oder Web3-Domainnamen kaufen", it: "Acquistare un dominio classico o Web3", pt: "Comprar um nome de domínio clássico ou Web3" },
+    "Fermer le guide": { en: "Close the guide", es: "Cerrar la guía", de: "Leitfaden schließen", it: "Chiudi la guida", pt: "Fechar o guia" },
+    "Guide d'achat des noms de domaine": { en: "Domain name buying guide", es: "Guía de compra de nombres de dominio", de: "Kaufratgeber für Domainnamen", it: "Guida all'acquisto di nomi di dominio", pt: "Guia de compra de nomes de domínio" },
+    "Module intégré": { en: "Integrated module", es: "Módulo integrado", de: "Integriertes Modul", it: "Modulo integrato", pt: "Módulo integrado" },
+    "Le tirage PureOwner.": { en: "The PureOwner reading.", es: "La tirada PureOwner.", de: "Die PureOwner-Legung.", it: "La lettura PureOwner.", pt: "A leitura PureOwner." },
+    "Choisissez trois arcanes dans notre cabinet numérique : rideaux, boule de cristal et chat noir compris.": {
+      en: "Choose three arcana in our digital reading room — curtains, crystal ball and black cat included.",
+      es: "Elija tres arcanos en nuestro gabinete digital, con cortinas, bola de cristal y gato negro incluidos.",
+      de: "Wählen Sie drei Arkana in unserem digitalen Kabinett — Vorhänge, Kristallkugel und schwarze Katze inklusive.",
+      it: "Scegli tre arcani nel nostro studio digitale, con tende, sfera di cristallo e gatto nero inclusi.",
+      pt: "Escolha três arcanos no nosso gabinete digital, com cortinas, bola de cristal e gato preto incluídos."
+    },
+    "Le tarot reste un module autonome. La molette continue de faire défiler PureOwner, même lorsque la souris se trouve au-dessus des cartes.": {
+      en: "The tarot remains a standalone module. The wheel continues to scroll PureOwner even when the pointer is over the cards.",
+      es: "El tarot sigue siendo un módulo autónomo. La rueda continúa desplazando PureOwner incluso cuando el puntero está sobre las cartas.",
+      de: "Das Tarot bleibt ein eigenständiges Modul. Das Mausrad scrollt PureOwner weiter, auch wenn sich der Zeiger über den Karten befindet.",
+      it: "I tarocchi restano un modulo autonomo. La rotellina continua a scorrere PureOwner anche quando il puntatore è sopra le carte.",
+      pt: "O tarot continua a ser um módulo autónomo. A roda continua a deslocar a PureOwner mesmo quando o ponteiro está sobre as cartas."
+    },
+    "Tarot digital PureOwner": { en: "PureOwner digital tarot", es: "Tarot digital PureOwner", de: "Digitales PureOwner-Tarot", it: "Tarocchi digitali PureOwner", pt: "Tarot digital PureOwner" },
+    "Tarot digital": { en: "Digital tarot", es: "Tarot digital", de: "Digitales Tarot", it: "Tarocchi digitali", pt: "Tarot digital" },
+    "Choisissez trois arcanes pour révéler votre trajectoire.": { en: "Choose three arcana to reveal your path.", es: "Elija tres arcanos para revelar su trayectoria.", de: "Wählen Sie drei Arkana, um Ihren Weg zu enthüllen.", it: "Scegli tre arcani per rivelare il tuo percorso.", pt: "Escolha três arcanos para revelar o seu percurso." },
+    "Cartes de votre tirage": { en: "Cards in your reading", es: "Cartas de su tirada", de: "Karten Ihrer Legung", it: "Carte della tua lettura", pt: "Cartas da sua leitura" },
+    "Votre tirage": { en: "Your reading", es: "Su tirada", de: "Ihre Legung", it: "La tua lettura", pt: "A sua leitura" },
+    "arcanes choisis": { en: "arcana selected", es: "arcanos elegidos", de: "Arkana gewählt", it: "arcani scelti", pt: "arcanos escolhidos" },
+    "Révéler ma trajectoire": { en: "Reveal my path", es: "Revelar mi trayectoria", de: "Meinen Weg enthüllen", it: "Rivela il mio percorso", pt: "Revelar o meu percurso" },
+    "✦ Révéler ma trajectoire": { en: "✦ Reveal my path", es: "✦ Revelar mi trayectoria", de: "✦ Meinen Weg enthüllen", it: "✦ Rivela il mio percorso", pt: "✦ Revelar o meu percurso" },
+    "Redistribuer les cartes": { en: "Redeal the cards", es: "Volver a repartir las cartas", de: "Karten neu austeilen", it: "Ridistribuisci le carte", pt: "Voltar a distribuir as cartas" },
+    "Sélectionnez trois arcanes. La boule de cristal est encore en train de négocier avec le Wi‑Fi.": { en: "Select three arcana. The crystal ball is still negotiating with the Wi-Fi.", es: "Seleccione tres arcanos. La bola de cristal sigue negociando con el Wi-Fi.", de: "Wählen Sie drei Arkana. Die Kristallkugel verhandelt noch mit dem WLAN.", it: "Seleziona tre arcani. La sfera di cristallo sta ancora negoziando con il Wi-Fi.", pt: "Selecione três arcanos. A bola de cristal ainda está a negociar com o Wi-Fi." },
+    "Recommencer le tirage": { en: "Start the reading again", es: "Reiniciar la tirada", de: "Legung neu starten", it: "Ricomincia la lettura", pt: "Recomeçar a leitura" },
+    "Votre trajectoire digitale": { en: "Your digital path", es: "Su trayectoria digital", de: "Ihr digitaler Weg", it: "Il tuo percorso digitale", pt: "O seu percurso digital" },
+    "Priorité": { en: "Priority", es: "Prioridad", de: "Priorität", it: "Priorità", pt: "Prioridade" },
+    "Point de vigilance": { en: "Watch point", es: "Punto de atención", de: "Zu beachten", it: "Punto di attenzione", pt: "Ponto de atenção" },
+    "Recevoir cette trajectoire et en parler ensemble": { en: "Receive this path and discuss it together", es: "Recibir esta trayectoria y comentarla juntos", de: "Diesen Weg erhalten und gemeinsam besprechen", it: "Ricevi questo percorso e parliamone insieme", pt: "Receber este percurso e conversar sobre ele" },
+    "Découvrir votre trajectoire digitale": { en: "Discover your digital path", es: "Descubrir su trayectoria digital", de: "Ihren digitalen Weg entdecken", it: "Scopri il tuo percorso digitale", pt: "Descobrir o seu percurso digital" },
+    "Couper les effets sonores": { en: "Turn off sound effects", es: "Desactivar los efectos de sonido", de: "Soundeffekte ausschalten", it: "Disattiva gli effetti sonori", pt: "Desativar os efeitos sonoros" },
+    "Activer les effets sonores": { en: "Turn on sound effects", es: "Activar los efectos de sonido", de: "Soundeffekte einschalten", it: "Attiva gli effetti sonori", pt: "Ativar os efeitos sonoros" },
+    "Son activé": { en: "Sound on", es: "Sonido activado", de: "Ton an", it: "Audio attivo", pt: "Som ativado" },
+    "Son coupé": { en: "Sound off", es: "Sonido desactivado", de: "Ton aus", it: "Audio disattivato", pt: "Som desativado" },
+    "Fondations": { en: "Foundations", es: "Fundamentos", de: "Grundlagen", it: "Fondamenta", pt: "Fundações" },
+    "Croissance": { en: "Growth", es: "Crecimiento", de: "Wachstum", it: "Crescita", pt: "Crescimento" },
+    "Innovation": { en: "Innovation", es: "Innovación", de: "Innovation", it: "Innovazione", pt: "Inovação" },
+    "Implantation internet": { en: "Internet presence", es: "Presencia en Internet", de: "Internetpräsenz", it: "Presenza su Internet", pt: "Presença na Internet" },
+    "Storytelling du site": { en: "Website storytelling", es: "Narrativa del sitio", de: "Website-Storytelling", it: "Storytelling del sito", pt: "Narrativa do site" },
+    "Image de marque": { en: "Brand image", es: "Imagen de marca", de: "Markenbild", it: "Immagine di marca", pt: "Imagem de marca" },
+    "Canaux de diffusion": { en: "Distribution channels", es: "Canales de difusión", de: "Vertriebskanäle", it: "Canali di diffusione", pt: "Canais de divulgação" },
+    "Acquisition client": { en: "Customer acquisition", es: "Adquisición de clientes", de: "Kundengewinnung", it: "Acquisizione clienti", pt: "Aquisição de clientes" },
+    "Crypto transactions": { en: "Crypto transactions", es: "Transacciones cripto", de: "Krypto-Transaktionen", it: "Transazioni crypto", pt: "Transações cripto" },
+    "Web3 innovateur": { en: "Web3 innovation", es: "Innovación Web3", de: "Web3-Innovation", it: "Innovazione Web3", pt: "Inovação Web3" },
+    "Trajectoire enregistrée — merci": { en: "Path saved — thank you", es: "Trayectoria guardada — gracias", de: "Weg gespeichert — danke", it: "Percorso salvato — grazie", pt: "Percurso guardado — obrigado" },
+    "Activer Ibiza Global Radio": { en: "Turn on Ibiza Global Radio", es: "Activar Ibiza Global Radio", de: "Ibiza Global Radio einschalten", it: "Attiva Ibiza Global Radio", pt: "Ativar Ibiza Global Radio" },
+    "Lecteur radio flottant": { en: "Floating radio player", es: "Reproductor de radio flotante", de: "Schwebender Radioplayer", it: "Lettore radio mobile", pt: "Leitor de rádio flutuante" },
+    "Favori du titre en cours": { en: "Favorite current track", es: "Favorito del tema actual", de: "Aktuellen Titel favorisieren", it: "Brano attuale preferito", pt: "Favorito da faixa atual" },
+    "Ajouter le titre en cours aux favoris": { en: "Add current track to favorites", es: "Añadir el tema actual a favoritos", de: "Aktuellen Titel zu Favoriten hinzufügen", it: "Aggiungi il brano attuale ai preferiti", pt: "Adicionar faixa atual aos favoritos" },
+    "Retirer le titre en cours des favoris": { en: "Remove current track from favorites", es: "Quitar el tema actual de favoritos", de: "Aktuellen Titel aus Favoriten entfernen", it: "Rimuovi il brano attuale dai preferiti", pt: "Remover faixa atual dos favoritos" },
+    "En attente": { en: "Waiting", es: "En espera", de: "Warten", it: "In attesa", pt: "A aguardar" },
+    "Aucun son sans clic utilisateur.": { en: "No sound until you click.", es: "No hay sonido hasta que haga clic.", de: "Kein Ton vor einem Klick.", it: "Nessun suono prima del clic.", pt: "Sem som até clicar." },
+    "Lecture ou pause": { en: "Play or pause", es: "Reproducir o pausar", de: "Wiedergabe oder Pause", it: "Riproduci o pausa", pt: "Reproduzir ou pausar" },
+    "Ouvrir le volume": { en: "Open volume control", es: "Abrir el volumen", de: "Lautstärke öffnen", it: "Apri il volume", pt: "Abrir volume" },
+    "Volume du lecteur etendu": { en: "Expanded player volume", es: "Volumen del reproductor ampliado", de: "Lautstärke des erweiterten Players", it: "Volume del lettore esteso", pt: "Volume do leitor expandido" },
+    "Copier le titre": { en: "Copy track", es: "Copiar tema", de: "Titel kopieren", it: "Copia brano", pt: "Copiar faixa" },
+    "Masquer": { en: "Hide", es: "Ocultar", de: "Ausblenden", it: "Nascondi", pt: "Ocultar" },
+    "Masquer le lecteur": { en: "Hide player", es: "Ocultar reproductor", de: "Player ausblenden", it: "Nascondi lettore", pt: "Ocultar leitor" },
+    "Afficher": { en: "Show", es: "Mostrar", de: "Anzeigen", it: "Mostra", pt: "Mostrar" },
+    "Afficher le lecteur": { en: "Show player", es: "Mostrar reproductor", de: "Player anzeigen", it: "Mostra lettore", pt: "Mostrar leitor" },
+    "Ouvrir Soundeo et copier ce titre": { en: "Open Soundeo and copy this track", es: "Abrir Soundeo y copiar este tema", de: "Soundeo öffnen und diesen Titel kopieren", it: "Apri Soundeo e copia questo brano", pt: "Abrir Soundeo e copiar esta faixa" },
+    "Ajouter ce titre aux favoris": { en: "Add this track to favorites", es: "Añadir este tema a favoritos", de: "Diesen Titel zu Favoriten hinzufügen", it: "Aggiungi questo brano ai preferiti", pt: "Adicionar esta faixa aos favoritos" },
+    "Retirer ce titre des favoris": { en: "Remove this track from favorites", es: "Quitar este tema de favoritos", de: "Diesen Titel aus Favoriten entfernen", it: "Rimuovi questo brano dai preferiti", pt: "Remover esta faixa dos favoritos" },
+    "Ajouter aux favoris": { en: "Add to favorites", es: "Añadir a favoritos", de: "Zu Favoriten hinzufügen", it: "Aggiungi ai preferiti", pt: "Adicionar aos favoritos" },
+    "Retirer des favoris": { en: "Remove from favorites", es: "Quitar de favoritos", de: "Aus Favoriten entfernen", it: "Rimuovi dai preferiti", pt: "Remover dos favoritos" },
+    "Actualiser le flux": { en: "Refresh stream", es: "Actualizar emisión", de: "Stream aktualisieren", it: "Aggiorna flusso", pt: "Atualizar transmissão" },
+    "Actualiser le flux Ibiza Global TV": { en: "Refresh Ibiza Global TV stream", es: "Actualizar la emisión de Ibiza Global TV", de: "Ibiza Global TV-Stream aktualisieren", it: "Aggiorna il flusso Ibiza Global TV", pt: "Atualizar transmissão Ibiza Global TV" },
+    "Ouvrir dans un nouvel onglet": { en: "Open in a new tab", es: "Abrir en una pestaña nueva", de: "In neuem Tab öffnen", it: "Apri in una nuova scheda", pt: "Abrir num novo separador" },
+    "Ouvrir Ibiza Global TV dans un nouvel onglet": { en: "Open Ibiza Global TV in a new tab", es: "Abrir Ibiza Global TV en una pestaña nueva", de: "Ibiza Global TV in neuem Tab öffnen", it: "Apri Ibiza Global TV in una nuova scheda", pt: "Abrir Ibiza Global TV num novo separador" },
+    "Chaine en direct. Restream indiquera si la diffusion est hors ligne.": { en: "Live channel. Restream will indicate if the broadcast is offline.", es: "Canal en directo. Restream indicará si la emisión está desconectada.", de: "Live-Kanal. Restream zeigt an, wenn die Übertragung offline ist.", it: "Canale in diretta. Restream indicherà se la trasmissione è offline.", pt: "Canal em direto. A Restream indicará se a transmissão está offline." },
+    "Envoyer les favoris par mail": { en: "Email favorites", es: "Enviar favoritos por correo", de: "Favoriten per E-Mail senden", it: "Invia i preferiti via email", pt: "Enviar favoritos por e-mail" },
+    "Mail": { en: "Email", es: "Correo", de: "E-Mail", it: "Email", pt: "E-mail" },
+    "Favoris": { en: "Favorites", es: "Favoritos", de: "Favoriten", it: "Preferiti", pt: "Favoritos" },
+    "Historique indisponible": { en: "History unavailable", es: "Historial no disponible", de: "Verlauf nicht verfügbar", it: "Cronologia non disponibile", pt: "Histórico indisponível" },
+    "En attente des donnees radio": { en: "Waiting for radio data", es: "Esperando datos de la radio", de: "Warten auf Radiodaten", it: "In attesa dei dati radio", pt: "A aguardar dados da rádio" },
+    "Lecteur radio reduit": { en: "Minimized radio player", es: "Reproductor de radio minimizado", de: "Minimierter Radioplayer", it: "Lettore radio ridotto", pt: "Leitor de rádio reduzido" },
+    "Lecture en direct": { en: "Live playback", es: "Reproducción en directo", de: "Live-Wiedergabe", it: "Riproduzione in diretta", pt: "Reprodução em direto" },
+    "Flux officiel Ibiza Global Radio.": { en: "Official Ibiza Global Radio stream.", es: "Emisión oficial de Ibiza Global Radio.", de: "Offizieller Ibiza Global Radio-Stream.", it: "Flusso ufficiale Ibiza Global Radio.", pt: "Transmissão oficial da Ibiza Global Radio." },
+    "Le flux est pret.": { en: "The stream is ready.", es: "La emisión está lista.", de: "Der Stream ist bereit.", it: "Il flusso è pronto.", pt: "A transmissão está pronta." },
+    "Connexion live": { en: "Connecting live", es: "Conectando en directo", de: "Live-Verbindung", it: "Connessione live", pt: "Ligação em direto" },
+    "Ouverture du flux officiel Ibiza Global Radio.": { en: "Opening the official Ibiza Global Radio stream.", es: "Abriendo la emisión oficial de Ibiza Global Radio.", de: "Offizieller Ibiza Global Radio-Stream wird geöffnet.", it: "Apertura del flusso ufficiale Ibiza Global Radio.", pt: "A abrir a transmissão oficial da Ibiza Global Radio." },
+    "Lecture bloquee": { en: "Playback blocked", es: "Reproducción bloqueada", de: "Wiedergabe blockiert", it: "Riproduzione bloccata", pt: "Reprodução bloqueada" },
+    "Clique sur lecture pour relancer le flux.": { en: "Click play to restart the stream.", es: "Pulse reproducir para reiniciar la emisión.", de: "Klicken Sie auf Wiedergabe, um den Stream neu zu starten.", it: "Premi play per riavviare il flusso.", pt: "Clique em reproduzir para reiniciar a transmissão." },
+    "Mettre en pause": { en: "Pause", es: "Pausar", de: "Pausieren", it: "Metti in pausa", pt: "Pausar" },
+    "Volume coupe": { en: "Muted", es: "Silenciado", de: "Stumm", it: "Audio disattivato", pt: "Sem som" },
+    "Retablir le son": { en: "Unmute", es: "Restablecer el sonido", de: "Ton einschalten", it: "Riattiva audio", pt: "Repor o som" },
+    "Offres acceptées": { en: "Offers welcome", es: "Se aceptan ofertas", de: "Angebote willkommen", it: "Offerte accettate", pt: "Ofertas aceites" },
+    "Voir le domaine": { en: "View domain", es: "Ver dominio", de: "Domain ansehen", it: "Vedi dominio", pt: "Ver domínio" },
+    "Options de paiement": { en: "Payment options", es: "Opciones de pago", de: "Zahlungsoptionen", it: "Opzioni di pagamento", pt: "Opções de pagamento" },
+    "Précédent": { en: "Previous", es: "Anterior", de: "Zurück", it: "Precedente", pt: "Anterior" },
+    "Suivant": { en: "Next", es: "Siguiente", de: "Weiter", it: "Successivo", pt: "Seguinte" },
+    "Vos données restent les vôtres.": { en: "Your data remains yours.", es: "Sus datos siguen siendo suyos.", de: "Ihre Daten bleiben Ihre Daten.", it: "I tuoi dati restano tuoi.", pt: "Os seus dados continuam a ser seus." },
+    "Découvrez précisément les données utilisées, leur finalité et les protections appliquées par PureOwner.": { en: "See exactly what data PureOwner uses, why it is used and how it is protected.", es: "Descubra qué datos utiliza PureOwner, con qué finalidad y cómo los protege.", de: "Erfahren Sie genau, welche Daten PureOwner nutzt, wofür und wie sie geschützt werden.", it: "Scopri quali dati utilizza PureOwner, per quale scopo e come vengono protetti.", pt: "Veja exatamente que dados a PureOwner utiliza, para que fim e como são protegidos." },
+    "Confidentialité et transparence": { en: "Privacy and transparency", es: "Privacidad y transparencia", de: "Datenschutz und Transparenz", it: "Privacy e trasparenza", pt: "Privacidade e transparência" },
+    "Notre accompagnement peut impliquer des informations de profil ou de wallet. Le cadre complet précise ce qui est utilisé, pourquoi et pendant combien de temps.": { en: "Our guidance may involve profile or wallet information. The full policy explains what is used, why and for how long.", es: "Nuestro acompañamiento puede implicar información de perfil o wallet. La política completa explica qué se utiliza, por qué y durante cuánto tiempo.", de: "Unsere Begleitung kann Profil- oder Wallet-Informationen umfassen. Die vollständige Richtlinie erklärt, was warum und wie lange genutzt wird.", it: "Il nostro supporto può coinvolgere informazioni del profilo o del wallet. L'informativa completa spiega cosa viene utilizzato, perché e per quanto tempo.", pt: "O nosso acompanhamento pode envolver informações de perfil ou wallet. A política completa explica o que é utilizado, porquê e durante quanto tempo." },
+    "Lire la politique détaillée": { en: "Read the detailed policy", es: "Leer la política detallada", de: "Ausführliche Richtlinie lesen", it: "Leggi l'informativa dettagliata", pt: "Ler a política detalhada" },
+    "Confidentialité": { en: "Privacy", es: "Privacidad", de: "Datenschutz", it: "Privacy", pt: "Privacidade" },
+    "Fermer": { en: "Close", es: "Cerrar", de: "Schließen", it: "Chiudi", pt: "Fechar" }
+  });
+
   function normalize(value) {
     return String(value || "").replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
   }
@@ -962,7 +1142,7 @@
   }
 
   function skipElement(element) {
-    return !element || element.closest("script,style,noscript,svg,.language-menu,.storefront-card-name,[data-no-translate]");
+    return !element || element.closest("script,style,noscript,svg,.storefront-card-name,[data-no-translate]");
   }
 
   function dynamicTranslate(source, lang) {
@@ -1017,6 +1197,9 @@
       }[lang];
     }
 
+    match = source.match(/^(.+),\s*(Fondations|Identité|Croissance|Innovation)$/i);
+    if (match) return translateString(match[1], lang) + ", " + translateString(match[2], lang);
+
     return null;
   }
 
@@ -1028,7 +1211,8 @@
   }
 
   function translateTextNode(node, lang) {
-    if (!node.__poSourceText) {
+    var current = normalize(node.nodeValue);
+    if (!node.__poSourceText || (node.__poLastText && current !== node.__poLastText && current !== node.__poSourceText)) {
       node.__poSourceText = normalize(node.nodeValue);
       node.__poPrefix = (node.nodeValue.match(/^\s*/) || [""])[0];
       node.__poSuffix = (node.nodeValue.match(/\s*$/) || [""])[0];
@@ -1038,19 +1222,26 @@
     var translated = translateString(original, lang);
     var next = (node.__poPrefix || "") + translated + (node.__poSuffix || "");
     if (node.nodeValue !== next) node.nodeValue = next;
+    node.__poLastText = normalize(next);
   }
 
   function translateAttrs(element, lang) {
     if (!element || element.nodeType !== 1 || skipElement(element)) return;
+    if (element.matches(".language-menu [data-lang]")) return;
+    var states = element.__poI18nAttrs || (element.__poI18nAttrs = {});
     ATTRS.forEach(function (attr) {
       if (!element.hasAttribute(attr)) return;
       if (attr === "content" && !element.matches("meta[name='description'],meta[property='og:title'],meta[property='og:description'],meta[name='twitter:title'],meta[name='twitter:description']")) return;
-      var store = "data-i18n-source-" + attr.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
-      var source = element.getAttribute(store) || normalize(element.getAttribute(attr));
+      var current = normalize(element.getAttribute(attr));
+      var state = states[attr];
+      if (!state || (state.last && current !== state.last && current !== state.source)) {
+        state = states[attr] = { source: current, last: current };
+      }
+      var source = state.source;
       if (!source || !hasLetters(source)) return;
-      element.setAttribute(store, source);
       var translated = translateString(source, lang);
       if (element.getAttribute(attr) !== translated) element.setAttribute(attr, translated);
+      state.last = normalize(translated);
     });
   }
 
@@ -1099,6 +1290,11 @@
     syncMenus(lang);
     walk(document.documentElement, lang);
     applying = false;
+    document.dispatchEvent(new CustomEvent("pureowner:languagechange", { detail: { language: lang } }));
+    var tarot = document.getElementById("tarot-digital-widget");
+    if (tarot && tarot.contentWindow) {
+      tarot.contentWindow.postMessage({ type: "pureowner:languagechange", language: lang }, window.location.origin);
+    }
   }
 
   function bind() {
@@ -1133,6 +1329,15 @@
   }
 
   window.PureOwnerI18n = { setLanguage: setLanguage, translateString: translateString, dictionary: T };
+
+  window.addEventListener("message", function (event) {
+    if (event.origin !== window.location.origin || !event.data || event.data.type !== "pureowner:languagechange") return;
+    setLanguage(event.data.language);
+  });
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === STORAGE_KEY && event.newValue) setLanguage(event.newValue);
+  });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bind);
   else bind();

@@ -293,6 +293,7 @@ footer{border-top:1px solid var(--border-soft)}
 .simplified-hero{min-height:auto;padding-top:8rem;padding-bottom:4.5rem}
 .simplified-hero .hero-content{max-width:660px}
 .simplified-hero h1{max-width:760px}
+html[lang="de"] .simplified-hero h1{overflow-wrap:anywhere;hyphens:auto}
 .micro-line{margin-top:-1.2rem;margin-bottom:1.6rem;color:var(--gold-2);font-family:'Didot','Playfair Display',Georgia,serif;font-size:1.18rem;font-style:italic}
 .hero-proof{display:block;align-items:stretch}
 .proof-card{width:min(420px,100%);padding:2rem;background:linear-gradient(160deg,rgba(15,64,52,0.96),rgba(6,35,28,0.9));border:1px solid var(--border);box-shadow:0 24px 70px rgba(0,0,0,0.38);border-radius:6px}
@@ -562,6 +563,7 @@ footer{border-top:1px solid var(--border-soft)}
   .hero-sub{font-size:1.03rem;line-height:1.62;margin-bottom:1.8rem}
   .hero-ctas{display:grid;grid-template-columns:1fr;gap:0.8rem}
   .btn-gold,.btn-ghost{width:100%;justify-content:center;min-height:52px;padding:0.9rem 1rem}
+  html[lang]:not([lang="fr"]) .simplified-hero .btn-gold{padding-left:1rem;padding-right:4.8rem;font-size:0.68rem;letter-spacing:0.06em}
   .hero-proof{margin-top:2.4rem}
   .proof-card,.proof-strip{width:100%}
   .market-head{margin-bottom:1.7rem;text-align:left}
@@ -1636,7 +1638,7 @@ footer{border-top:1px solid var(--border-soft)}
   </div>
 
   <div class="tarot-module-shell">
-    <iframe id="tarot-digital-widget" src="/widgets/tarot-digital-widget.html" title="Tarot digital PureOwner" loading="lazy"></iframe>
+    <iframe id="tarot-digital-widget" src="/widgets/tarot-digital-widget.html?v=i18n-3" title="Tarot digital PureOwner" loading="lazy"></iframe>
   </div>
 
   <p class="tarot-module-note">Le tarot reste un module autonome. La molette continue de faire défiler PureOwner, même lorsque la souris se trouve au-dessus des cartes.</p>
@@ -1703,7 +1705,7 @@ footer{border-top:1px solid var(--border-soft)}
   var $ = function(s){ return document.querySelector(s); };
 
   function fmt(v) {
-    return (v / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
+    return (v / 100).toLocaleString(document.documentElement.lang || 'fr', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
   }
 
   function buildUrl() {
@@ -1742,7 +1744,7 @@ footer{border-top:1px solid var(--border-soft)}
 
     var price = document.createElement('div');
     price.className = 'storefront-card-price';
-    price.textContent = item.price !== null ? fmt(item.price) : 'Make an Offer';
+    price.textContent = item.price !== null ? fmt(item.price) : 'Faire une offre';
     card.appendChild(price);
 
     var badges = document.createElement('div');
@@ -1750,15 +1752,15 @@ footer{border-top:1px solid var(--border-soft)}
     if (item.hasLto && item.leaseToOwnMonthlyPrice !== null) {
       var ltoBadge = document.createElement('span');
       ltoBadge.className = 'storefront-card-badge storefront-badge-lto';
-      ltoBadge.textContent = 'Lease ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo';
+      ltoBadge.textContent = 'Échelonner dès ' + fmt(item.leaseToOwnMonthlyPrice) + '/mois';
       badges.appendChild(ltoBadge);
     }
     if (item.hasOffers) {
       var offerBadge = document.createElement('span');
       offerBadge.className = 'storefront-card-badge storefront-badge-offers';
       offerBadge.textContent = item.minOfferAmountInCents !== null
-        ? 'Offers from ' + fmt(item.minOfferAmountInCents)
-        : 'Offers Welcome';
+        ? 'Offres dès ' + fmt(item.minOfferAmountInCents)
+        : 'Offres acceptées';
       badges.appendChild(offerBadge);
     }
     var typeBadge = document.createElement('span');
@@ -1773,10 +1775,10 @@ footer{border-top:1px solid var(--border-soft)}
     cta.rel = 'noopener';
     if (item.price !== null) {
       cta.href = absolutise(item.buyUrl);
-      cta.textContent = 'Buy Now';
+      cta.textContent = 'Acheter';
     } else {
       cta.href = absolutise(item.detailUrl);
-      cta.textContent = 'View Domain';
+      cta.textContent = 'Voir le domaine';
     }
     card.appendChild(cta);
 
@@ -1786,7 +1788,7 @@ footer{border-top:1px solid var(--border-soft)}
       ltoLink.href = absolutise(item.detailUrl + '?pm=lto');
       ltoLink.target = '_blank';
       ltoLink.rel = 'noopener';
-      ltoLink.textContent = item.leaseToOwnMonthlyPrice !== null ? 'Lease from ' + fmt(item.leaseToOwnMonthlyPrice) + '/mo' : 'Lease Options';
+      ltoLink.textContent = item.leaseToOwnMonthlyPrice !== null ? 'Échelonner dès ' + fmt(item.leaseToOwnMonthlyPrice) + '/mois' : 'Options de paiement';
       card.appendChild(ltoLink);
     }
 
@@ -1820,11 +1822,11 @@ footer{border-top:1px solid var(--border-soft)}
     var start = Math.max(1, page - w);
     var end = Math.min(totalPages, page + w);
 
-    addBtn('Prev', page - 1, false, page <= 1);
+    addBtn('Précédent', page - 1, false, page <= 1);
     if (start > 1) { addBtn(1, 1, page === 1, false); if (start > 2) addEllipsis(); }
     for (var i = start; i <= end; i++) { addBtn(String(i), i, i === page, false); }
     if (end < totalPages) { if (end < totalPages - 1) addEllipsis(); addBtn(String(totalPages), totalPages, page === totalPages, false); }
-    addBtn('Next', page + 1, false, page >= totalPages);
+    addBtn('Suivant', page + 1, false, page >= totalPages);
   }
 
   function fetchAndRender() {
@@ -1850,7 +1852,7 @@ footer{border-top:1px solid var(--border-soft)}
             });
           }
         }
-        if (count) count.textContent = data.total + ' domain' + (data.total !== 1 ? 's' : '') + ' for sale';
+        if (count) count.textContent = data.total + ' nom' + (data.total !== 1 ? 's' : '') + ' .brave disponible' + (data.total !== 1 ? 's' : '');
         renderPagination(data.total, data.page, data.pageSize);
       })
       .catch(function() {
@@ -2055,7 +2057,7 @@ footer{border-top:1px solid var(--border-soft)}
 <script>
 (function(){
   var labels = { fr: "FR", en: "EN", es: "ES", de: "DE", it: "IT", pt: "PT" };
-  var storageKey = "braveowner-language";
+  var storageKey = "pureowner-language";
   var selected = localStorage.getItem(storageKey) || "fr";
 
   function sync(menu) {
@@ -2876,6 +2878,7 @@ footer{border-top:1px solid var(--border-soft)}
     });
   })();
 </script>
+  <script src="translations.js?v=i18n-3" defer></script>
   <script src="privacy-and-learning.js"></script>
   <script src="privacy-center-v2.js" defer></script>
   <script src="widgets/ibiza-radio-widget.js" defer></script>
