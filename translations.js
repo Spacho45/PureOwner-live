@@ -4,13 +4,34 @@
   var ATTRS = ["placeholder", "aria-label", "title", "alt", "content"];
   var applying = false;
   var observer;
+  var currentLanguage = "fr";
+
+  function normalizeLanguage(language) {
+    var code = String(language || "").split(/[-_]/)[0].toLowerCase();
+    return LANG_LABELS[code] ? code : "";
+  }
+
+  function getStoredLanguage() {
+    try {
+      return normalizeLanguage(localStorage.getItem(STORAGE_KEY));
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function storeLanguage(language) {
+    try {
+      localStorage.setItem(STORAGE_KEY, language);
+    } catch (error) {
+      // Translation still works when storage is unavailable.
+    }
+  }
 
   function detectDeviceLanguage() {
-    var supported = Object.keys(LANG_LABELS);
     var candidates = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "fr"]);
     for (var i = 0; i < candidates.length; i++) {
-      var code = String(candidates[i] || "").slice(0, 2).toLowerCase();
-      if (supported.indexOf(code) !== -1) return code;
+      var code = normalizeLanguage(candidates[i]);
+      if (code) return code;
     }
     return "fr";
   }
@@ -1283,9 +1304,11 @@
     });
   }
 
-  function setLanguage(lang) {
-    if (!LANG_LABELS[lang]) lang = "fr";
-    localStorage.setItem(STORAGE_KEY, lang);
+  function setLanguage(lang, options) {
+    lang = normalizeLanguage(lang) || "fr";
+    var shouldPersist = !options || options.persist !== false;
+    currentLanguage = lang;
+    if (shouldPersist) storeLanguage(lang);
     applying = true;
     syncMenus(lang);
     walk(document.documentElement, lang);
@@ -1293,7 +1316,7 @@
     document.dispatchEvent(new CustomEvent("pureowner:languagechange", { detail: { language: lang } }));
     var tarot = document.getElementById("tarot-digital-widget");
     if (tarot && tarot.contentWindow) {
-      tarot.contentWindow.postMessage({ type: "pureowner:languagechange", language: lang }, window.location.origin);
+      tarot.contentWindow.postMessage({ type: "pureowner:languagechange", language: lang, persist: shouldPersist }, window.location.origin);
     }
   }
 
@@ -1306,7 +1329,7 @@
 
     observer = new MutationObserver(function (mutations) {
       if (applying) return;
-      var lang = localStorage.getItem(STORAGE_KEY) || "fr";
+      var lang = currentLanguage;
       if (lang === "fr") return;
       applying = true;
       mutations.forEach(function (mutation) {
@@ -1325,18 +1348,18 @@
       attributeFilter: ATTRS
     });
 
-    setLanguage(localStorage.getItem(STORAGE_KEY) || detectDeviceLanguage());
+    setLanguage(getStoredLanguage() || detectDeviceLanguage(), { persist: false });
   }
 
   window.PureOwnerI18n = { setLanguage: setLanguage, translateString: translateString, dictionary: T };
 
   window.addEventListener("message", function (event) {
     if (event.origin !== window.location.origin || !event.data || event.data.type !== "pureowner:languagechange") return;
-    setLanguage(event.data.language);
+    setLanguage(event.data.language, { persist: event.data.persist !== false });
   });
 
   window.addEventListener("storage", function (event) {
-    if (event.key === STORAGE_KEY && event.newValue) setLanguage(event.newValue);
+    if (event.key === STORAGE_KEY && event.newValue) setLanguage(event.newValue, { persist: false });
   });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bind);

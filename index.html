@@ -56,13 +56,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a:hover,.nav-links a.is-active{color:var(--gold-2)}
 .nav-cta{padding:0.55rem 1.15rem;border:1px solid var(--border);border-radius:2px;color:var(--gold-2)!important}
 .nav-cta:hover{border-color:var(--gold);background:rgba(212,175,55,0.06)}
-.language-menu{position:absolute;right:2.5rem;top:50%;width:13.4rem;overflow:hidden;transform:translateY(-50%);padding:0.28rem;border:1px solid rgba(240,216,138,0.18);border-radius:999px;background:linear-gradient(160deg,rgba(212,175,55,0.08),rgba(6,35,28,0.72));box-shadow:inset 0 0 0 1px rgba(255,255,255,0.02),0 14px 34px rgba(0,0,0,0.18)}
+.language-menu{position:absolute;right:2.5rem;top:50%;width:13.4rem;overflow:hidden;display:flex;align-items:center;gap:0.18rem;transform:translateY(-50%);padding:0.28rem;border:1px solid rgba(240,216,138,0.18);border-radius:999px;background:linear-gradient(160deg,rgba(212,175,55,0.08),rgba(6,35,28,0.72));box-shadow:inset 0 0 0 1px rgba(255,255,255,0.02),0 14px 34px rgba(0,0,0,0.18)}
 .language-menu::before,.language-menu::after{content:"";position:absolute;top:0;bottom:0;z-index:2;width:2rem;pointer-events:none}
-.language-menu::before{left:0;background:linear-gradient(90deg,rgba(6,35,28,0.96),transparent)}
+.language-menu::before{left:2.7rem;background:linear-gradient(90deg,rgba(6,35,28,0.96),transparent)}
 .language-menu::after{right:0;background:linear-gradient(270deg,rgba(6,35,28,0.96),transparent)}
+.language-window{min-width:0;overflow:hidden;flex:1}
 .language-track{display:flex;align-items:center;width:max-content;gap:0.34rem;animation:langMarquee 18s linear infinite}
 .language-menu:hover .language-track,.language-menu:focus-within .language-track{animation-play-state:paused}
 .language-menu button{width:2.18rem;height:2.18rem;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid transparent;border-radius:50%;background:transparent;color:rgba(244,239,225,0.56);font-size:1.05rem;line-height:1;cursor:pointer;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s,transform 0.2s,filter 0.2s}
+.language-menu .language-pinned{position:relative;z-index:3;border-color:rgba(240,216,138,0.24);background:rgba(6,35,28,0.58)}
 .language-menu button:hover,.language-menu button.active{border-color:rgba(240,216,138,0.5);background:radial-gradient(circle,rgba(240,216,138,0.16),rgba(6,35,28,0.14));box-shadow:0 0 18px rgba(212,175,55,0.18);transform:translateY(-1px);filter:saturate(1.15)}
 @keyframes langMarquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 0.17rem))}}
 .lang-trigger{display:flex;align-items:center;gap:0.45rem;padding:0.55rem 0.8rem;border:1px solid var(--border);border-radius:2px;background:linear-gradient(160deg,rgba(212,175,55,0.12),rgba(6,35,28,0.78));color:var(--gold-2);font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;cursor:pointer}
@@ -1083,19 +1085,20 @@ html[lang="de"] .simplified-hero h1{overflow-wrap:anywhere;hyphens:auto}
     PureOwner
   </a>
   <div class="language-menu" role="group" aria-label="Choisir une langue">
-    <div class="language-track">
-      <button type="button" data-lang="fr" aria-label="Français">🇫🇷</button>
-      <button type="button" data-lang="en" aria-label="English">🇬🇧</button>
-      <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
-      <button type="button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
-      <button type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
-      <button type="button" data-lang="pt" aria-label="Português">🇵🇹</button>
-      <button type="button" data-lang="fr" aria-label="Français">🇫🇷</button>
-      <button type="button" data-lang="en" aria-label="English">🇬🇧</button>
-      <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
-      <button type="button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
-      <button type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
-      <button type="button" data-lang="pt" aria-label="Português">🇵🇹</button>
+    <button class="language-pinned" type="button" data-lang="fr" aria-label="Français">🇫🇷</button>
+    <div class="language-window">
+      <div class="language-track">
+        <button type="button" data-lang="en" aria-label="English">🇬🇧</button>
+        <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+        <button type="button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+        <button type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+        <button type="button" data-lang="pt" aria-label="Português">🇵🇹</button>
+        <button type="button" data-lang="en" aria-label="English">🇬🇧</button>
+        <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+        <button type="button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+        <button type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+        <button type="button" data-lang="pt" aria-label="Português">🇵🇹</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -1638,7 +1641,7 @@ html[lang="de"] .simplified-hero h1{overflow-wrap:anywhere;hyphens:auto}
   </div>
 
   <div class="tarot-module-shell">
-    <iframe id="tarot-digital-widget" src="/widgets/tarot-digital-widget.html?v=i18n-3" title="Tarot digital PureOwner" loading="lazy"></iframe>
+    <iframe id="tarot-digital-widget" src="/widgets/tarot-digital-widget.html?v=i18n-4" title="Tarot digital PureOwner" loading="lazy"></iframe>
   </div>
 
   <p class="tarot-module-note">Le tarot reste un module autonome. La molette continue de faire défiler PureOwner, même lorsque la souris se trouve au-dessus des cartes.</p>
@@ -2058,7 +2061,15 @@ html[lang="de"] .simplified-hero h1{overflow-wrap:anywhere;hyphens:auto}
 (function(){
   var labels = { fr: "FR", en: "EN", es: "ES", de: "DE", it: "IT", pt: "PT" };
   var storageKey = "pureowner-language";
-  var selected = localStorage.getItem(storageKey) || "fr";
+  var supported = Object.keys(labels);
+  var browserLanguages = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "fr"];
+  var detected = browserLanguages.map(function(language) {
+    return String(language || "").split(/[-_]/)[0].toLowerCase();
+  }).find(function(language) {
+    return supported.indexOf(language) !== -1;
+  }) || "fr";
+  var saved = localStorage.getItem(storageKey);
+  var selected = supported.indexOf(saved) !== -1 ? saved : detected;
 
   function sync(menu) {
     var current = menu.querySelector(".lang-current");
@@ -2878,7 +2889,7 @@ html[lang="de"] .simplified-hero h1{overflow-wrap:anywhere;hyphens:auto}
     });
   })();
 </script>
-  <script src="translations.js?v=i18n-3" defer></script>
+  <script src="translations.js?v=i18n-4" defer></script>
   <script src="privacy-and-learning.js"></script>
   <script src="privacy-center-v2.js" defer></script>
   <script src="widgets/ibiza-radio-widget.js" defer></script>
