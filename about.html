@@ -64,7 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .lang-panel button:last-child{border-bottom:0}
 .lang-panel button:hover,.lang-panel button.active{color:var(--gold-2);background:rgba(212,175,55,0.08)}
 .lang-panel small{color:var(--gold);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase}
-@media(max-width:920px){.nav-links{display:flex;gap:0.75rem}.nav-links li:not(.language-menu){display:none}nav{padding:0.9rem 1.25rem}}
+@media(max-width:920px){.nav-links{display:flex;gap:0.75rem;flex-wrap:wrap}nav{padding:0.9rem 1.25rem}}
 
 /* Hero */
 .hero{position:relative;min-height:78vh;display:grid;grid-template-columns:1.12fr 0.88fr;align-items:center;gap:4rem;padding:8.5rem 3rem 4rem;max-width:1320px;margin:0 auto;overflow:hidden}
@@ -178,12 +178,11 @@ footer{border-top:1px solid var(--border-soft)}
 .footer-inner a{color:var(--muted);text-decoration:none;transition:color 0.2s}
 .footer-inner a:hover{color:var(--gold-2)}
 </style>
-  <link rel="stylesheet" href="assets/domain-companion/companion.css?v=20260806-header">
 </head>
 <body>
 
 <nav>
-  <a href="index.html#top" class="logo" aria-label="PureOwner accueil">
+  <a href="index.html" class="logo" aria-label="PureOwner accueil">
     <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
       <rect width="100" height="100" fill="none"/>
       <g fill="none" stroke="#d4af37" stroke-width="3">
@@ -196,23 +195,11 @@ footer{border-top:1px solid var(--border-soft)}
     PureOwner
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#transition">La transition</a></li>
-    <li><a href="index.html#compare">Web2 / Web3</a></li>
-    <li><a href="index.html#extensions">Extensions</a></li>
-    <li><a href="about.html" class="active">Notre mission</a></li>
     <li><a href="marketplace.html">Marketplace</a></li>
-    <li class="language-menu">
-      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="lang-current">FR</span><span class="chev">⌄</span></button>
-      <div class="lang-panel" role="menu" aria-label="Choisir une langue">
-        <button type="button" data-lang="fr" role="menuitem">Français <small>FR</small></button>
-        <button type="button" data-lang="en" role="menuitem">English <small>EN</small></button>
-        <button type="button" data-lang="es" role="menuitem">Español <small>ES</small></button>
-        <button type="button" data-lang="de" role="menuitem">Deutsch <small>DE</small></button>
-        <button type="button" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
-        <button type="button" data-lang="pt" role="menuitem">Português <small>PT</small></button>
-      </div>
-    </li>
-    <li><a href="index.html#reserver" class="nav-cta">Réserver mon nom</a></li>
+    <li><a href="ecosystemes.html">Écosystèmes</a></li>
+    <li><a href="web2-vs-web3.html">Comprendre</a></li>
+    <li><a href="about.html" class="active">À propos</a></li>
+    <li><a href="marketplace.html" class="nav-cta">Explorer</a></li>
   </ul>
 </nav>
 
@@ -231,7 +218,7 @@ footer{border-top:1px solid var(--border-soft)}
     <h1>Nous ne vendons pas des domaines. Nous accompagnons une <span class="it">transition</span>.</h1>
     <p class="hero-sub">L'objectif de PureOwner n'est pas de vendre des noms de domaine. Notre mission est de faire comprendre que nous vivons le plus grand transfert de propriété numérique depuis la création d'Internet — et d'aider chaque personne à réserver sa part avant qu'un autre ne le fasse.</p>
     <div class="hero-ctas">
-      <a href="index.html#reserver" class="btn-gold">Réserver mon nom →</a>
+      <a href="marketplace.html" class="btn-gold">Voir les noms disponibles →</a>
       <a href="#histoire" class="btn-ghost">Notre histoire</a>
     </div>
   </div>
@@ -246,7 +233,7 @@ footer{border-top:1px solid var(--border-soft)}
           <img src="./images/e8a8e1d1-50b8-4b83-ac24-b1a21fc452c1.png" alt="La mission de PureOwner — la propriété numérique Web3">
         </div>
       </div>
-      <div class="hero-caption">Acquis une fois, à vous pour toujours · votre patrimoine numérique</div>
+      <div class="hero-caption">Un actif numérique détenu directement · votre patrimoine numérique</div>
     </div>
   </div>
 </header>
@@ -266,7 +253,7 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="thesis-inner">
     <div class="eyebrow">Notre conviction</div>
     <h2>Il ne s'agit pas d'acheter un domaine, mais de <span class="it">réserver une partie de son identité</span> avant qu'elle ne soit prise par quelqu'un d'autre.</h2>
-    <p>Pendant plus de 35 ans, les noms de domaine étaient principalement destinés aux entreprises. Les particuliers possédaient une adresse e-mail ou un compte sur une plateforme, mais rarement leur propre identité numérique. Aujourd'hui, grâce au Web3, chacun peut devenir propriétaire de son prénom, de son nom ou de son identité numérique — de manière permanente.</p>
+    <p>Pendant plus de 35 ans, les noms de domaine étaient principalement destinés aux entreprises. Les particuliers possédaient une adresse e-mail ou un compte sur une plateforme, mais rarement leur propre identité numérique. Aujourd'hui, grâce au Web3, chacun peut détenir son prénom, son nom ou son identité numérique directement, selon les règles de chaque extension.</p>
   </div>
 </section>
 
@@ -328,13 +315,13 @@ footer{border-top:1px solid var(--border-soft)}
       <div class="story-frame">
         <img src="./images/368bbf04-fff0-4e03-9d30-2676099a9b29.png" alt="Réserver son identité numérique avant les autres">
       </div>
-      <div class="story-cap">Un nom unique — une fois pris, il l'est définitivement</div>
+      <div class="story-cap">Un nom rare — une fois enregistré, il faut le racheter ou en changer</div>
     </div>
     <div class="story-txt">
       <div class="eyebrow">Le parallèle immobilier</div>
       <h2>Personne n'attend qu'un autre achète sa <span class="it">maison</span>.</h2>
       <p>Personne n'attend qu'une autre personne achète sa maison avant de chercher un logement. Personne ne laisserait volontairement son nom être déposé comme marque par un tiers.</p>
-      <p><strong>Demain, il sera tout aussi naturel de posséder son prénom numérique.</strong> Un nom Web3 fonctionne comme un bien immobilier : il est unique, il vous appartient, et sa valeur grandit avec son usage. La seule différence, c'est qu'il n'en existe qu'un seul exemplaire.</p>
+      <p><strong>Demain, il sera tout aussi naturel de posséder son prénom numérique.</strong> Un nom Web3 peut être rare et détenu directement, selon l'extension et le réseau sur lequel il est enregistré.</p>
     </div>
   </div>
 </section>
@@ -345,7 +332,7 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="market-head">
     <div class="eyebrow">Pourquoi agir tôt est essentiel</div>
     <h2>Le <span class="it">premier arrivé</span> est le seul servi</h2>
-    <p>Chaque nom est unique. Plus on attend, plus le risque qu'il soit pris augmente.</p>
+    <p>Un nom court et mémorable est rare. Plus on attend, plus le risque qu'il soit pris augmente.</p>
   </div>
   <div class="pillars">
     <div class="pillar">
@@ -388,7 +375,7 @@ footer{border-top:1px solid var(--border-soft)}
     <div class="promise-card">
       <div class="pc-num">02</div>
       <h3>Pourquoi agir tôt est essentiel</h3>
-      <p>Chaque nom est unique. Nous vous aidons à sécuriser le vôtre avant qu'il ne soit réservé par un autre.</p>
+      <p>Un nom court et mémorable est rare. Nous vous aidons à sécuriser le vôtre avant qu'il ne soit réservé par un autre.</p>
     </div>
     <div class="promise-card">
       <div class="pc-num">03</div>
@@ -426,9 +413,9 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="cta-inner">
     <div class="eyebrow">Votre tour</div>
     <h2>Réservez votre <span class="it">identité numérique</span> dès aujourd'hui.</h2>
-    <p>Chaque nom est unique. Le vôtre vous attend — pour l'instant. Sécurisez-le avant quelqu'un d'autre et faites de votre prénom un véritable patrimoine numérique.</p>
+    <p>Un nom court et mémorable est rare. Le vôtre vous attend — pour l'instant. Sécurisez-le avant quelqu'un d'autre et faites de votre prénom un véritable patrimoine numérique.</p>
     <div class="hero-ctas">
-      <a href="index.html#reserver" class="btn-gold">Réserver mon nom →</a>
+      <a href="marketplace.html" class="btn-gold">Voir les noms disponibles →</a>
       <a href="marketplace.html" class="btn-ghost">Explorer la marketplace</a>
     </div>
   </div>
@@ -438,7 +425,7 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="footer-inner">
     <div class="f-logo">PureOwner</div>
     <div>© <span id="year"></span> PureOwner · La référence de la propriété numérique</div>
-    <div><a href="marketplace.html">Marketplace</a> · <a href="about.html">Notre mission</a> · <a href="index.html#transition">La transition</a></div>
+    <div><a href="marketplace.html">Marketplace</a> · <a href="ecosystemes.html">Écosystèmes</a> · <a href="about.html">À propos</a></div>
   </div>
 </footer>
 
@@ -708,6 +695,5 @@ footer{border-top:1px solid var(--border-soft)}
   });
 })();
 </script>
-  <script type="module" src="assets/domain-companion/companion.js?v=20260806-header"></script>
 </body>
 </html>

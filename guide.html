@@ -64,7 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .lang-panel button:last-child{border-bottom:0}
 .lang-panel button:hover,.lang-panel button.active{color:var(--gold-2);background:rgba(212,175,55,0.08)}
 .lang-panel small{color:var(--gold);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase}
-@media(max-width:920px){.nav-links{display:flex;gap:0.75rem}.nav-links li:not(.language-menu){display:none}nav{padding:0.9rem 1.25rem}}
+@media(max-width:920px){.nav-links{display:flex;gap:0.75rem;flex-wrap:wrap}nav{padding:0.9rem 1.25rem}}
 
 .page-hero{position:relative;padding:9rem 2.5rem 4rem;max-width:1320px;margin:0 auto;text-align:center;overflow:hidden}
 .page-hero .eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.24em;color:var(--gold);margin-bottom:1.6rem;padding:0.45rem 1rem;border:1px solid var(--border);border-radius:2px}
@@ -180,7 +180,6 @@ footer{border-top:1px solid var(--border-soft)}
 .footer-inner a{color:var(--muted);text-decoration:none;transition:color 0.2s}
 .footer-inner a:hover{color:var(--gold-2)}
 </style>
-  <link rel="stylesheet" href="assets/domain-companion/companion.css?v=20260806-header">
 </head>
 <body>
 
@@ -198,22 +197,11 @@ footer{border-top:1px solid var(--border-soft)}
     PureOwner
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#transition">La transition</a></li>
-    <li><a href="guide.html" class="active">Le guide</a></li>
-    <li><a href="index.html#extensions">Extensions</a></li>
     <li><a href="marketplace.html">Marketplace</a></li>
-    <li class="language-menu">
-      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="lang-current">FR</span><span class="chev">⌄</span></button>
-      <div class="lang-panel" role="menu" aria-label="Choisir une langue">
-        <button type="button" data-lang="fr" role="menuitem">Français <small>FR</small></button>
-        <button type="button" data-lang="en" role="menuitem">English <small>EN</small></button>
-        <button type="button" data-lang="es" role="menuitem">Español <small>ES</small></button>
-        <button type="button" data-lang="de" role="menuitem">Deutsch <small>DE</small></button>
-        <button type="button" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
-        <button type="button" data-lang="pt" role="menuitem">Português <small>PT</small></button>
-      </div>
-    </li>
-    <li><a href="marketplace.html" class="nav-cta">Réserver mon nom</a></li>
+    <li><a href="ecosystemes.html">Écosystèmes</a></li>
+    <li><a href="guide.html" class="active">Le guide</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="marketplace.html" class="nav-cta">Explorer</a></li>
   </ul>
 </nav>
 
@@ -280,7 +268,7 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="prose">
     <p class="lead">Pendant plus de 35 ans, les noms de domaine étaient principalement destinés aux entreprises. Les particuliers possédaient une adresse e-mail ou un compte sur une plateforme, mais rarement leur propre identité numérique.</p>
     <p>Notre vie en ligne s'est construite sur des comptes que nous ne possédons pas vraiment. Un identifiant prêté par une plateforme, une adresse e-mail liée à un fournisseur, un nom d'utilisateur qui peut disparaître du jour au lendemain. Nous étions locataires de notre propre présence numérique.</p>
-    <p>Aujourd'hui, grâce au Web3, chacun peut devenir propriétaire de son prénom, de son nom ou de son identité numérique <strong>de manière permanente</strong>. Ce n'est plus un privilège réservé aux marques : c'est désormais accessible à chaque personne.</p>
+    <p>Aujourd'hui, grâce au Web3, chacun peut détenir son prénom, son nom ou son identité numérique directement, <strong>selon les règles de chaque extension</strong>. Ce n'est plus un privilège réservé aux marques : c'est désormais accessible à chaque personne.</p>
     <div class="figure">
       <div class="figure-frame">
         <img src="./images/edc77926-6c39-44b6-8702-c65fb5a0c81b.png" alt="Le transfert de propriété numérique vers le Web3">
@@ -370,7 +358,7 @@ footer{border-top:1px solid var(--border-soft)}
     <p>Demain, il sera tout aussi naturel de posséder son <span class="hl">prénom numérique</span> qu'il l'est aujourd'hui de posséder son logement.</p>
   </div>
   <div class="prose">
-    <p>Un nom Web3 fonctionne comme un bien immobilier : il est unique, il vous appartient, et sa valeur grandit avec son usage. La seule différence, c'est qu'il n'en existe qu'un seul exemplaire — et qu'une fois pris, il l'est définitivement.</p>
+    <p>Un nom Web3 peut fonctionner comme un bien immobilier : il est rare, il peut être détenu directement, et son intérêt grandit avec son usage. Une fois enregistré par quelqu'un d'autre, il faut le racheter ou en changer.</p>
   </div>
   <div class="pillars">
     <div class="pillar">
@@ -520,7 +508,7 @@ footer{border-top:1px solid var(--border-soft)}
     </details>
     <details>
       <summary>Pourquoi est-il urgent d'agir maintenant ? <span class="q-mark">+</span></summary>
-      <div class="faq-body">Parce que chaque nom est unique. Comme pour un logement ou une marque, le premier arrivé est le premier servi. Plus vous attendez, plus le risque qu'un tiers réserve votre nom augmente.</div>
+      <div class="faq-body">Parce qu'un nom court et mémorable est rare. Comme pour un logement ou une marque, le premier arrivé est le premier servi. Plus vous attendez, plus le risque qu'un tiers réserve votre nom augmente.</div>
     </details>
     <details>
       <summary>Quelle extension dois-je choisir ? <span class="q-mark">+</span></summary>
@@ -549,7 +537,7 @@ footer{border-top:1px solid var(--border-soft)}
   <p>Vous avez compris pourquoi le moment est venu. La prochaine étape est simple : cherchez votre nom et sécurisez-le, avant quelqu'un d'autre.</p>
   <div class="cta-row">
     <a href="marketplace.html" class="btn-gold">Réserver mon nom →</a>
-    <a href="index.html#transition" class="btn-ghost">Revoir la transition</a>
+    <a href="ecosystemes.html" class="btn-ghost">Comprendre les écosystèmes</a>
   </div>
 </section>
 
@@ -557,7 +545,7 @@ footer{border-top:1px solid var(--border-soft)}
   <div class="footer-inner">
     <div class="f-logo">PureOwner</div>
     <div>© <span id="year"></span> PureOwner · La référence de la propriété numérique</div>
-    <div><a href="marketplace.html">Marketplace</a> · <a href="guide.html">Le guide</a> · <a href="index.html#transition">La transition</a></div>
+    <div><a href="marketplace.html">Marketplace</a> · <a href="ecosystemes.html">Écosystèmes</a> · <a href="guide.html">Le guide</a></div>
   </div>
 </footer>
 
@@ -827,6 +815,5 @@ footer{border-top:1px solid var(--border-soft)}
   });
 })();
 </script>
-  <script type="module" src="assets/domain-companion/companion.js?v=20260806-header"></script>
 </body>
 </html>
