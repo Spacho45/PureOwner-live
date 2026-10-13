@@ -46,6 +46,16 @@ button{font-family:inherit}
 .nav-links a{display:block;padding:.85rem 0;border-bottom:1px solid var(--border-soft);color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .nav-links a:hover{color:var(--gold-2)}
 .nav-cta{color:var(--gold-2)}
+.language-menu{position:relative}
+.lang-trigger{display:flex;align-items:center;gap:.45rem;padding:.55rem .8rem;border:1px solid var(--border);border-radius:2px;background:transparent;color:var(--gold-2);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;cursor:pointer}
+.lang-trigger .chev{font-size:.7rem;color:var(--muted)}
+.lang-panel{position:absolute;right:0;top:calc(100% + .6rem);z-index:130;min-width:220px;padding:.55rem;background:rgba(6,35,28,.98);border:1px solid var(--border);border-radius:3px;box-shadow:0 24px 60px rgba(0,0,0,.4);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .18s,transform .18s}
+.language-menu.open .lang-panel,.language-menu:focus-within .lang-panel{opacity:1;transform:translateY(0);pointer-events:auto}
+.lang-panel button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.7rem .8rem;border:0;border-bottom:1px solid var(--border-soft);background:transparent;color:var(--muted);font-size:.76rem;font-weight:700;text-align:left;cursor:pointer}
+.lang-panel button:last-child{border-bottom:0}
+.lang-panel button:hover,.lang-panel button.active{color:var(--gold-2);background:rgba(212,175,55,.08)}
+.lang-panel small{color:var(--gold);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:699px){.nav-links .lang-trigger{width:100%;justify-content:space-between}}
 
 /* Hero + search */
 .hero{padding:7.3rem 1.25rem 2rem;max-width:1120px;margin:0 auto}
@@ -86,6 +96,7 @@ button{font-family:inherit}
 .sf span{font-size:.9rem;color:var(--fg)}
 .sheet-warn{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:.8rem}
 .sheet-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--gold-2);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sheet-link::after{content:" →"}
 .sheet-link:hover{color:var(--gold)}
 @media(min-width:700px){.sheet-facts{grid-template-columns:repeat(4,1fr)}}
 
@@ -167,6 +178,17 @@ footer{border-top:1px solid var(--border-soft)}
     <li><a href="ecosystemes.html">Écosystèmes</a></li>
     <li><a href="web2-vs-web3.html">Comprendre</a></li>
     <li><a href="about.html">À propos</a></li>
+    <li class="language-menu">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="lang-current">FR</span><span class="chev">⌄</span></button>
+      <div class="lang-panel" role="menu" aria-label="Choisir une langue">
+        <button type="button" data-lang="fr" role="menuitem">Français <small>FR</small></button>
+        <button type="button" data-lang="en" role="menuitem">English <small>EN</small></button>
+        <button type="button" data-lang="es" role="menuitem">Español <small>ES</small></button>
+        <button type="button" data-lang="de" role="menuitem">Deutsch <small>DE</small></button>
+        <button type="button" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
+        <button type="button" data-lang="pt" role="menuitem">Português <small>PT</small></button>
+      </div>
+    </li>
     <li><a class="nav-cta" href="#acheter">Explorer</a></li>
   </ul>
 </nav>
@@ -424,7 +446,7 @@ footer{border-top:1px solid var(--border-soft)}
           '<div class="sf"><b>Paiement wallet</b><span>' + escapeHtml(walletLabel(info.walletCompatibility)) + '</span></div>' +
         '</div>' +
         warnHtml +
-        '<a class="sheet-link" href="' + href + '"' + (external ? ' target="_blank" rel="noopener"' : '') + '>Plus d\u2019informations \u2192</a>' +
+        '<a class="sheet-link" href="' + href + '"' + (external ? ' target="_blank" rel="noopener"' : '') + '>Plus d\'informations</a>' +
       '</div>';
   }
 
@@ -506,5 +528,6 @@ footer{border-top:1px solid var(--border-soft)}
   load();
 })();
 </script>
+<script src="translations.js"></script>
 </body>
 </html>

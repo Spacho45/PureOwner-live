@@ -199,6 +199,17 @@ footer{border-top:1px solid var(--border-soft)}
     <li><a href="ecosystemes.html">Écosystèmes</a></li>
     <li><a href="web2-vs-web3.html">Comprendre</a></li>
     <li><a href="about.html" class="active">À propos</a></li>
+    <li class="language-menu">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false"><span class="lang-current">FR</span><span class="chev">⌄</span></button>
+      <div class="lang-panel" role="menu" aria-label="Choisir une langue">
+        <button type="button" data-lang="fr" role="menuitem">Français <small>FR</small></button>
+        <button type="button" data-lang="en" role="menuitem">English <small>EN</small></button>
+        <button type="button" data-lang="es" role="menuitem">Español <small>ES</small></button>
+        <button type="button" data-lang="de" role="menuitem">Deutsch <small>DE</small></button>
+        <button type="button" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
+        <button type="button" data-lang="pt" role="menuitem">Português <small>PT</small></button>
+      </div>
+    </li>
     <li><a href="marketplace.html" class="nav-cta">Explorer</a></li>
   </ul>
 </nav>
@@ -642,58 +653,6 @@ footer{border-top:1px solid var(--border-soft)}
   fetchAndRender();
 })();
 </script>
-<script>
-(function(){
-  var labels = { fr: "FR", en: "EN", es: "ES", de: "DE", it: "IT", pt: "PT" };
-  var storageKey = "braveowner-language";
-  var selected = localStorage.getItem(storageKey) || "fr";
-
-  function sync(menu) {
-    var current = menu.querySelector(".lang-current");
-    var trigger = menu.querySelector(".lang-trigger");
-    if (current) current.textContent = labels[selected] || "FR";
-    if (trigger) trigger.setAttribute("aria-expanded", menu.classList.contains("open") ? "true" : "false");
-    menu.querySelectorAll("[data-lang]").forEach(function(button) {
-      button.classList.toggle("active", button.dataset.lang === selected);
-    });
-    document.documentElement.setAttribute("lang", selected);
-  }
-
-  document.querySelectorAll(".language-menu").forEach(function(menu) {
-    var trigger = menu.querySelector(".lang-trigger");
-    sync(menu);
-    if (trigger) {
-      trigger.addEventListener("click", function(event) {
-        event.stopPropagation();
-        var willOpen = !menu.classList.contains("open");
-        document.querySelectorAll(".language-menu.open").forEach(function(openMenu) {
-          openMenu.classList.remove("open");
-          sync(openMenu);
-        });
-        menu.classList.toggle("open", willOpen);
-        sync(menu);
-      });
-    }
-    menu.querySelectorAll("[data-lang]").forEach(function(button) {
-      button.addEventListener("click", function(event) {
-        event.stopPropagation();
-        selected = button.dataset.lang;
-        localStorage.setItem(storageKey, selected);
-        document.querySelectorAll(".language-menu").forEach(function(item) {
-          item.classList.remove("open");
-          sync(item);
-        });
-      });
-    });
-  });
-
-  document.addEventListener("click", function() {
-    document.querySelectorAll(".language-menu.open").forEach(function(menu) {
-      menu.classList.remove("open");
-      sync(menu);
-    });
-  });
-})();
-</script>
+<script src="translations.js"></script>
 </body>
 </html>
